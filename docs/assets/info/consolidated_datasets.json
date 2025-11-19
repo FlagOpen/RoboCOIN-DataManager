@@ -1595,6 +1595,51 @@
     ],
     "end_effector_type": "two_finger_gripper"
   },
+  "AgiBot-g1_box_storage_cardboard_box_a": {
+    "dataset_name": "box_storage_cardboard_box_a",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "using a robotic arm to pick up a cardboard box and palace it the carton."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "place",
+      "pick",
+      "grasp"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "paper_box",
+        "level1": "tool",
+        "level2": "paper_box",
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "carton",
+        "level1": "tool",
+        "level2": "carton",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "ruantong_a2d"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
   "R1_Lite_switch_on_and_off_the_central_air_conditioning": {
     "dataset_name": "switch_on_and_off_the_central_air_conditioning",
     "dataset_uuid": null,
@@ -5615,6 +5660,52 @@
     "operation_platform_height": null,
     "device_model": [
       "galaxea_r1_lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Tianqin_A2_box_storage_part": {
+    "dataset_name": "box_storage_part",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take the parts from the box containing them and put them into an empty box."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "part",
+        "level1": "tool",
+        "level2": "part",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "ruantong_a2d"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -13603,6 +13694,60 @@
     "operation_platform_height": 77.2,
     "device_model": [
       "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Tianqin_A2_container_storage_graphics_card": {
+    "dataset_name": "container_storage_graphics_card",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take out graphics card from box remove packaging put into black container."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "black_container",
+        "level1": "container",
+        "level2": "black_container",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "graphics_card",
+        "level1": "tool",
+        "level2": "graphics_card",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "ruantong_a2d"
     ],
     "end_effector_type": "two_finger_gripper"
   },

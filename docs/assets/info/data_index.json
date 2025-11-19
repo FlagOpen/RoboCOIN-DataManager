@@ -59,6 +59,7 @@
     "AIRBOT_MMK2_take_down_umbrella_and_mineral_water",
     "AIRBOT_MMK2_take_the_book",
     "AIRBOT_MMK2_toy_storage",
+    "AgiBot-g1_box_storage_cardboard_box_a",
     "AgiBot-g1_left_capture_part",
     "AgiBot-g1_picks_up_battery_a",
     "AgiBot-g1_picks_up_battery_b",
@@ -205,6 +206,8 @@
     "Split_aloha_wipe_table",
     "Split_aloha_wipe_the_table",
     "Split_aloha_zip_up_the_document_bag",
+    "Tianqin_A2_box_storage_part",
+    "Tianqin_A2_container_storage_graphics_card",
     "alpha_bot_2_carry_the_clothes_basket",
     "alpha_bot_2_item_reversal",
     "alpha_bot_2_move_the_table",
@@ -218,5 +221,5 @@
     "leju_robot_pass_the_cleaner_d",
     "leju_robot_pass_the_cleaner_e"
   ],
-  "count": 217
+  "count": 220
 }

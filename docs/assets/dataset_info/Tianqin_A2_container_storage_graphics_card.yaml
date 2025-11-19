@@ -1,0 +1,39 @@
+dataset_name: container_storage_graphics_card
+dataset_uuid:
+task_descriptions:
+- take out graphics card from box remove packaging put into black container.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- place
+- pick
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: black_container
+  level1: container
+  level2: black_container
+  level3:
+  level4:
+  level5:
+- object_name: graphics_card
+  level1: tool
+  level2: graphics_card
+  level3:
+  level4:
+  level5:
+- object_name: box
+  level1: container
+  level2: box
+  level3:
+  level4:
+  level5:
+-operation_platform_height:
+device_model:
+- ruantong_a2d
+end_effector_type: two_finger_gripper

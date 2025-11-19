@@ -1,0 +1,32 @@
+dataset_name: box_storage_cardboard_box_a
+dataset_uuid:
+task_descriptions:
+- using a robotic arm to pick up a cardboard box and palace it the carton.
+scene_type:
+- home
+atomic_actions:
+- place
+- pick
+- grasp
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: paper_box
+  level1: tool
+  level2: paper_box
+  level4:
+  level5:
+- object_name: carton
+  level1: tool
+  level2: carton
+  level3:
+  level4:
+  level5:
+-operation_platform_height:
+device_model:
+- ruantong_a2d
+end_effector_type: two_finger_gripper
