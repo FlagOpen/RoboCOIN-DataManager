@@ -206,9 +206,9 @@ class ConfigManager {
         command += `${config.datasetsParam} `;
         if (datasets.length > 0) {
             const dsListContent = datasets.join(config.datasetSeparator);
-            command += `${dsListContent}${config.lineContinuation}${config.lineBreak}`;
+            command += `${dsListContent}${config.lineBreak}`;
         } else {
-            command += `${config.lineContinuation}${config.lineBreak}`;
+            command += `${config.lineBreak}`;
         }
         
         // Add comments about download path (directly after command, no blank line)
