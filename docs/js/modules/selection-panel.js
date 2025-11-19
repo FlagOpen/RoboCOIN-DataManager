@@ -24,7 +24,7 @@ export class SelectionPanelManager {
         this.datasetMap = datasetMap;
         
         /** @type {string} */
-        this.currentHub = 'modelscope';
+        this.currentHub = 'huggingface';
         
         /** @type {Object} */
         this.config = ConfigManager.getConfig();

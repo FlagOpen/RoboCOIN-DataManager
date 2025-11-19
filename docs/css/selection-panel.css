@@ -571,3 +571,39 @@
     min-width: 100%;
 }
 
+/* ==================== Hub Selection Buttons ==================== */
+
+.hub-buttons-container {
+    display: flex;
+    gap: 4px;
+}
+
+.btn-hub {
+    padding: 4px 12px;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    font-size: 12px;
+    background: #ffffff;
+    color: #24292f;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-weight: 400;
+}
+
+.btn-hub:hover {
+    background: #f6f8fa;
+    border-color: #8b949e;
+}
+
+.btn-hub.active {
+    background: linear-gradient(135deg, #2da44e 0%, #1a7f37 100%);
+    color: #ffffff;
+    border-color: #1a7f37;
+    font-weight: 600;
+}
+
+.btn-hub.active:hover {
+    background: linear-gradient(135deg, #1a7f37 0%, #166b31 100%);
+    border-color: #166b31;
+}
+

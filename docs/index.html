@@ -128,13 +128,13 @@
                     <button class="btn-selection" id="exportBtn">📤 export .json</button>
                 </div>
                 <div style="margin-top: 8px; margin-bottom: 8px;">
-                    <label style="font-size: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                    <div style="font-size: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
                         <span style="font-weight: 500;">Hub Source:</span>
-                        <select id="hubSelect" style="padding: 4px 8px; border: 1px solid #ddd; border-radius: 4px; font-size: 12px;">
-                            <option value="modelscope">ModelScope</option>
-                            <option value="huggingface">HuggingFace</option>
-                        </select>
-                    </label>
+                        <div class="hub-buttons-container">
+                            <button class="btn-hub active" id="hubBtnHuggingFace" data-hub="huggingface">HuggingFace</button>
+                            <button class="btn-hub" id="hubBtnModelScope" data-hub="modelscope">ModelScope</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="code-section-header">
                     <div class="code-section-description">Download command:</div>

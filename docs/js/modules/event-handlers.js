@@ -113,16 +113,54 @@ export class EventHandlers {
             });
         }
         
-        // Hub selection
-        const hubSelect = document.getElementById('hubSelect');
-        if (hubSelect) {
-            hubSelect.addEventListener('change', (e) => {
-                this.managers.selectionPanel.setHub(e.target.value);
+        // Hub selection buttons
+        const hubBtnHuggingFace = document.getElementById('hubBtnHuggingFace');
+        const hubBtnModelScope = document.getElementById('hubBtnModelScope');
+        
+        if (hubBtnHuggingFace) {
+            hubBtnHuggingFace.addEventListener('click', () => {
+                this.managers.selectionPanel.setHub('huggingface');
+                this.updateHubButtons('huggingface');
             });
         }
         
+        if (hubBtnModelScope) {
+            hubBtnModelScope.addEventListener('click', () => {
+                this.managers.selectionPanel.setHub('modelscope');
+                this.updateHubButtons('modelscope');
+            });
+        }
+        
+        // Initialize hub button states
+        this.updateHubButtons(this.managers.selectionPanel.currentHub);
+        
         // Quick-action buttons and tooltips (event delegation)
         this.bindFilterDropdownEvents();
+    }
+    
+    /**
+     * Update hub button states
+     * @param {string} activeHub - Active hub name ('huggingface' or 'modelscope')
+     */
+    updateHubButtons(activeHub) {
+        const hubBtnHuggingFace = document.getElementById('hubBtnHuggingFace');
+        const hubBtnModelScope = document.getElementById('hubBtnModelScope');
+        
+        if (hubBtnHuggingFace) {
+            if (activeHub === 'huggingface') {
+                hubBtnHuggingFace.classList.add('active');
+            } else {
+                hubBtnHuggingFace.classList.remove('active');
+            }
+        }
+        
+        if (hubBtnModelScope) {
+            if (activeHub === 'modelscope') {
+                hubBtnModelScope.classList.add('active');
+            } else {
+                hubBtnModelScope.classList.remove('active');
+            }
+        }
     }
     
     /**
