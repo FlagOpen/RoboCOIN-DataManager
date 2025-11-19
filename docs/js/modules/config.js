@@ -196,11 +196,11 @@ class ConfigManager {
     static generateDownloadCommand(hub, datasets) {
         const config = this.getConfig().downloadCommand;
         
-        // Format: robocoin-download \ + two blank lines
-        let command = `${config.command}${config.lineContinuation}${config.lineBreak}${config.lineBreak}${config.lineBreak}`;
+        // Format: robocoin-download \
+        let command = `${config.command}${config.lineContinuation}${config.lineBreak}`;
         
-        // Format: --hub modelscope \ + one blank line
-        command += `${config.hubParam} ${hub}${config.lineContinuation}${config.lineBreak}${config.lineBreak}`;
+        // Format: --hub modelscope \
+        command += `${config.hubParam} ${hub}${config.lineContinuation}${config.lineBreak}`;
         
         // Format: --ds_lists + each dataset on new line with continuation
         command += `${config.datasetsParam} `;
@@ -211,8 +211,8 @@ class ConfigManager {
             command += `${config.lineContinuation}${config.lineBreak}`;
         }
         
-        // Add comments about download path
-        command += `${config.lineBreak}${config.defaultPathComment}${config.lineBreak}`;
+        // Add comments about download path (directly after command, no blank line)
+        command += `${config.defaultPathComment}${config.lineBreak}`;
         command += `${config.targetDirComment}`;
         
         return command;
