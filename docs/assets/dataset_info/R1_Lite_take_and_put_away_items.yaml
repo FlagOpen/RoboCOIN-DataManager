@@ -1,5 +1,5 @@
 dataset_name: take_and_put_away_items
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - take out or store umbrellas water cables boxes on drawers tables.
 scene_type:
@@ -14,40 +14,40 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: drawer
   level1: container
   level2: drawer
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: umbrella
   level1: daily_necessities
   level2: umbrella
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: data_cable
   level1: electronic_products
   level2: data_cable
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: mineral_water
   level1: beverages
   level2: mineral_water
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: storage_box
   level1: container
   level2: storage_box
-  level3:
-  level4:
-  level5:
-operation_platform_height:
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
 device_model:
-- galaxea_r1_lite
+- R1_Lite
 end_effector_type: two_finger_gripper

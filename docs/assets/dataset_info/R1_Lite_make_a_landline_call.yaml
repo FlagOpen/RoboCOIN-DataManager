@@ -1,5 +1,5 @@
 dataset_name: make_a_landline_call
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - lift phone handle dial number then replace to end call.
 scene_type:
@@ -12,16 +12,16 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: furnitureixed_line_telephone
   level1: communication_equipment
   level2: furnitureixed_line_telephone
-  level3:
-  level4:
-  level5:
-operation_platform_height:
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
 device_model:
-- galaxea_r1_lite
+- R1_Lite
 end_effector_type: two_finger_gripper

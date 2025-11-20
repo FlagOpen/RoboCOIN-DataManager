@@ -1,5 +1,5 @@
 dataset_name: garbage_disposal
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - pick up garbage from table and throw into trash can.
 scene_type:
@@ -12,22 +12,22 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: garbage
   level1: garbage
   level2: garbage
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: trash_can
   level1: container
   level2: trash_can
-  level3:
-  level4:
-  level5:
-operation_platform_height:
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
 device_model:
-- galaxea_r1_lite
+- R1_Lite
 end_effector_type: two_finger_gripper

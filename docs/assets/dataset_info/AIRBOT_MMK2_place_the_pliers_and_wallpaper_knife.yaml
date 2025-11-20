@@ -1,5 +1,5 @@
 dataset_name: place_the_pliers_and_wallpaper_knife
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - pick up the pliers with your left hand and place them in the white lid. then, with
   your right hand, pick up the wallpaper knife and place it in the white lid.
@@ -13,28 +13,28 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: pliers
   level1: tool
   level2: pliers
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: lid
   level1: container
   level2: lid
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: utility_knife
   level1: tool
   level2: utility_knife
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 operation_platform_height: 77.2
 device_model:
-- discover_robotics_aitbot_mmk2
+- AIRBOT_MMK2
 end_effector_type: two_finger_gripper

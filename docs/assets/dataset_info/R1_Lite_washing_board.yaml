@@ -1,5 +1,5 @@
 dataset_name: washing_board
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - turn on tap scrub cutting board with cloth then turn off tap.
 scene_type:
@@ -15,28 +15,28 @@ objects:
 - object_name: faucet
   level1: tool
   level2: faucet
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: sponge
   level1: daily_necessities
   level2: sponge
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: cutting_board
   level1: tool
   level2: cutting_board
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: sink
   level1: container
   level2: sink
-  level3:
-  level4:
-  level5:
-operation_platform_height:
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
 device_model:
-- galaxea_r1_lite
+- R1_Lite
 end_effector_type: two_finger_gripper

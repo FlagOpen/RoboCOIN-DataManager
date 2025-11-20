@@ -1,5 +1,5 @@
 dataset_name: make_the_bed
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - hold quilt's folded corner flatten blanket's corners.
 scene_type:
@@ -13,22 +13,22 @@ objects:
 - object_name: quilt
   level1: clothing
   level2: quilt
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: blanket
   level1: clothing
   level2: blanket
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: bed
   level1: furniture
   level2: bed
-  level3:
-  level4:
-  level5:
-operation_platform_height:
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
 device_model:
-- galaxea_r1_lite
+- R1_Lite
 end_effector_type: two_finger_gripper

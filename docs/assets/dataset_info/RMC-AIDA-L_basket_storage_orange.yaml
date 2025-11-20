@@ -1,5 +1,5 @@
 dataset_name: basket_storage_orange
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - the left gripper pick up the basket to the appropriate position,  the right gripper
   pick up the orange and place it into the basket.
@@ -23,22 +23,22 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: basket
   level1: container
   level2: basket
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: orange
   level1: fruit
   level2: orange
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 operation_platform_height: 77.2
 device_model:
-- realman_rmc_aidal
+- RMC-AIDA-L
 end_effector_type: two_finger_gripper

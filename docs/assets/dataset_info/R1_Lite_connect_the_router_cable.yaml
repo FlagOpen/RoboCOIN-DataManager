@@ -1,5 +1,5 @@
 dataset_name: connect_the_router_cable
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - insert plug into socket then connect cable to router interface.
 scene_type:
@@ -13,34 +13,34 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: router
   level1: electric_appliance
   level2: router
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: socket
   level1: electric_appliance
   level2: socket
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: cable
   level1: electric_appliance
   level2: cable
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: plug
   level1: electric_appliance
   level2: plug
-  level3:
-  level4:
-  level5:
-operation_platform_height:
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
 device_model:
-- galaxea_r1_lite
+- R1_Lite
 end_effector_type: two_finger_gripper

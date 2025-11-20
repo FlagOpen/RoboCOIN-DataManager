@@ -1,5 +1,5 @@
 dataset_name: clean_the_sink
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - turn on faucet off wipe washbasin place rag beside it.
 scene_type:
@@ -15,22 +15,22 @@ objects:
 - object_name: washbasin
   level1: container
   level2: washbasin
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: faucet
   level1: tool
   level2: faucet
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: rag
   level1: clothing
   level2: rag
-  level3:
-  level4:
-  level5:
-operation_platform_height:
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
 device_model:
-- galaxea_r1_lite
+- R1_Lite
 end_effector_type: two_finger_gripper

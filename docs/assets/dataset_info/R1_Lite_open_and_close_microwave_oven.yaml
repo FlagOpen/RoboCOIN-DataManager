@@ -1,5 +1,5 @@
 dataset_name: open_and_close_microwave_oven
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - put fries plate in microwave turn on then take out and close.
 scene_type:
@@ -16,22 +16,22 @@ objects:
 - object_name: french_fries
   level1: food
   level2: french_fries
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: plate
   level1: container
   level2: plate
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: microwave
   level1: electric_appliance
   level2: microwave
-  level3:
-  level4:
-  level5:
-operation_platform_height:
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
 device_model:
-- galaxea_r1_lite
+- R1_Lite
 end_effector_type: two_finger_gripper

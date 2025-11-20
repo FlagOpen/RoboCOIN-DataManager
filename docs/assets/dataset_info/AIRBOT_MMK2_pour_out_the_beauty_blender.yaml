@@ -1,5 +1,5 @@
 dataset_name: pour_out_the_beauty_blender
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - pick up the cup with your right hand and pour the beauty blender inside into the
   bowl.
@@ -13,28 +13,28 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: beauty_blender
   level1: tool
   level2: beauty_blender
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: cup
   level1: container
   level2: cup
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: bowl
   level1: container
   level2: bowl
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 operation_platform_height: 77.2
 device_model:
-- discover_robotics_aitbot_mmk2
+- AIRBOT_MMK2
 end_effector_type: two_finger_gripper

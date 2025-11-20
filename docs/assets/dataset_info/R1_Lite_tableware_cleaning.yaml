@@ -1,7 +1,8 @@
 dataset_name: tableware_cleaning
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
-- wipe the tableware with a sponge containing detergent then put them in their original places.
+- wipe the tableware with a sponge containing detergent then put them in their original
+  places.
 scene_type:
 - home
 atomic_actions:
@@ -12,46 +13,46 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: bowl
   level1: container
   level2: bowl
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: chopsticks
   level1: tableware
   level2: chopsticks
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: spoon
   level1: tableware
   level2: spoon
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: plate
   level1: container
   level2: plate
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: dishwashing_liquid
   level1: cleaning_supplies
   level2: dishwashing_liquid
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: sponge
   level1: cleaning_supplies
   level2: sponge
-  level3:
-  level4:
-  level5:
-operation_platform_height:
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
 device_model:
-- galaxea_r1_lite
+- R1_Lite
 end_effector_type: two_finger_gripper

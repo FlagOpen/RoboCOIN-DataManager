@@ -1,5 +1,5 @@
 dataset_name: stack_baskets
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - put the yellow basket on top of the brown basket.
 - put the brown basket on top of the yellow basket.
@@ -14,22 +14,22 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: brown_basket
   level1: container
   level2: brown_basket
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: yellow_basket
   level1: container
   level2: yellow_basket
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 device_model:
-- realman_rmc_aidal
+- RMC-AIDA-L
 end_effector_type: two_finger_gripper
 operation_platform_height: 77.2

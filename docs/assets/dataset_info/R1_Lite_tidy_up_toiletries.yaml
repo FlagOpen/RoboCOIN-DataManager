@@ -1,5 +1,5 @@
 dataset_name: tidy_up_toiletries
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - put toiletries in drawer and cup in box or on table.
 scene_type:
@@ -12,34 +12,34 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: toiletries
   level1: personal_care_products
   level2: toiletries
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: drawer
   level1: container
   level2: drawer
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: storage_box
   level1: container
   level2: storage_box
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: cup
   level1: container
   level2: cup
-  level3:
-  level4:
-  level5:
-operation_platform_height:
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
 device_model:
-- galaxea_r1_lite
+- R1_Lite
 end_effector_type: two_finger_gripper

@@ -1,5 +1,5 @@
 dataset_name: build_blocks
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - left arm begins to build blocks.
 - right arm begins to build blocks.
@@ -13,16 +13,16 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: building_block
   level1: toy
   level2: building_blocks
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 device_model:
-- realman_rmc_aidal
+- RMC-AIDA-L
 end_effector_type: two_finger_gripper
 operation_platform_height: 77.2

@@ -1,5 +1,5 @@
 dataset_name: wipe_the_table
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - wipe the stains on the table with a cloth.
 scene_type:
@@ -12,28 +12,28 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: towel
   level1: clothing
   level2: towel
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: tablecloth
   level1: clothing
   level2: tablecloth
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: stains
   level1: rubbish
   level2: stains
-  level3:
-  level4:
-  level5:
-operation_platform_height:
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
 device_model:
-- galaxea_r1_lite
+- R1_Lite
 end_effector_type: two_finger_gripper

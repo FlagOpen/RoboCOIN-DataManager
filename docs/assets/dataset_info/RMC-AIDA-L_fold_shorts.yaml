@@ -1,5 +1,5 @@
 dataset_name: fold_shorts
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - the shorts is place with the back facing up, the left gripper grasp the waist of
   the shorts, and the right gripper grasp the bottom of the shorts and folds them
@@ -24,16 +24,16 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: shorts
   level1: clothing
   level2: shorts
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 operation_platform_height: 77.2
 device_model:
-- realman_rmc_aidal
+- RMC-AIDA-L
 end_effector_type: two_finger_gripper

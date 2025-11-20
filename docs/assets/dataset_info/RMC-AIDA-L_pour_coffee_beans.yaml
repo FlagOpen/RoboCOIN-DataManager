@@ -1,5 +1,5 @@
 dataset_name: pour_coffee_beans
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - use a blue spoon with right hand to take out the coffee beans from the glass, and
   then pour the coffee beans into the gray cup.
@@ -29,52 +29,52 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: gray_cup
   level1: container
   level2: gray_cup
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: red_cup
   level1: container
   level2: red_cup
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: glass
   level1: container
   level2: glass
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: coffee_bean
   level1: food
   level2: coffee_bean
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: blue_spoon
   level1: tableware
   level2: blue_spoon
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: pink_spoon
   level1: tableware
   level2: pink_spoon
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: glass_lid
   level1: daily_necessities
   level2: glass_lid
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 operation_platform_height: 77.2
 device_model:
-- realman_rmc_aidal
+- RMC-AIDA-L
 end_effector_type: two_finger_gripper

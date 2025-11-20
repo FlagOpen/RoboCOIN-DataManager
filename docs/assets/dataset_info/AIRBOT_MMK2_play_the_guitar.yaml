@@ -1,5 +1,5 @@
 dataset_name: play_the_guitar
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - hold the small guitar in your left hand, pluck the strings with your right hand,  and
   then put down the small guitar with your left hand.
@@ -14,16 +14,16 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: little_guitar
   level1: musical_instrument
   level2: little_guitar
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 operation_platform_height: 77.2
 device_model:
-- discover_robotics_aitbot_mmk2
+- AIRBOT_MMK2
 end_effector_type: two_finger_gripper

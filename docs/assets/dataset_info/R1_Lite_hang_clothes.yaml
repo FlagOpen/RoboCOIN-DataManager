@@ -1,5 +1,5 @@
 dataset_name: hang_clothes
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - hang basket clothes on hanger then take off put back.
 scene_type:
@@ -12,28 +12,28 @@ objects:
 - object_name: clothesline
   level1: tool
   level2: clothesline
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: clothes_hanger
   level1: daily_necessities
   level2: clothes_hanger
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: clothes
   level1: fabric
   level2: clothes
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: basket
   level1: container
   level2: basket
-  level3:
-  level4:
-  level5:
-operation_platform_height:
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
 device_model:
-- galaxea_r1_lite
+- R1_Lite
 end_effector_type: two_finger_gripper

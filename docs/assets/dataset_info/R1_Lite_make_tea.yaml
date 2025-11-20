@@ -1,5 +1,5 @@
 dataset_name: make_tea
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - pour kettle water into cup steep tea bag then discard it.
 scene_type:
@@ -13,40 +13,40 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: water
   level1: drink
   level2: water
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: tea_bag
   level1: drink
   level2: tea_bag
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: trash_bin
   level1: container
   level2: trash_bin
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: kettle
   level1: electric_appliance
   level2: kettle
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: cup
   level1: container
   level2: cup
-  level3:
-  level4:
-  level5:
-operation_platform_height:
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
 device_model:
-- galaxea_r1_lite
+- R1_Lite
 end_effector_type: two_finger_gripper

@@ -1,5 +1,5 @@
 dataset_name: right_capture_part
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - grasp the part and place them on the black container.
 scene_type:
@@ -10,26 +10,26 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: part
   level1: tool
   level2: part
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: box
   level1: container
   level2: box
-  level3:
-  level4:
+  level3: null
+  level4: null
 - object_name: black_container
   level1: tool
   level2: black_container
-  level3:
-  level4:
-operation_platform_height:
+  level3: null
+  level4: null
+operation_platform_height: null
 device_model:
-- ruantong_a2d
+- AgiBot-g1
 end_effector_type: two_finger_gripper

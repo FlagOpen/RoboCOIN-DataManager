@@ -45,7 +45,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "ruantong_a2d"
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -99,7 +99,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -170,7 +170,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -265,7 +265,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -303,7 +303,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -349,7 +349,53 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AgiBot-g1_mobile_accessory_storage_box_e": {
+    "dataset_name": "mobile_accessory_storage_box_e",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "move the position of the storage box with accessories on the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "accessories",
+        "level1": "electronic_products",
+        "level2": "accessories",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -394,7 +440,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "ruantong_a2d"
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -441,7 +487,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -534,7 +580,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -580,7 +626,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -618,7 +664,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -664,7 +710,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -718,7 +764,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -770,6 +816,52 @@
     "operation_platform_height": null,
     "device_model": [
       "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AgiBot-g1_picks_up_parts_a": {
+    "dataset_name": "picks_up_parts_a",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "use the mechanical arm to pick up the parts and place them on the table."
+    ],
+    "scene_type": [
+      "factory"
+    ],
+    "atomic_actions": [
+      "place",
+      "pick",
+      "grasp"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "basket",
+        "level1": "container",
+        "level2": "basket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parts",
+        "level1": "tool",
+        "level2": "parts",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -896,7 +988,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -934,7 +1026,99 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_hotel_services_c": {
+    "dataset_name": "hotel_services_c",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take out the card place it on the sensor for recognition and then transfer it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "card",
+        "level1": "nfc",
+        "level2": "card",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sensor",
+        "level1": "electronic_products",
+        "level2": "sensor",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AgiBot-g1_box_storage_b": {
+    "dataset_name": "box_storage_b",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "put the box on the table into the big box."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -1044,7 +1228,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -1101,7 +1285,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -1155,7 +1339,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -1209,7 +1393,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -1255,7 +1439,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -1302,7 +1486,7 @@
       }
     ],
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
@@ -1353,7 +1537,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "ruantong_a2d"
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -1400,6 +1584,60 @@
     "operation_platform_height": 77.2,
     "device_model": [
       "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_hotel_services_ag": {
+    "dataset_name": "hotel_services_ag",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take out the card place it on the sensor for recognition and then transfer it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "card",
+        "level1": "nfc",
+        "level2": "card",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sensor",
+        "level1": "electronic_products",
+        "level2": "sensor",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -1497,6 +1735,52 @@
     ],
     "end_effector_type": "two_finger_gripper"
   },
+  "AgiBot-g1_pick_up_battery": {
+    "dataset_name": "pick_up_battery",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "using a robotic arm to pick up battery."
+    ],
+    "scene_type": [
+      "factory"
+    ],
+    "atomic_actions": [
+      "place",
+      "pick",
+      "grasp"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "carton",
+        "level1": "tool",
+        "level2": "carton",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "battery",
+        "level1": "tool",
+        "level2": "battery",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "AgiBot-g1"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
   "AIRBOT_MMK2_diamond_storage": {
     "dataset_name": "diamond_storage",
     "dataset_uuid": null,
@@ -1540,7 +1824,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -1636,7 +1920,7 @@
     ],
     "-operation_platform_height": null,
     "device_model": [
-      "ruantong_a2d"
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -1666,7 +1950,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -1725,7 +2009,61 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_hotel_services_ab": {
+    "dataset_name": "hotel_services_ab",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take out the card place it on the sensor for recognition and then transfer it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "card",
+        "level1": "nfc",
+        "level2": "card",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sensor",
+        "level1": "electronic_products",
+        "level2": "sensor",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -1771,7 +2109,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -1863,44 +2201,6 @@
     ],
     "end_effector_type": "two_finger_gripper"
   },
-  "alpha_bot_2_sticker": {
-    "dataset_name": "sticker",
-    "task_descriptions": [
-      "stick the poster on the table by hand."
-    ],
-    "scene_type": [
-      "home"
-    ],
-    "atomic_actions": [
-      "grasp",
-      "place",
-      "pick"
-    ],
-    "objects": [
-      {
-        "object_name": "table",
-        "level1": "furniture",
-        "level2": "table",
-        "level3": null,
-        "level4": null,
-        "level5": null
-      },
-      {
-        "object_name": "poster",
-        "level1": "toy",
-        "level2": "poster",
-        "level3": null,
-        "level4": null,
-        "level5": null
-      }
-    ],
-    "operation_platform_height": null,
-    "device_model": [
-      "alpha_bot_2"
-    ],
-    "end_effector_type": "two_finger_gripper",
-    "dataset_uuid": null
-  },
   "R1_Lite_stack_baskets": {
     "dataset_name": "stack_baskets",
     "dataset_uuid": null,
@@ -1936,7 +2236,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -1999,7 +2299,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -2281,7 +2581,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -2334,7 +2634,61 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_box_storage_parcel_d": {
+    "dataset_name": "box_storage_parcel_d",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "moved the parcel from conveyor to table for the left to box."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parcel",
+        "level1": "container",
+        "level2": "parcel",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "conveyor_belt",
+        "level1": "tool",
+        "level2": "conveyor_belt",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -2434,7 +2788,59 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AgiBot-g1_storage_item_d": {
+    "dataset_name": "storage_item_d",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "grasp data cable left put into box grasp mouse right put into box."
+    ],
+    "scene_type": [
+      "factory"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "data_cable",
+        "level1": "tool",
+        "level2": "data_cable",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null
+      },
+      {
+        "object_name": "mouse",
+        "level1": "tool",
+        "level2": "mouse",
+        "level3": null,
+        "level4": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -2609,7 +3015,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -2699,7 +3105,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -2816,7 +3222,61 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_hotel_services_f": {
+    "dataset_name": "hotel_services_f",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take out the card place it on the sensor for recognition and then transfer it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "card",
+        "level1": "nfc",
+        "level2": "card",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sensor",
+        "level1": "electronic_products",
+        "level2": "sensor",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -2870,7 +3330,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -2948,7 +3408,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -3002,7 +3462,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -3039,7 +3499,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -3123,7 +3583,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "ruantong_a2d"
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -3215,7 +3675,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -3580,7 +4040,7 @@
       }
     ],
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
@@ -3628,36 +4088,6 @@
     "operation_platform_height": 77.2,
     "device_model": [
       "agilex_cobot_magic_aloha"
-    ],
-    "end_effector_type": "two_finger_gripper"
-  },
-  "alpha_bot_2_carry_the_clothes_basket": {
-    "dataset_name": "carry_the_clothes_basket",
-    "dataset_uuid": null,
-    "task_descriptions": [
-      "carry the clothes basket in coordination with both hands."
-    ],
-    "scene_type": [
-      "home"
-    ],
-    "atomic_actions": [
-      "grasp",
-      "place",
-      "pick"
-    ],
-    "objects": [
-      {
-        "object_name": "clothes_basket",
-        "level1": "container",
-        "level2": "clothes_basket",
-        "level3": null,
-        "level4": null,
-        "level5": null
-      }
-    ],
-    "operation_platform_height": null,
-    "device_model": [
-      "alpha_bot_2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -3727,7 +4157,161 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_hotel_services_ad": {
+    "dataset_name": "hotel_services_ad",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take out the card place it on the sensor for recognition and then transfer it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "card",
+        "level1": "nfc",
+        "level2": "card",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sensor",
+        "level1": "electronic_products",
+        "level2": "sensor",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AgiBot-g1_remove_the_accessory": {
+    "dataset_name": "remove_the_accessory_b",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take the accessories out of the box and place them on the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "accessories",
+        "level1": "electronic_products",
+        "level2": "accessories",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "AgiBot-g1"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_box_storage_parcel_g": {
+    "dataset_name": "box_storage_parcel_g",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "moved the parcel from conveyor to table for the left to box."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parcel",
+        "level1": "container",
+        "level2": "parcel",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "conveyor_belt",
+        "level1": "tool",
+        "level2": "conveyor_belt",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -3773,45 +4357,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
-    ],
-    "end_effector_type": "two_finger_gripper"
-  },
-  "alpha_bot_2_item_reversal": {
-    "dataset_name": "item_reversal",
-    "dataset_uuid": null,
-    "task_descriptions": [
-      "on the white table pick up the cup wit your left hand and hand it to your right hand then turn it over."
-    ],
-    "scene_type": [
-      "home"
-    ],
-    "atomic_actions": [
-      "grasp",
-      "place",
-      "pick"
-    ],
-    "objects": [
-      {
-        "object_name": "table",
-        "level1": "furniture",
-        "level2": "table",
-        "level3": null,
-        "level4": null,
-        "level5": null
-      },
-      {
-        "object_name": "cup",
-        "level1": "container",
-        "level2": "cup",
-        "level3": null,
-        "level4": null,
-        "level5": null
-      }
-    ],
-    "operation_platform_height": null,
-    "device_model": [
-      "alpha_bot_2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -4294,7 +4840,7 @@
       }
     ],
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
@@ -4349,7 +4895,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -4445,7 +4991,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -4539,7 +5085,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -4739,7 +5285,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -4785,7 +5331,7 @@
     ],
     "-operation_platform_height": null,
     "device_model": [
-      "ruantong_a2d"
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -4896,7 +5442,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -4942,7 +5488,7 @@
     ],
     "-operation_platform_height": null,
     "device_model": [
-      "ruantong_a2d"
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -4980,7 +5526,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -5018,7 +5564,7 @@
       }
     ],
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
@@ -5119,7 +5665,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -5157,7 +5703,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -5221,7 +5767,7 @@
       }
     ],
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
@@ -5286,7 +5832,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -5372,7 +5918,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -5422,7 +5968,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -5554,7 +6100,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -5659,7 +6205,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -5800,7 +6346,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -5830,7 +6376,53 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_moving_parts_c": {
+    "dataset_name": "moving_parts_c",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take the parts from the cabinet and place them on the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cabinet",
+        "level1": "furniture",
+        "level2": "cabinet",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parts",
+        "level1": "mechanical_parts",
+        "level2": "parts",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -5876,7 +6468,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -6293,7 +6885,7 @@
       }
     ],
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
@@ -6441,7 +7033,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -6495,7 +7087,61 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_hotel_services_i": {
+    "dataset_name": "hotel_services_i",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take out the card place it on the sensor for recognition and then transfer it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "card",
+        "level1": "nfc",
+        "level2": "card",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sensor",
+        "level1": "electronic_products",
+        "level2": "sensor",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -6541,7 +7187,61 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_box_storage_parcel_b": {
+    "dataset_name": "box_storage_parcel_b",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "moved the parcel from conveyor to table for the left to box."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parcel",
+        "level1": "container",
+        "level2": "parcel",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "conveyor_belt",
+        "level1": "tool",
+        "level2": "conveyor_belt",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -6587,7 +7287,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -6626,6 +7326,44 @@
     "operation_platform_height": 77.2,
     "device_model": [
       "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AgiBot-g1_box_storage_c": {
+    "dataset_name": "box_storage_c",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "put the box on the table into the big box."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -6672,7 +7410,115 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_hotel_services_aa": {
+    "dataset_name": "hotel_services_aa",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take out the card place it on the sensor for recognition and then transfer it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "card",
+        "level1": "nfc",
+        "level2": "card",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sensor",
+        "level1": "electronic_products",
+        "level2": "sensor",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_hotel_services_ae": {
+    "dataset_name": "hotel_services_ae",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take out the card place it on the sensor for recognition and then transfer it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "card",
+        "level1": "nfc",
+        "level2": "card",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sensor",
+        "level1": "electronic_products",
+        "level2": "sensor",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -6783,7 +7629,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -6878,52 +7724,6 @@
       "agilex_cobot_magic_aloha"
     ],
     "end_effector_type": "two_finger_gripper"
-  },
-  "alpha_bot_2_recover_after_touching_an_obstacle": {
-    "dataset_name": "recover_after_touching_an_obstacle",
-    "task_descriptions": [
-      "return to a safe position after touching an obstacle with your arm on the white table."
-    ],
-    "scene_type": [
-      "home"
-    ],
-    "atomic_actions": [
-      "pick",
-      "grasp",
-      null
-    ],
-    "objects": [
-      {
-        "object_name": "table",
-        "level1": "furniture",
-        "level2": "table",
-        "level3": null,
-        "level4": null,
-        "level5": null
-      },
-      {
-        "object_name": "mineral_water",
-        "level1": "drinks",
-        "level2": "mineral_water",
-        "level3": null,
-        "level4": null,
-        "level5": null
-      },
-      {
-        "object_name": "button",
-        "level1": "toy",
-        "level2": "button",
-        "level3": null,
-        "level4": null,
-        "level5": null
-      }
-    ],
-    "operation_platform_height": null,
-    "device_model": [
-      "alpha_bot_2"
-    ],
-    "end_effector_type": "two_finger_gripper",
-    "dataset_uuid": null
   },
   "leju_robot_pass_the_cleaner_a": {
     "dataset_name": "pass_the_cleaner_a",
@@ -7325,7 +8125,7 @@
       }
     ],
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
@@ -7380,7 +8180,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -7472,7 +8272,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "ruantong_a2d"
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -7518,7 +8318,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -7558,7 +8358,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -7606,7 +8406,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -8007,7 +8807,7 @@
       }
     ],
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
@@ -8054,7 +8854,61 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_hotel_services_e": {
+    "dataset_name": "hotel_services_e",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take out the card place it on the sensor for recognition and then transfer it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "card",
+        "level1": "nfc",
+        "level2": "card",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sensor",
+        "level1": "electronic_products",
+        "level2": "sensor",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -8100,7 +8954,53 @@
     ],
     "-operation_platform_height": null,
     "device_model": [
-      "ruantong_a2d"
+      "AgiBot-g1"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AgiBot-g1_mobile_accessory_storage_box_a": {
+    "dataset_name": "mobile_accessory_storage_box_a",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "move the position of the storage box with accessories on the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "accessories",
+        "level1": "electronic_products",
+        "level2": "accessories",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -8137,6 +9037,98 @@
     "operation_platform_height": 77.2,
     "device_model": [
       "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_moving_parts_b": {
+    "dataset_name": "moving_parts_b",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take the parts from the cabinet and place them on the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cabinet",
+        "level1": "furniture",
+        "level2": "cabinet",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parts",
+        "level1": "mechanical_parts",
+        "level2": "parts",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AgiBot-g1_battery_storage_b": {
+    "dataset_name": "battery_storage_b",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "place the batteries in the box on the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "battery",
+        "level1": "electronic_products",
+        "level2": "battery",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -8267,7 +9259,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -8334,7 +9326,61 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_hotel_services_b": {
+    "dataset_name": "hotel_services_b",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take out the card place it on the sensor for recognition and then transfer it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "card",
+        "level1": "nfc",
+        "level2": "card",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sensor",
+        "level1": "electronic_products",
+        "level2": "sensor",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -8391,6 +9437,44 @@
     "operation_platform_height": 77.2,
     "device_model": [
       "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AgiBot-g1_box_storage_a": {
+    "dataset_name": "box_storage_a",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "put the box on the table into the big box."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -8755,7 +9839,7 @@
       }
     ],
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
@@ -8798,7 +9882,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -8846,7 +9930,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -8892,7 +9976,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -8939,6 +10023,105 @@
     "operation_platform_height": 77.2,
     "device_model": [
       "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_box_storage_parcel_h": {
+    "dataset_name": "box_storage_parcel_h",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "moved the parcel from conveyor to table for the left to box."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parcel",
+        "level1": "container",
+        "level2": "parcel",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "conveyor_belt",
+        "level1": "tool",
+        "level2": "conveyor_belt",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AgiBot-g1_box_storage_cardboard_box_b": {
+    "dataset_name": "box_storage_cardboard_box_b",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "using a robotic arm to pick up a cardboard box and palace it the carton."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "place",
+      "pick",
+      "grasp"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "paper_box",
+        "level1": "tool",
+        "level2": "paper_box",
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "carton",
+        "level1": "tool",
+        "level2": "carton",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -9354,10 +10537,55 @@
       }
     ],
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
+  },
+  "AgiBot-g1_box_storage_cardboard_box_c": {
+    "dataset_name": "box_storage_cardboard_box_c",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "using a robotic arm to pick up a cardboard box and palace it the carton."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "place",
+      "pick",
+      "grasp"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "paper_box",
+        "level1": "tool",
+        "level2": "paper_box",
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "carton",
+        "level1": "tool",
+        "level2": "carton",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "AgiBot-g1"
+    ],
+    "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_movethe_position_of_the_bluetooth": {
     "dataset_name": "movethe_position_of_the_bluetooth",
@@ -9480,7 +10708,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -9560,7 +10788,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -9606,7 +10834,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -9979,7 +11207,7 @@
       }
     ],
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
@@ -10034,7 +11262,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -10088,7 +11316,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -10155,7 +11383,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -10185,7 +11413,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -10282,6 +11510,58 @@
     "operation_platform_height": 77.2,
     "device_model": [
       "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AgiBot-g1_storage_item_e": {
+    "dataset_name": "storage_item_e",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "put the tools in the box."
+    ],
+    "scene_type": [
+      "factory"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "data_cable",
+        "level1": "tool",
+        "level2": "data_cable",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null
+      },
+      {
+        "object_name": "mouse",
+        "level1": "tool",
+        "level2": "mouse",
+        "level3": null,
+        "level4": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -10646,7 +11926,7 @@
       }
     ],
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
@@ -11012,10 +12292,64 @@
       }
     ],
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
+  },
+  "leju_robot_hotel_services_ac": {
+    "dataset_name": "hotel_services_ac",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take out the card place it on the sensor for recognition and then transfer it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "card",
+        "level1": "nfc",
+        "level2": "card",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sensor",
+        "level1": "electronic_products",
+        "level2": "sensor",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
+    ],
+    "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_fold_towel_a": {
     "dataset_name": "fold_towel_a",
@@ -11106,7 +12440,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -11211,7 +12545,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -11309,7 +12643,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -11363,7 +12697,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -11420,7 +12754,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -11490,7 +12824,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -11552,7 +12886,61 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_box_storage_parcel_a": {
+    "dataset_name": "box_storage_parcel_a",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "moved the parcel from conveyor to table for the left to box."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parcel",
+        "level1": "container",
+        "level2": "parcel",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "conveyor_belt",
+        "level1": "tool",
+        "level2": "conveyor_belt",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -11634,7 +13022,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -11731,7 +13119,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -11804,7 +13192,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -11840,7 +13228,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -11886,7 +13274,53 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_moving_parts_k": {
+    "dataset_name": "moving_parts_k",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take the parts from the cabinet and place them on the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cabinet",
+        "level1": "furniture",
+        "level2": "cabinet",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parts",
+        "level1": "mechanical_parts",
+        "level2": "parts",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -11933,7 +13367,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -11971,7 +13405,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -12336,7 +13770,7 @@
       }
     ],
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
@@ -12391,7 +13825,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -12533,7 +13967,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -12572,6 +14006,60 @@
     "operation_platform_height": 77.2,
     "device_model": [
       "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_hotel_services_d": {
+    "dataset_name": "hotel_services_d",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take out the card place it on the sensor for recognition and then transfer it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "card",
+        "level1": "nfc",
+        "level2": "card",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sensor",
+        "level1": "electronic_products",
+        "level2": "sensor",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -12626,7 +14114,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -12689,7 +14177,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -12727,7 +14215,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -12836,7 +14324,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -12888,15 +14376,15 @@
     ],
     "-operation_platform_height": null,
     "device_model": [
-      "ruantong_a2d"
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
-  "alpha_bot_2_move_the_table": {
-    "dataset_name": "move_the_table",
+  "leju_robot_moving_parts_f": {
+    "dataset_name": "moving_parts_f",
     "dataset_uuid": null,
     "task_descriptions": [
-      "human machine collaborative table moving."
+      "take the parts from the cabinet and place them on the table."
     ],
     "scene_type": [
       "home"
@@ -12914,11 +14402,27 @@
         "level3": null,
         "level4": null,
         "level5": null
+      },
+      {
+        "object_name": "cabinet",
+        "level1": "furniture",
+        "level2": "cabinet",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parts",
+        "level1": "mechanical_parts",
+        "level2": "parts",
+        "level3": null,
+        "level4": null,
+        "level5": null
       }
     ],
     "operation_platform_height": null,
     "device_model": [
-      "alpha_bot_2"
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -13050,7 +14554,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -13146,7 +14650,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -13235,7 +14739,115 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_box_storage_parcel_j": {
+    "dataset_name": "box_storage_parcel_j",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "moved the parcel from conveyor to table for the left to box."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parcel",
+        "level1": "container",
+        "level2": "parcel",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "conveyor_belt",
+        "level1": "tool",
+        "level2": "conveyor_belt",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_hotel_services_af": {
+    "dataset_name": "hotel_services_af",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take out the card place it on the sensor for recognition and then transfer it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "card",
+        "level1": "nfc",
+        "level2": "card",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sensor",
+        "level1": "electronic_products",
+        "level2": "sensor",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -13289,7 +14901,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -13654,7 +15266,7 @@
       }
     ],
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
@@ -13693,7 +15305,53 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AgiBot-g1_mobile_accessory_storage_box_c": {
+    "dataset_name": "mobile_accessory_storage_box_c",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "move the position of the storage box with accessories on the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "accessories",
+        "level1": "electronic_products",
+        "level2": "accessories",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": [
+      "AgiBot-g1"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -13884,7 +15542,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -13976,7 +15634,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -14215,7 +15873,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "realman_rmc_aidal"
+      "RMC-AIDA-L"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -14254,7 +15912,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -14620,7 +16278,7 @@
       }
     ],
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
@@ -14667,7 +16325,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -14705,7 +16363,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -14743,7 +16401,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -14789,7 +16447,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -14837,7 +16495,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -15201,7 +16859,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -15255,7 +16913,61 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_box_storage_parcel_c": {
+    "dataset_name": "box_storage_parcel_c",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "moved the parcel from conveyor to table for the left to box."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parcel",
+        "level1": "container",
+        "level2": "parcel",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "conveyor_belt",
+        "level1": "tool",
+        "level2": "conveyor_belt",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -15317,7 +17029,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -15512,7 +17224,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -15877,7 +17589,7 @@
       }
     ],
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
@@ -15932,7 +17644,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -15970,47 +17682,9 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
-  },
-  "alpha_bot_2_operate_the_microwave_oven": {
-    "dataset_name": "operate_the_microwave_oven",
-    "task_descriptions": [
-      "set the temperature of the microwave oven and turn it on. Open the door of the microwave oven and then close it."
-    ],
-    "scene_type": [
-      "home"
-    ],
-    "atomic_actions": [
-      "pullapart",
-      "pushtogether",
-      "turn"
-    ],
-    "objects": [
-      {
-        "object_name": "microwave_oven",
-        "level1": "kitchenware",
-        "level2": "microwave_oven",
-        "level3": null,
-        "level4": null,
-        "level5": null
-      },
-      {
-        "object_name": "table",
-        "level1": "furniture",
-        "level2": "table",
-        "level3": null,
-        "level4": null,
-        "level5": null
-      }
-    ],
-    "operation_platform_height": null,
-    "device_model": [
-      "alpha_bot_2"
-    ],
-    "end_effector_type": "two_finger_gripper",
-    "dataset_uuid": null
   },
   "AIRBOT_MMK2_lemon_and_orange_storage": {
     "dataset_name": "lemon_and_orange_storage",
@@ -16062,7 +17736,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -16108,7 +17782,61 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_hotel_services_a": {
+    "dataset_name": "hotel_services_a",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take out the card place it on the sensor for recognition and then transfer it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "card",
+        "level1": "nfc",
+        "level2": "card",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sensor",
+        "level1": "electronic_products",
+        "level2": "sensor",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "leju_robot"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -16165,7 +17893,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -16258,7 +17986,7 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "discover_robotics_aitbot_mmk2"
+      "AIRBOT_MMK2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
@@ -16313,7 +18041,7 @@
     ],
     "operation_platform_height": null,
     "device_model": [
-      "galaxea_r1_lite"
+      "R1_Lite"
     ],
     "end_effector_type": "two_finger_gripper"
   }

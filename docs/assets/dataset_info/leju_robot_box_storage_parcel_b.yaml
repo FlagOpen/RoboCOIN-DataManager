@@ -1,0 +1,39 @@
+dataset_name: box_storage_parcel_b
+dataset_uuid:
+task_descriptions:
+- moved the parcel from conveyor to table for the left to box.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: parcel
+  level1: container
+  level2: parcel
+  level3:
+  level4:
+  level5:
+- object_name: conveyor_belt
+  level1: tool
+  level2: conveyor_belt
+  level3:
+  level4:
+  level5:
+- object_name: box
+  level1: container
+  level2: box
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- leju_robot
+end_effector_type: two_finger_gripper

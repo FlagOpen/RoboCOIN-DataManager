@@ -1,5 +1,5 @@
 dataset_name: clean_table
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - wipe off the black water stains in the middle of the table with a blue rag.
 - wipe off the brown water stains in the middle of the table with a blue rag.
@@ -17,34 +17,34 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: cup
   level1: container
   level2: cup
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: blue_rag
   level1: clothing
   level2: blue_rag
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: pruple_rag
   level1: clothing
   level2: pruple_rag
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: water
   level1: drink
   level2: water
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 operation_platform_height: 77.2
 device_model:
-- realman_rmc_aidal
+- RMC-AIDA-L
 end_effector_type: two_finger_gripper

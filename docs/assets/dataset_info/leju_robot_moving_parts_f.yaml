@@ -1,0 +1,33 @@
+dataset_name: moving_parts_f
+dataset_uuid:
+task_descriptions:
+- take the parts from the cabinet and place them on the table.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- place
+- pick
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: cabinet
+  level1: furniture
+  level2: cabinet
+  level3:
+  level4:
+  level5:
+- object_name: parts
+  level1: mechanical_parts
+  level2: parts
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- leju_robot
+end_effector_type: two_finger_gripper
