@@ -19,164 +19,12 @@
 }
 
 .toolbar-actions::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 0.15rem;
+    background: transparent;
 }
 
 .toolbar-actions::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.25);
-    border-radius: 0.15rem;
-}
-
-.toolbar-actions::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.4);
-}
-
-@media (pointer: coarse) {
-    .toolbar-actions::-webkit-scrollbar {
-        height: 0.375rem;
-    }
-    
-    .toolbar-actions::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, 0.3);
-    }
-}
-
-.btn-group {
-    display: flex;
-    gap: clamp(0.25rem, 0.2rem + 0.25vw, 0.375rem);
-    align-items: center;
-    flex-shrink: 0;
-    flex-wrap: nowrap;
-    padding: clamp(0.3rem, 0.25rem + 0.25vw, 0.5rem) clamp(0.5rem, 0.4rem + 0.3vw, 0.75rem);
-    position: relative;
-    z-index: 1;
-    white-space: nowrap;
-    
-    background: var(--color-bg-light);
-    
-    border: 1px solid var(--color-bg-gray);
-    border-radius: var(--border-radius-lg);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.btn-group .btn-toolbar {
-    position: relative;
-    z-index: 2;
-}
-
-.btn-toolbar {
-    padding: clamp(0.2rem, 0.15rem + 0.25vw, 0.35rem) clamp(0.4rem, 0.3rem + 0.4vw, 0.625rem);
-    border: 1px solid var(--color-bg-gray);
-    background: #ffffff;
-    color: var(--color-text-primary);
-    border-radius: var(--border-radius-sm);
-    cursor: pointer;
-    font-size: clamp(0.5625rem, 0.5rem + 0.4vw, 0.8125rem);
-    font-weight: 500;
-    white-space: nowrap;
-    flex-shrink: 0;
-    transition: all 0.15s ease;
-    line-height: 1.2;
-}
-
-.btn-toolbar:hover {
-    background: var(--color-bg-light);
-    border-color: var(--color-bg-gray-dark);
-}
-
-.btn-toolbar.primary {
-    background: var(--color-primary);
-    color: #ffffff;
-    border: 1px solid var(--color-primary);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    font-weight: 600;
-    letter-spacing: 0.01em;
-}
-
-.btn-toolbar.primary:hover {
-    background: var(--color-primary-hover);
-    border-color: var(--color-primary-hover);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.btn-toolbar.primary:active,
-.btn-toolbar.primary.click-animate {
-    background: var(--color-primary-active);
-    border-color: var(--color-primary-active);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.btn-toolbar.success {
-    background: var(--color-success);
-    color: #ffffff;
-    border: 1px solid var(--color-success);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    margin-left: auto;
-}
-
-.btn-toolbar.success:hover {
-    background: var(--color-success-hover);
-    border-color: var(--color-success-hover);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.btn-toolbar.success:active,
-.btn-toolbar.success.click-animate {
-    background: #047857;
-    border-color: #047857;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.btn-toolbar.danger {
-    background: var(--color-danger);
-    color: #ffffff;
-    border: 1px solid var(--color-danger);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    font-weight: 600;
-    letter-spacing: 0.01em;
-}
-
-.btn-toolbar.danger:hover {
-    background: var(--color-danger-hover);
-    border-color: var(--color-danger-hover);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.btn-toolbar.danger:active,
-.btn-toolbar.danger.click-animate {
-    background: #b91c1c;
-    border-color: #b91c1c;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.btn-toolbar.secondary {
-    background: #64748b;
-    color: #ffffff;
-    border: 1px solid #64748b;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    font-weight: 600;
-    letter-spacing: 0.01em;
-}
-
-.btn-toolbar.secondary:hover {
-    background: #475569;
-    border-color: #475569;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.btn-toolbar.secondary:active,
-.btn-toolbar.secondary.click-animate {
-    background: #334155;
-    border-color: #334155;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-/* Click animation class */
-.btn-toolbar.click-animate {
-    animation: buttonClickScale 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--color-bg-gray-dark);
+    border-radius: var(--border-radius-pill);
 }
 
 /* ==================== Video Panel ==================== */
@@ -185,7 +33,7 @@
     width: var(--video-panel-width);
     display: flex;
     flex-direction: column;
-    background: #ffffff;
+    background: var(--color-bg-body);
     padding: 0;
 }
 
@@ -214,29 +62,32 @@
 /* ==================== Video Card ==================== */
 
 .video-card {
-    background: #ffffff;
+    background: white;
     border-radius: var(--border-radius);
     overflow: hidden;
     cursor: pointer;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
-    border: 1px solid var(--color-bg-gray);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--color-border);
     position: absolute;
     display: flex;
     width: var(--grid-card-width);
     height: var(--grid-card-height);
     margin: 0;
     flex-direction: column;
+    box-shadow: var(--shadow-sm);
 }
 
 .video-card:hover {
-    border-color: var(--color-bg-gray-dark);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-color: var(--color-primary-light);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+    z-index: 10;
 }
 
 .video-card.selected {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 2px var(--color-primary);
-    transform: scale(1.01);
+    box-shadow: 0 0 0 2px var(--color-primary), var(--shadow-md);
+    transform: translateY(-2px);
 }
 
 /* ==================== Video Thumbnail ==================== */
@@ -244,19 +95,24 @@
 .video-thumbnail {
     width: 100%;
     aspect-ratio: 16/9;
-    background: #000;
+    background: var(--color-bg-surface);
     position: relative;
     overflow: hidden;
     flex-shrink: 0;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .video-thumbnail .thumbnail-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.2s ease;
+    transition: transform 0.4s ease;
     position: relative;
     z-index: 1;
+}
+
+.video-card:hover .thumbnail-image {
+    transform: scale(1.05);
 }
 
 .video-thumbnail video,
@@ -268,7 +124,7 @@
     top: 0;
     left: 0;
     z-index: 2;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.3s ease;
     opacity: 0;
     pointer-events: none;
 }
@@ -278,83 +134,91 @@
     pointer-events: auto;
 }
 
-.video-thumbnail .play-indicator {
-    display: none;
-}
-
 .video-error {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    font-size: 0.875rem;
-    background: rgba(0, 0, 0, 0.7);
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    background: var(--color-bg-surface);
     padding: 0.5rem 0.75rem;
-    border-radius: 0.25rem;
+    border-radius: var(--border-radius-sm);
     display: none;
+    border: 1px solid var(--color-border);
 }
 
 .video-success-badge {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     z-index: 11;
     line-height: 1;
-    background: white;
+    background: var(--color-success);
+    color: white;
     border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-md);
+    animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
 
 /* ==================== Video Info ==================== */
 
 .video-info {
-    padding: 0.75rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    flex: 1;
+    background: white;
 }
 
 .video-title {
-    font-size: clamp(0.75rem, 0.6875rem + 0.25vw, 0.875rem);
+    font-size: 0.9375rem;
     font-weight: 600;
     line-height: 1.4;
     height: 2.625rem;
     overflow: hidden;
-    word-wrap: break-word;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.75rem 0;
     color: var(--color-text-primary);
 }
 
 .video-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.25rem;
+    gap: 0.375rem;
     align-content: flex-start;
     overflow: hidden;
     width: 100%;
-    min-width: 0;
-    height: 3.25rem;
-    max-height: 3.25rem;
+    flex: 1;
 }
 
 .video-tag {
-    padding: 0.125rem 0.4375rem;
-    background: var(--color-primary-bg);
-    border: 1px solid var(--color-primary);
-    border-radius: 1.5rem;
-    font-size: 0.6875rem;
-    color: var(--color-primary);
+    padding: 0.125rem 0.5rem;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
     font-weight: 500;
     flex: 0 1 auto;
     min-width: 0;
@@ -362,28 +226,26 @@
     height: 1.5rem;
     display: inline-flex;
     align-items: center;
-    vertical-align: middle;
-    position: relative;
-    gap: 0.125rem;
+    transition: all 0.2s ease;
+}
+
+.video-card:hover .video-tag {
+    border-color: var(--color-primary-light);
+    color: var(--color-primary);
+    background: var(--color-primary-bg);
 }
 
 .video-tag .tag-text {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    min-width: 0;
-    flex: 1 1 auto;
 }
 
 .video-tag .tag-count {
-    font-size: 0.5rem;
+    font-size: 0.625rem;
     font-weight: 600;
-    vertical-align: super;
-    line-height: 0;
-    white-space: nowrap;
-    flex-shrink: 0;
-    display: inline-block;
-    margin-left: 0.1rem;
+    margin-left: 0.25rem;
+    opacity: 0.7;
 }
 
 /* ==================== Video Hover Overlay ==================== */
@@ -394,64 +256,52 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    color: var(--color-text-primary);
+    padding: 1.25rem;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
-    transition-delay: 0s;
+    transition: all 0.3s ease;
     z-index: 10;
     overflow-y: auto;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    gap: 0.625rem;
+    gap: 0.75rem;
     cursor: pointer;
 }
 
 .video-hover-overlay.delayed-show {
     opacity: 1;
     visibility: visible;
-    transition-delay: 0s;
-}
-
-.video-hover-overlay.touch-active {
-    opacity: 1 !important;
-    visibility: visible !important;
 }
 
 .hover-title {
-    font-size: 0.8125rem;
-    font-weight: 600;
-    margin-bottom: 0.375rem;
-    padding-bottom: 0.375rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    word-wrap: break-word;
-    word-break: break-word;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-primary);
 }
 
 .hover-info-group {
-    margin-bottom: 0.375rem;
+    margin-bottom: 0.5rem;
 }
 
 .hover-info-label {
-    font-size: 0.625rem;
-    color: #adb5bd;
+    font-size: 0.6875rem;
+    color: var(--color-text-muted);
     margin-bottom: 0.25rem;
     font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .hover-info-content {
-    font-size: 0.6875rem;
+    font-size: 0.8125rem;
     line-height: 1.5;
-    color: #fff;
-    display: block;
-    word-wrap: break-word;
-    word-break: break-word;
-    white-space: normal;
-    overflow-wrap: break-word;
+    color: var(--color-text-secondary);
 }
 
 .hover-info-content.tags {
@@ -462,13 +312,10 @@
 
 .hover-tag {
     display: inline-block;
-    padding: 0.125rem 0.375rem;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 0.1875rem;
-    font-size: 0.625rem;
-    word-break: break-word;
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    box-sizing: border-box;
+    padding: 0.125rem 0.5rem;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--color-text-primary);
 }
-

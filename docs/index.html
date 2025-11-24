@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,6 +18,7 @@
 
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <!-- 加载动画覆盖层 -->
     <div class="loading-overlay" id="loadingOverlay">
@@ -34,7 +36,7 @@
             <span class="version-badge">v1.0</span>
         </div>
     </div>
-    
+
     <!-- Filter Control Bar -->
     <div class="filter-control-bar">
         <div class="filter-control-container">
@@ -42,25 +44,25 @@
                 <span class="filter-trigger-text">Filters</span>
                 <span class="filter-trigger-count" id="filterTriggerCount"></span>
             </button>
-            
+
             <button class="btn-selection secondary" id="resetFiltersBtn">Reset</button>
-            
+
             <div class="top-selection-container">
                 <span class="selection-prefix-box">ALL</span>
                 <button class="btn-toolbar primary" id="selectAllBtn">Select</button>
                 <button class="btn-toolbar danger" id="deselectAllBtn">Deselect</button>
             </div>
-            
+
             <div class="filter-search-container">
                 <input type="text" id="searchBox" class="filter-search-input" placeholder="Search datasets...">
             </div>
-            
+
             <div class="cart-actions-container">
                 <button class="btn-toolbar success" id="addToListBtn">Add</button>
                 <button class="btn-toolbar danger" id="deleteFromListBtn">Remove</button>
                 <button class="btn-toolbar secondary" id="clearListBtn">Clear</button>
             </div>
-            
+
             <div class="filter-stats-inline">
                 <span class="stat-inline">
                     <span class="stat-label">Results:</span>
@@ -72,9 +74,6 @@
                 </span>
             </div>
         </div>
-        
-        <!-- Active Filter Tags -->
-        <div class="filter-tags-container" id="filterTagsContainer"></div>
     </div>
 
     <!-- Filter Dropdown Overlay -->
@@ -83,15 +82,13 @@
             <div class="filter-dropdown-header">
                 <h3 class="filter-dropdown-title">Filter Datasets</h3>
                 <div class="filter-finder">
-                    <input type="text" 
-                           id="filterFinderInput" 
-                           class="filter-finder-input" 
-                           placeholder="Search filter options... (Ctrl+F)"
-                           autocomplete="off"
-                           spellcheck="false">
+                    <input type="text" id="filterFinderInput" class="filter-finder-input"
+                        placeholder="Search filter options... (Ctrl+F)" autocomplete="off" spellcheck="false">
                     <div class="filter-finder-nav">
-                        <button class="filter-finder-btn" id="filterFinderPrev" title="Previous match (↑)" disabled>↑</button>
-                        <button class="filter-finder-btn" id="filterFinderNext" title="Next match (↓)" disabled>↓</button>
+                        <button class="filter-finder-btn" id="filterFinderPrev" title="Previous match (↑)"
+                            disabled>↑</button>
+                        <button class="filter-finder-btn" id="filterFinderNext" title="Next match (↓)"
+                            disabled>↓</button>
                         <span class="filter-finder-count" id="filterFinderCount">0/0</span>
                     </div>
                 </div>
@@ -119,9 +116,9 @@
                     <input type="file" id="importFile" accept=".json" style="display: none;">
                 </div>
             </div>
-            
+
             <div class="selection-list" id="selectionList"></div>
-            
+
             <div class="selection-footer">
                 <div class="selection-actions">
                     <button class="btn-selection" id="importBtn">Import JSON</button>
@@ -131,7 +128,8 @@
                     <div style="font-size: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
                         <span style="font-weight: 500;">Hub Source:</span>
                         <div class="hub-buttons-container">
-                            <button class="btn-hub active" id="hubBtnHuggingFace" data-hub="huggingface">HuggingFace</button>
+                            <button class="btn-hub active" id="hubBtnHuggingFace"
+                                data-hub="huggingface">HuggingFace</button>
                             <button class="btn-hub" id="hubBtnModelScope" data-hub="modelscope">ModelScope</button>
                         </div>
                     </div>
@@ -151,9 +149,10 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 
     <script type="module" src="./js/main.js?v=20251119-fix-tooltip"></script>
 </body>
+
 </html>

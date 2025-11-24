@@ -1,0 +1,198 @@
+/**
+ * IDE Theme - Geometric & Minimalist
+ * Inspired by JetBrains IDEs and Python indentation
+ */
+
+/* ==================== Geometric Shapes ==================== */
+/* Base shape class */
+.geo-shape {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    transition: clip-path var(--transition-duration) var(--ease-out-expo),
+        background-color var(--transition-duration) linear,
+        transform var(--transition-duration) var(--ease-out-expo);
+    vertical-align: middle;
+}
+
+/* Shape variants using clip-path */
+.geo-circle {
+    clip-path: circle(50% at 50% 50%);
+    border-radius: 50%;
+    /* Fallback */
+}
+
+.geo-square {
+    clip-path: inset(0 0 0 0);
+    border-radius: 1px;
+    /* Slight softening for "sharp" look */
+}
+
+.geo-triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.geo-triangle-right {
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+
+.geo-triangle-down {
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+.geo-diamond {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* ==================== Interactive Morphing ==================== */
+/* 
+ * Usage: <span class="geo-morph-trigger"><span class="geo-shape geo-circle"></span></span>
+ * When parent is hovered/active, shape changes.
+ */
+
+.geo-morph-trigger:hover .geo-shape.geo-circle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    /* Morph to triangle */
+    background-color: var(--color-primary);
+}
+
+.geo-morph-trigger:active .geo-shape {
+    transform: scale(0.9);
+}
+
+/* Active state morphing (e.g. for toggle buttons) */
+.active .geo-shape.geo-circle {
+    clip-path: inset(0 0 0 0);
+    /* Morph to square when active */
+}
+
+/* ==================== Python Indentation Lines ==================== */
+/* 
+ * Adds a vertical line to the left of the element to mimic code indentation.
+ */
+.indent-line {
+    position: relative;
+    padding-left: var(--hierarchy-indent);
+    margin-left: 2px;
+}
+
+.indent-line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--color-border);
+    opacity: 0.5;
+    transition: background-color 0.2s;
+}
+
+.indent-line:hover::before {
+    background-color: var(--color-primary);
+    opacity: 1;
+}
+
+/* Apply to filter options */
+.filter-option-wrapper {
+    position: relative;
+    border-left: 1px solid var(--color-border);
+    /* The indentation line */
+    margin-left: 12px;
+    /* Spacing for the line */
+    padding-left: 8px;
+    /* Spacing between line and content */
+}
+
+.filter-option-wrapper[data-level="0"] {
+    border-left: none;
+    /* No line for top level */
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* Filter Tags as Code Tokens */
+.filter-tag {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    border-radius: 2px;
+    /* Sharp corners */
+    background-color: var(--color-bg-surface-hover);
+    border: 1px solid var(--color-border);
+    padding: 2px 8px;
+}
+
+.filter-tag:hover {
+    background-color: var(--color-selection-bg);
+    border-color: var(--color-selection-border);
+    color: var(--color-primary);
+}
+
+/* ==================== IDE Layout Utilities ==================== */
+.ide-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    /* Tight gap like IDE toolbars */
+    background-color: var(--color-bg-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding: 4px 8px;
+}
+
+.ide-btn {
+    border: 1px solid transparent;
+    border-radius: 2px;
+    /* Sharp corners */
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    /* Monospace font */
+    font-size: 0.85rem;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: all 0.1s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ide-btn:hover {
+    background-color: var(--color-bg-surface-hover);
+    color: var(--color-text-primary);
+}
+
+.ide-btn.active {
+    background-color: var(--color-selection-bg);
+    color: var(--color-primary);
+    border-color: var(--color-selection-border);
+}
+
+/* Status Bar Style */
+.ide-status-bar {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-family: monospace;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ==================== Animations ==================== */
+@keyframes pulse-geo {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animate-pulse-geo {
+    animation: pulse-geo 0.3s ease-in-out;
+}

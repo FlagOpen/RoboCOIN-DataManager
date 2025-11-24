@@ -16,6 +16,7 @@
 @import './filter.css';
 @import './video-grid.css';
 @import './selection-panel.css';
+@import './code-detail.css';
 @import './modal.css';
 
 /* Animations */
@@ -23,4 +24,3 @@
 
 /* Responsive overrides */
 @import './responsive.css';
-

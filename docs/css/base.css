@@ -5,51 +5,32 @@
 
 /* ==================== Fluid Typography ==================== */
 html {
-    /* Fluid font size: 13px on mobile to 18px on desktop */
-    font-size: clamp(13px, 0.8125rem + 0.3125vw, 18px);
-}
-
-/* Fallback for browsers that don't support clamp */
-@supports not (font-size: clamp(13px, 1vw, 18px)) {
-    html {
-        font-size: 14px;
-    }
-
-    @media (min-width: 768px) {
-        html { font-size: 15px; }
-    }
-
-    @media (min-width: 1024px) {
-        html { font-size: 16px; }
-    }
-
-    @media (min-width: 1440px) {
-        html { font-size: 17px; }
-    }
-    
-    @media (min-width: 1920px) {
-        html { font-size: 18px; }
-    }
+    /* Fluid font size: 14px on mobile to 16px on desktop */
+    font-size: clamp(14px, 0.875rem + 0.25vw, 16px);
 }
 
 /* ==================== Basic Resets ==================== */
-* { 
+* {
     box-sizing: border-box;
 }
 
+html,
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
-    background: #f8fafc;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-family-sans);
+    background: var(--color-bg-body);
+    color: var(--color-text-primary);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    color: var(--color-text-primary);
-    transform: scale(0.8);
-    transform-origin: 0 0;
-    width: 125%;
-    height: 125vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* ==================== Global Scrollbar Styles ==================== */
@@ -59,15 +40,29 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 0.25rem;
+    background: var(--color-bg-gray-dark);
+    border-radius: var(--border-radius-pill);
+    border: 2px solid transparent;
+    background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: var(--color-text-muted);
+    border: 2px solid transparent;
+    background-clip: content-box;
 }
 
+/* ==================== Selection & Focus ==================== */
+::selection {
+    background: rgba(59, 130, 246, 0.3);
+    color: inherit;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}

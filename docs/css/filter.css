@@ -1,88 +1,73 @@
 /* ==================== Filter Control Bar ==================== */
 .filter-control-bar {
     width: 100%;
-    background: #ffffff;
-    border-bottom: 1px solid var(--color-bg-gray);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
     z-index: 900;
+    transition: all 0.3s ease;
 }
 
 .filter-control-container {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 0.75rem 1.25rem;
+    padding: 0.75rem 1.5rem;
     flex-wrap: wrap;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
-.top-selection-container {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.selection-prefix-box {
-    font-weight: 700;
-    font-size: 0.9375rem;
-    color: var(--color-text-primary);
-    padding: 0.375rem 0.75rem;
-    border: 2px solid var(--color-primary);
-    border-radius: var(--border-radius-sm);
-    background: var(--color-primary-bg);
-    letter-spacing: 0.03em;
-}
-
-.cart-actions-container {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-left: auto;
-}
-
-#resetFiltersBtn {
-    flex: 0 0 auto;
-    min-width: auto;
-    width: auto;
-    padding: 0.5rem 0.875rem;
-    height: 2.375rem;
-}
-
-.filter-trigger-btn {
-    display: flex;
+/* ==================== Chip Buttons ==================== */
+.filter-trigger-btn,
+.btn-selection,
+.btn-toolbar {
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    background: var(--color-primary);
-    color: white;
-    border: none;
-    border-radius: var(--border-radius-sm);
+    height: 2.5rem;
+    border-radius: 9999px;
+    /* Pill shape */
     font-size: 0.875rem;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.15s ease;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    height: 2.375rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--color-border);
+    background: white;
+    color: var(--color-text-secondary);
+    box-shadow: var(--shadow-sm);
 }
 
-.top-selection-container .btn-toolbar {
-    height: 2.375rem;
-    padding: 0.5rem 0.625rem;
-    display: flex;
-    align-items: center;
+.filter-trigger-btn:hover,
+.btn-selection:hover,
+.btn-toolbar:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary-light);
+    color: var(--color-primary);
+}
+
+.filter-trigger-btn:active,
+.btn-selection:active,
+.btn-toolbar:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Primary Filter Trigger */
+.filter-trigger-btn {
+    background: var(--color-primary-bg);
+    border-color: var(--color-primary-light);
+    color: var(--color-primary);
+    font-weight: 600;
 }
 
 .filter-trigger-btn:hover {
-    background: var(--color-primary-hover);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transform: translateY(-1px);
-}
-
-.filter-trigger-btn:active {
-    transform: translateY(0);
-}
-
-.filter-trigger-icon {
-    font-size: 1rem;
+    background: var(--color-primary);
+    color: white;
 }
 
 .filter-trigger-count {
@@ -92,52 +77,122 @@
     min-width: 1.25rem;
     height: 1.25rem;
     padding: 0 0.375rem;
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 0.625rem;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 9999px;
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.filter-trigger-btn:hover .filter-trigger-count {
+    background: white;
+    color: var(--color-primary);
 }
 
 .filter-trigger-count:empty {
     display: none;
 }
 
+/* Toolbar Buttons (Select/Deselect/Add/Remove) */
+.btn-toolbar.primary {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+}
+
+.btn-toolbar.primary:hover {
+    background: var(--color-primary-hover);
+}
+
+.btn-toolbar.danger {
+    color: var(--color-danger);
+    border-color: var(--color-danger);
+    background: white;
+}
+
+.btn-toolbar.danger:hover {
+    background: var(--color-danger);
+    color: white;
+}
+
+.btn-toolbar.success {
+    background: var(--color-success);
+    color: white;
+    border: none;
+}
+
+.btn-toolbar.success:hover {
+    background: #059669;
+    /* Darker green */
+}
+
+/* Top Selection Container */
+.top-selection-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-right: 1rem;
+    border-right: 1px solid var(--color-border);
+}
+
+.selection-prefix-box {
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    padding: 0.25rem 0.75rem;
+    background: var(--color-primary-bg);
+    border-radius: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+/* Search Box */
 .filter-search-container {
     flex: 1;
-    min-width: 200px;
-    max-width: 500px;
+    min-width: 240px;
+    max-width: 480px;
+    position: relative;
 }
 
 .filter-search-input {
     width: 100%;
-    padding: 0.5rem 0.75rem;
-    border: 1px solid var(--color-bg-gray);
-    border-radius: var(--border-radius-sm);
+    height: 2.5rem;
+    padding: 0 1rem 0 2.5rem;
+    /* Space for icon */
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
     font-size: 0.875rem;
-    transition: all 0.15s ease;
-    outline: none;
+    transition: all 0.2s ease;
+    background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 0.75rem center / 1rem;
 }
 
 .filter-search-input:focus {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+    outline: none;
 }
 
+/* Cart Actions */
+.cart-actions-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+    transition: all 0.3s ease;
+}
+
+/* Stats */
 .filter-stats-inline {
     display: flex;
     gap: 1.5rem;
     font-size: 0.875rem;
     color: var(--color-text-secondary);
-}
-
-.stat-inline {
-    display: flex;
-    gap: 0.375rem;
-    align-items: center;
-}
-
-.stat-label {
-    color: var(--color-text-muted);
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid var(--color-border);
 }
 
 .stat-inline strong {
@@ -145,14 +200,13 @@
     font-weight: 600;
 }
 
-/* ==================== Filter Tags Container ==================== */
+/* ==================== Active Filter Tags ==================== */
 .filter-tags-container {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    padding: 0 1.25rem 0.75rem;
+    padding: 0 1.5rem 0.75rem;
     min-height: 0;
-    transition: all 0.3s ease;
 }
 
 .filter-tags-container:empty {
@@ -163,44 +217,55 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.375rem 0.75rem;
-    background: var(--color-primary-bg);
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
-    border-radius: 1rem;
+    padding: 0.25rem 0.75rem;
+    background: white;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
     font-size: 0.8125rem;
     font-weight: 500;
-    transition: all 0.15s ease;
-    animation: tagSlideIn 0.2s ease;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+    animation: tagSlideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-tag-text {
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.filter-tag:hover {
+    border-color: var(--color-primary-light);
+    color: var(--color-primary);
+    transform: translateY(-1px);
 }
 
 .filter-tag-close {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1rem;
-    height: 1rem;
-    background: transparent;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: var(--color-bg-gray);
     border: none;
     border-radius: 50%;
-    color: var(--color-primary);
-    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    font-size: 0.75rem;
     cursor: pointer;
     transition: all 0.15s ease;
     padding: 0;
-    line-height: 1;
 }
 
 .filter-tag-close:hover {
-    background: var(--color-primary);
+    background: var(--color-danger);
     color: white;
+}
+
+@keyframes tagSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 /* ==================== Filter Dropdown Overlay ==================== */
@@ -210,7 +275,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(15, 23, 42, 0.4);
+    /* Slate 900 with opacity */
+    backdrop-filter: blur(4px);
     z-index: 1000;
     display: none;
     opacity: 0;
@@ -221,7 +288,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 2rem;
+    padding: 4rem 2rem;
     overflow-y: auto;
 }
 
@@ -230,577 +297,232 @@
 }
 
 .filter-dropdown {
-    background: #ffffff;
+    background: white;
     border-radius: var(--border-radius-lg);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-lg);
     width: 100%;
     max-width: 900px;
-    max-height: 85vh;
+    max-height: 80vh;
     display: flex;
     flex-direction: column;
-    transform: translateY(-20px);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .filter-dropdown-overlay.show .filter-dropdown {
-    transform: translateY(0);
+    transform: scale(1);
 }
 
 .filter-dropdown-header {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1.5rem 1.75rem;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-    border-radius: 1rem 1rem 0 0;
+    padding: 1.5rem 2rem;
+    background: white;
+    border-bottom: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
 }
 
 .filter-dropdown-title {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: #ffffff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    letter-spacing: 0.02em;
-}
-
-.filter-dropdown-footer {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 1rem 1.5rem;
-    background: white;
-    border-radius: 0 0 1rem 1rem;
-}
-
-.filter-dropdown-done {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1.5rem;
-    background: var(--color-primary);
-    color: #ffffff;
-    border: 1px solid var(--color-primary);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    border-radius: var(--border-radius-sm);
-    font-size: 0.875rem;
-    cursor: pointer;
-    transition: all 0.15s ease;
-}
-
-.filter-dropdown-done:hover {
-    background: var(--color-primary-hover);
-    border-color: var(--color-primary-hover);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transform: translateY(-1px);
-}
-
-.filter-dropdown-done:active {
-    transform: translateY(0);
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
 }
 
 .filter-dropdown-content {
     flex: 1;
     overflow-y: auto;
-    padding: 1.5rem;
-    contain: layout style paint;
-    will-change: scroll-position;
+    padding: 2rem;
 }
 
-/* ==================== Filter Group Styles ==================== */
+.filter-dropdown-footer {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    justify-content: flex-end;
+    background: var(--color-bg-surface);
+    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+}
+
+.filter-dropdown-done {
+    padding: 0.75rem 2rem;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.filter-dropdown-done:hover {
+    background: var(--color-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ==================== Filter Options (Chips) ==================== */
 .filter-dropdown-content .filter-group {
-    margin-bottom: 0.75rem;
-    overflow: visible;
+    margin-bottom: 2rem;
 }
 
-.filter-dropdown-content .filter-group:last-child {
-    margin-bottom: 0;
+.filter-dropdown-content .filter-option-wrapper {
+    margin-bottom: 0.5rem;
 }
 
-
-
-/* ==================== Filter Option Styles ==================== */
+/* Base Option Style */
 .filter-dropdown-content .filter-option {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem;
-    margin: 0.125rem 0;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    transition: background-color 0.15s ease;
-    user-select: none;
-    position: relative;
+    transition: all 0.2s ease;
+    border-radius: var(--border-radius);
+    border: 1px solid transparent;
     background: transparent;
-    min-height: 2.5rem;
-    border-radius: var(--border-radius-sm);
-    overflow: hidden;
 }
 
-.filter-dropdown-content:not(.scrolling) .filter-option:hover {
-    background: var(--color-bg-light);
+.filter-dropdown-content .filter-option:hover {
+    background: var(--color-bg-surface);
 }
 
-/* Selection indicator: Background fill animation from left to right */
-/* Optimized: Using transform: scaleX() instead of width for GPU-accelerated animation */
-.filter-dropdown-content .filter-option::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    background: var(--color-selection-bg);
-    border-radius: var(--border-radius-sm);
-    z-index: 0;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* Selected State - Gradient Chip */
+.filter-dropdown-content .filter-option.selected {
+    background: var(--color-primary-bg);
+    border-color: var(--color-primary-light);
 }
 
-.filter-dropdown-content .filter-option.selected::before {
-    transform: scaleX(1);
-}
-
-.filter-dropdown-content .filter-option.selected:hover::before {
-    background: var(--color-selection-bg-hover);
-}
-
-/* Ensure content stays above background */
-.filter-dropdown-content .filter-option > * {
-    position: relative;
-    z-index: 1;
-}
-
-/* Base label styles */
-.filter-dropdown-content .filter-option-label {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 0.375rem;
-    font-size: 0.8125rem;
-    color: var(--color-text-secondary);
-    font-weight: 400;
-    line-height: 1.4;
-    transform: translateX(0);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.15s ease;
-}
-
-/* Selection indicator: Bold text with smooth transition and right shift */
 .filter-dropdown-content .filter-option.selected .filter-option-label {
-    font-weight: 600;
     color: var(--color-primary);
-    transform: translateX(0.5rem) !important;
-}
-
-.filter-dropdown-content .filter-option-count {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 2rem;
-    padding: 0.25rem 0.625rem;
-    background: var(--color-bg-gray);
-    border-radius: 1rem;
-    font-size: 0.75rem;
-    color: var(--color-text-muted);
     font-weight: 600;
-    transition: all 0.15s ease;
-    margin-left: 0.5rem;
-}
-
-.filter-dropdown-content .filter-option-count.pulse {
-    animation: countPulse 0.4s ease;
 }
 
 .filter-dropdown-content .filter-option.selected .filter-option-count {
     background: var(--color-primary);
     color: white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* ==================== Tooltip Styles ==================== */
-.filter-tooltip {
-    position: fixed;
-    z-index: 10000;
-    background: var(--tooltip-bg);
-    color: white;
-    padding: 0.625rem 0.875rem;
-    border-radius: 0.5rem;
-    font-size: 0.8125rem;
-    line-height: 1.4;
-    max-width: 280px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
-    pointer-events: none;
-    opacity: 0;
-    transform: translateY(8px);
-    transition: opacity var(--transition-duration) ease, transform var(--transition-duration) ease;
-    backdrop-filter: blur(8px);
+/* Labels & Counts */
+.filter-dropdown-content .filter-option-label {
+    flex: 1;
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    transition: color 0.2s ease;
 }
 
-.filter-tooltip.show {
-    opacity: 1;
-    transform: translateY(0);
-    animation: tooltipFadeIn 0.25s ease;
-}
-
-.filter-tooltip::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-}
-
-.filter-tooltip.tooltip-bottom::after {
-    top: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 0 6px 6px 6px;
-    border-color: transparent transparent var(--tooltip-bg) transparent;
-}
-
-.filter-tooltip.tooltip-top::after {
-    bottom: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 6px 6px 0 6px;
-    border-color: var(--tooltip-bg) transparent transparent transparent;
-}
-
-.filter-tooltip-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.filter-tooltip-label {
-    font-weight: 600;
-    color: #ffffff;
-}
-
-.filter-tooltip-count {
+.filter-dropdown-content .filter-option-count {
     font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    align-items: center;
-    gap: 0.375rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    background: var(--color-bg-gray);
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    transition: all 0.2s ease;
 }
 
-.filter-tooltip-count::before {
-    content: '📊';
-    font-size: 0.875rem;
-}
-
-/* ==================== Hierarchical Filter Options ==================== */
+/* Hierarchy Styles */
 .filter-dropdown-content .filter-children {
     margin-left: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    border-left: 1px solid var(--color-bg-gray);
-    padding-left: 0.5rem;
-}
-
-.filter-dropdown-content .filter-children.collapsed {
-    display: none;
-}
-
-.filter-dropdown-content .filter-option-wrapper {
-    position: relative;
+    padding-left: 1rem;
+    border-left: 2px solid var(--color-border);
+    margin-top: 0.5rem;
 }
 
 .filter-dropdown-content .filter-option.hierarchy-name-only {
-    font-weight: 500;
-    background: transparent;
-    position: relative;
-    padding: 0.5rem;
-    min-height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: var(--border-radius-sm);
-    cursor: pointer;
-    transition: background-color 0.15s ease;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    padding: 0.5rem 0;
 }
 
 .filter-dropdown-content .filter-option.hierarchy-name-only:hover {
-    background: var(--color-bg-light);
+    background: transparent;
+    color: var(--color-primary);
 }
 
-/* Top-level groups (level 0) - slightly more emphasis */
-.filter-dropdown-content .filter-option-wrapper[data-level="0"] > .filter-option.hierarchy-name-only {
-    font-weight: 600;
-    font-size: 0.9375rem;
-    padding: 0.625rem 0.5rem;
-}
-
-/* Hierarchy label styling */
-.filter-dropdown-content .filter-option.hierarchy-name-only .filter-option-label {
-    flex: 1;
+/* Hierarchy Actions */
+.hierarchy-actions {
     display: flex;
-    align-items: center;
-    gap: 0.375rem;
-    font-size: 0.875rem;
-    color: var(--color-text-primary);
-    transition: color 0.15s ease;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
 
-/* ==================== Hierarchy Actions (All/Clear buttons) ==================== */
-.filter-dropdown-content .hierarchy-actions {
-    display: flex;
-    align-items: center;
-    gap: 0.375rem;
-    margin-left: 0.5rem;
+.filter-option:hover .hierarchy-actions {
+    opacity: 1;
 }
 
-.filter-dropdown-content .hierarchy-action-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.6875rem;
-    font-weight: 600;
-    border: none;
-    border-radius: var(--border-radius-sm);
+.hierarchy-action-btn {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    border-radius: 9999px;
+    border: 1px solid var(--color-border);
+    background: white;
     cursor: pointer;
-    transition: all 0.15s ease;
-    white-space: nowrap;
-    min-height: 1.75rem;
+    transition: all 0.2s ease;
 }
 
-.filter-dropdown-content .hierarchy-action-btn.select-all {
-    background: var(--color-primary);
-    color: white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+.hierarchy-action-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
 }
 
-.filter-dropdown-content .hierarchy-action-btn.select-all:hover {
-    background: var(--color-primary-hover);
-    transform: translateY(-1px);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.filter-dropdown-content .hierarchy-action-btn.clear-all {
-    background: var(--color-bg-gray);
-    color: var(--color-text-secondary);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.filter-dropdown-content .hierarchy-action-btn.clear-all:hover {
-    background: var(--color-bg-gray-dark);
-    color: var(--color-text-primary);
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-}
-
-.filter-dropdown-content .hierarchy-action-btn:active {
-    transform: translateY(0) scale(0.95);
-}
-
-.filter-dropdown-content .hierarchy-label {
-    font-weight: 500;
-}
-
-
-/* ==================== Legacy Filter Panel (Hidden) ==================== */
-.filter-panel {
-    display: none;  /* Hidden - replaced by new filter dropdown */
-}
-
-.filter-header {
-    padding: 0.75rem 0.5rem;
-    border-bottom: 1px solid #d0d7de;
-    position: relative;
-    overflow: hidden;
-}
-
-.filter-search-row {
-    display: flex;
-    gap: 0.375rem;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin-bottom: 0.5rem;
-}
-
-.filter-search {
-    flex: 1;
-    min-width: 0;
-    padding: 0.375rem 0.75rem;
-    border: 1px solid #d0d7de;
-    border-radius: 0.375rem;
-    font-size: clamp(0.75rem, 0.6875rem + 0.25vw, 0.875rem);
-    background: #ffffff;
-    outline: none;
-    transition: border-color 0.15s ease;
-    box-sizing: border-box;
-}
-
-.filter-search:focus {
-    border-color: #0969da;
-}
-
-.filter-search::placeholder {
-    color: #6e7781;
-}
-
-.btn-filter-reset {
-    flex-shrink: 0;
-    padding: 0.375rem 0.625rem;
-    border: 1px solid #d0d7de;
-    background: #ffffff;
-    color: #24292f;
-    border-radius: 0.375rem;
-    cursor: pointer;
-    font-size: clamp(0.875rem, 0.8125rem + 0.25vw, 1rem);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 2.25rem;
-    height: 2.25rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-filter-reset:hover {
-    background: linear-gradient(135deg, #f0f4ff 0%, #e1e8ff 100%);
-    border-color: #0969da;
-    color: #0969da;
-    box-shadow: 
-        0 0.125rem 0.5rem rgba(9, 105, 218, 0.25),
-        0 0 0 0.125rem rgba(9, 105, 218, 0.1);
-}
-
-.btn-filter-reset:active,
-.btn-filter-reset.click-animate {
-    background: linear-gradient(135deg, #b8c5ff 0%, #9fb0ff 100%);
-    border-color: #0550ae;
-    color: #0550ae;
-    box-shadow: 
-        0 0.25rem 0.75rem rgba(9, 105, 218, 0.5),
-        0 0 0 0.125rem rgba(9, 105, 218, 0.3);
-}
-
-/* Click animation for reset button */
-.btn-filter-reset.click-animate {
-    animation: buttonClickScale 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Filter Finder - 筛选项搜索 */
+/* Filter Finder (Search in Dropdown) */
 .filter-finder {
     display: flex;
     gap: 0.5rem;
-    align-items: center;
-    flex-wrap: nowrap;
-    background: rgba(255, 255, 255, 0.9);
     padding: 0.5rem;
+    background: var(--color-bg-surface);
     border-radius: var(--border-radius);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--color-border);
 }
 
 .filter-finder-input {
     flex: 1;
-    min-width: 0;
-    padding: 0.5rem 0.75rem;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: var(--border-radius-sm);
+    border: none;
+    background: transparent;
     font-size: 0.875rem;
     outline: none;
-    transition: all 0.15s ease;
-    box-sizing: border-box;
-    background: #ffffff;
     color: var(--color-text-primary);
-}
-
-.filter-finder-input:focus {
-    border-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
-    background: #ffffff;
-}
-
-.filter-finder-input::placeholder {
-    color: #6e7781;
 }
 
 .filter-finder-nav {
     display: flex;
     gap: 0.25rem;
-    align-items: center;
-    flex-shrink: 0;
 }
 
 .filter-finder-btn {
     width: 2rem;
     height: 2rem;
-    padding: 0;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background: #ffffff;
-    border-radius: var(--border-radius-sm);
-    cursor: pointer;
-    font-size: 0.875rem;
-    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.15s ease;
-    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .filter-finder-btn:hover:not(:disabled) {
-    background: #ffffff;
-    border-color: rgba(255, 255, 255, 0.8);
-    transform: translateY(-1px);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.filter-finder-btn:active:not(:disabled) {
-    transform: translateY(0);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 .filter-finder-btn:disabled {
-    opacity: 0.4;
+    opacity: 0.5;
     cursor: not-allowed;
-    background: var(--color-bg-light);
 }
 
 .filter-finder-count {
     font-size: 0.75rem;
-    color: var(--color-text-primary);
-    min-width: 3rem;
-    text-align: center;
-    font-weight: 600;
+    color: var(--color-text-muted);
     padding: 0 0.5rem;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: var(--border-radius-sm);
-    height: 2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-/* Filter highlight styles */
-.filter-option.highlight-match {
-    background-color: #fff3cd;
-    border-radius: 0.1875rem;
-    animation: pulse-highlight 0.5s ease;
-}
-
-.filter-option.highlight-match.current-match {
-    background-color: #ffc107;
-    box-shadow: 0 0 0 0.125rem rgba(255, 193, 7, 0.5);
-}
-
-/* Hide filter options that don't match search */
-.filter-option-wrapper.filter-search-hidden {
-    display: none !important;
-}
-
-/* Filter stats */
-.filter-stats {
-    padding: 0.75rem 0.5rem;
-    background: #f6f8fa;
-    border-bottom: 1px solid #d0d7de;
-    font-size: clamp(0.75rem, 0.6875rem + 0.25vw, 0.875rem);
 }
 
 .stat-item {
@@ -913,8 +635,8 @@
     transition: color 0.15s ease;
 }
 
-.filter-option-control:hover + * .hierarchy-label,
-.filter-option-control:hover ~ .filter-option-label .hierarchy-label {
+.filter-option-control:hover+* .hierarchy-label,
+.filter-option-control:hover~.filter-option-label .hierarchy-label {
     color: #0969da;
     font-weight: 600;
 }
@@ -1078,3 +800,69 @@
     background: #0056b3;
 }
 
+/* ==================== Filter Tooltip ==================== */
+.filter-tooltip {
+    position: fixed;
+    z-index: 1100;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.filter-tooltip.show {
+    opacity: 1;
+}
+
+.filter-tooltip-content {
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(4px);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    max-width: 200px;
+    text-align: center;
+}
+
+.filter-tooltip-label {
+    font-weight: 600;
+    margin-bottom: 0.125rem;
+}
+
+.filter-tooltip-count {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.6875rem;
+}
+
+/* Tooltip Arrow */
+.filter-tooltip::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+}
+
+.filter-tooltip.tooltip-top {
+    transform: translateY(-4px);
+}
+
+.filter-tooltip.tooltip-top::after {
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-color: rgba(15, 23, 42, 0.9);
+}
+
+.filter-tooltip.tooltip-bottom {
+    transform: translateY(4px);
+}
+
+.filter-tooltip.tooltip-bottom::after {
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-color: rgba(15, 23, 42, 0.9);
+}

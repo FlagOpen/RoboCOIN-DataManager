@@ -4,11 +4,11 @@
 /* Includes: MacBook Pro/Air, Dell XPS, ASUS ZenBook, most 1920x1080 displays */
 @media (min-width: 1200px) and (max-width: 1599px) {
     body {
-        transform: scale(0.85);
-        width: 117.65%;
-        height: 117.65vh;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
     }
-    
+
     .video-grid {
         grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     }
@@ -17,15 +17,15 @@
 /* ==================== Large Desktop & 4K Displays (≥ 1600px) ==================== */
 @media (min-width: 1600px) {
     body {
-        transform: scale(0.9);
-        width: 111.11%;
-        height: 111.11vh;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
     }
-    
+
     .video-grid {
         grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
     }
-    
+
     .code-output {
         height: 7.5rem;
         min-height: 7.5rem;
@@ -36,15 +36,15 @@
 /* ==================== Extra Large Desktop & 4K+ Displays (≥ 2000px) ==================== */
 @media (min-width: 2000px) {
     body {
-        transform: scale(1);
         width: 100%;
         height: 100vh;
+        overflow: hidden;
     }
-    
+
     html {
         font-size: 18px;
     }
-    
+
     .video-grid {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
@@ -56,11 +56,11 @@
         grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
         gap: 1.5rem;
     }
-    
+
     .selection-panel {
         width: 30%;
     }
-    
+
     .video-panel {
         width: 70%;
     }
@@ -68,14 +68,16 @@
 
 /* ==================== High DPI / Retina Displays Optimization ==================== */
 /* MacBook Pro Retina, Dell UltraSharp, ASUS ProArt, 4K displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
     /* Improve text rendering on high DPI screens */
     body {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-rendering: optimizeLegibility;
     }
-    
+
     /* Crisper borders on Retina */
     .video-card,
     .selection-item,
@@ -86,6 +88,7 @@
 
 /* ==================== Tablet and below (< 900px) ==================== */
 @media (max-width: 899px) {
+
     /* Reset body scaling for tablets - use normal size */
     body {
         transform: none;
@@ -93,31 +96,31 @@
         height: 100vh;
         overflow: hidden;
     }
-    
+
     :root {
         --hierarchy-indent: 0.35rem;
         --content-padding: 0.5rem;
     }
-    
+
     .app-container {
         flex-direction: column;
         flex: 1;
         min-height: 0;
         overflow: hidden;
     }
-    
+
     .filter-panel {
         width: 100%;
         display: none;
     }
-    
+
     .video-panel {
         width: 100%;
         flex: 1;
         min-height: 0;
         max-height: none;
     }
-    
+
     .selection-panel {
         width: 100%;
         flex: 0 0 auto;
@@ -125,69 +128,69 @@
         min-height: 280px;
         max-height: 45%;
     }
-    
+
     /* Filter panel - prevent horizontal overflow */
     .filter-header {
         padding: 0.5rem 0.375rem;
         overflow: hidden;
     }
-    
+
     .filter-search-row {
         gap: 0.25rem;
         margin-bottom: 0.375rem;
     }
-    
+
     .filter-search {
         padding: 0.3rem 0.5rem;
         font-size: 0.75rem;
     }
-    
+
     .btn-filter-reset {
         padding: 0.3rem 0.4rem;
         min-width: 2rem;
         height: 2rem;
         font-size: 0.875rem;
     }
-    
+
     .filter-finder {
         gap: 0.2rem;
         margin-top: 0.375rem;
     }
-    
+
     .filter-finder-input {
         padding: 0.3rem 0.4rem;
         font-size: 0.6875rem;
     }
-    
+
     .filter-finder-btn {
         width: 1.375rem;
         height: 1.375rem;
         font-size: 0.6875rem;
     }
-    
+
     .filter-finder-count {
         font-size: 0.625rem;
         min-width: 1.875rem;
     }
-    
+
     .filter-content {
         padding: 0.5rem 0.375rem;
         overflow-x: hidden;
     }
-    
+
     .filter-group {
         padding-left: 0;
         padding-right: 0;
     }
-    
+
     .filter-group-title {
         padding-right: 0;
     }
-    
+
     .filter-option {
         margin: 0.25rem 0;
     }
-    
+
     /* Reduce hierarchy indentation on tablets */
     .filter-option-label {
         word-break: break-word;
@@ -195,102 +198,102 @@
         overflow-wrap: break-word;
         hyphens: auto;
     }
-    
+
     /* Hierarchy toggle positioning for tablets */
     .hierarchy-toggle {
         left: -0.625rem;
         font-size: 0.875rem;
     }
-    
+
     /* Reduce checkbox area width */
     .filter-option-checkbox {
         width: 4rem;
         padding: 0.125rem 0.25rem;
     }
-    
+
     .filter-group-title-checkbox {
         width: 4rem;
         padding: 0.125rem 0.25rem;
     }
-    
+
     /* Reduce connector width */
     .filter-option-connector {
         min-width: 0.5rem;
         margin: 0 0.25rem;
     }
-    
+
     /* Reduce count label width */
     .filter-option-count {
         min-width: 1.5rem;
     }
-    
+
     /* Video cards - ensure hover overlay works on tablets */
     .video-card .video-hover-overlay {
         padding: 0.75rem;
     }
-    
+
     .btn-group {
         padding: 0.3rem 0.4rem;
         gap: 0.25rem;
         flex-wrap: nowrap;
     }
-    
+
     .btn-toolbar {
         padding: 0.2rem 0.4rem;
         font-size: 0.625rem;
         flex-shrink: 0;
     }
-    
+
     .video-grid {
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
     }
-    
+
     /* Right panel - fix text overflow */
     .selection-header {
         padding: 0.5rem 0.75rem;
         flex-shrink: 0;
     }
-    
+
     .selection-list {
         flex: 1;
         min-height: 0;
         overflow-y: auto;
     }
-    
+
     .selection-actions {
         gap: 0.375rem;
     }
-    
+
     .btn-selection {
         padding: 0.375rem 0.5rem;
         white-space: normal;
         min-height: 2rem;
         line-height: 1.2;
     }
-    
+
     /* Hint messages - better wrapping and scrolling on tablets */
     .empty-cart-hint {
         padding: 1rem;
         height: 100%;
         overflow-y: auto;
     }
-    
+
     .hint-title {
         padding: 0.375rem 0.75rem;
     }
-    
+
     .hint-subtitle {
         padding: 0.5rem 0.75rem;
     }
-    
+
     .hint-step {
         padding: 0.5rem;
     }
-    
+
     .selection-item-name {
         word-break: break-word;
     }
-    
+
     /* Selection footer - ensure copy button is visible */
     .selection-footer {
         padding: 0.5rem;
@@ -299,17 +302,17 @@
         flex-shrink: 0;
         -webkit-overflow-scrolling: touch;
     }
-    
+
     .selection-actions {
         flex-wrap: wrap;
     }
-    
+
     .selection-actions .btn-selection {
         font-size: 0.6875rem;
         padding: 0.3rem 0.4rem;
         min-width: calc(50% - 0.2rem);
     }
-    
+
     /* Code output area */
     .code-output {
         height: 2rem;
@@ -318,16 +321,16 @@
         font-size: 0.625rem;
         word-break: break-all;
     }
-    
+
     .code-section-description {
         font-size: 0.6875rem;
     }
-    
+
     /* Code actions - ensure copy button is always visible */
     .code-actions {
         width: 100%;
     }
-    
+
     .code-actions .btn-selection {
         width: 100%;
         min-width: 100%;
@@ -336,13 +339,13 @@
         white-space: normal;
         text-align: center;
     }
-    
+
     /* Make modals more mobile friendly */
     .detail-modal {
         width: 95vw;
         max-height: 95vh;
     }
-    
+
     .hover-preview-card {
         width: min(90vw, 18rem);
         height: auto;
@@ -351,247 +354,248 @@
 
 /* ==================== Mobile (< 600px) ==================== */
 @media (max-width: 599px) {
+
     /* Header adjustments for mobile */
     .header-container {
         padding: 0.75rem 1rem;
     }
-    
+
     .header-content {
         gap: 0.5rem;
     }
-    
+
     .version-badge {
         padding: 0.2rem 0.75rem;
     }
-    
+
     /* Filter control bar mobile styles */
     .filter-control-container {
         padding: 0.5rem;
         gap: 0.5rem;
     }
-    
+
     .filter-trigger-btn {
         padding: 0.4rem 0.75rem;
         font-size: 0.8125rem;
     }
-    
+
     .filter-search-container {
         min-width: 100px;
         flex: 1;
     }
-    
+
     .filter-stats-inline {
         gap: 0.75rem;
         font-size: 0.75rem;
     }
-    
+
     .filter-tags-container {
         padding: 0 0.5rem 0.5rem;
         gap: 0.375rem;
     }
-    
+
     .filter-tag {
         font-size: 0.75rem;
         padding: 0.25rem 0.5rem;
     }
-    
+
     .filter-dropdown {
         border-radius: 0.75rem;
         max-height: 90vh;
         max-width: 95vw;
     }
-    
+
     .filter-dropdown-overlay.active {
         padding: 0.5rem;
     }
-    
+
     .filter-dropdown-header {
         padding: 1.25rem 1rem;
     }
-    
+
     .filter-dropdown-title {
         font-size: 1.125rem;
     }
-    
+
     .filter-dropdown-content {
         padding: 1rem;
     }
-    
+
     .filter-dropdown-footer {
         padding: 0.875rem 1rem;
     }
-    
+
     .filter-dropdown-done {
         padding: 0.5rem 1.25rem;
         font-size: 0.8125rem;
     }
-    
+
     .filter-dropdown-content .filter-group {
         margin-bottom: 0.875rem;
     }
-    
+
     .filter-dropdown-content .filter-group-title {
         padding: 1rem 1rem;
         font-size: 0.875rem;
         min-height: 3.5rem;
     }
-    
+
     .filter-dropdown-content .filter-option {
         padding: 0.75rem 0.875rem;
         font-size: 0.8125rem;
         min-height: 3rem;
     }
-    
+
     .filter-dropdown-content .hierarchy-expand-btn {
         width: 3.5rem;
         height: 3.5rem;
         font-size: 1.5rem;
     }
-    
+
     .filter-dropdown-content .filter-option.hierarchy-name-only {
         padding-left: 4rem;
         min-height: 3.5rem;
     }
-    
+
     .filter-header {
         padding: 0.5rem;
     }
-    
+
     .filter-search-row {
         gap: 0.25rem;
         margin-bottom: 0.375rem;
     }
-    
+
     .filter-search {
         padding: 0.4rem 0.5rem;
         font-size: 0.8125rem;
     }
-    
+
     .btn-filter-reset {
         padding: 0.3rem;
         min-width: 1.875rem;
         height: 1.875rem;
         font-size: 0.875rem;
     }
-    
+
     .filter-finder {
         margin-top: 0.375rem;
     }
-    
+
     .filter-finder-input {
         padding: 0.4rem 0.5rem;
     }
-    
+
     /* Stats and filters */
     .filter-stats {
         padding: 0.5rem;
     }
-    
+
     .filter-content {
         padding: 0.5rem;
     }
-    
+
     .filter-option {
         margin: 0.25rem 0;
     }
-    
+
     .btn-group {
         padding: 0.25rem 0.3rem;
         gap: 0.2rem;
         flex-wrap: nowrap;
     }
-    
+
     .btn-toolbar {
         padding: 0.15rem 0.3rem;
         font-size: 0.5625rem;
         flex-shrink: 0;
     }
-    
+
     /* Video grid - single column */
     .video-grid {
         grid-template-columns: 1fr !important;
         gap: 0.75rem;
     }
-    
+
     .video-card {
         margin: 0;
     }
-    
+
     .video-info {
         padding: 0.5rem;
     }
-    
+
     .video-title {
         height: auto;
         -webkit-line-clamp: 3;
         line-clamp: 3;
     }
-    
+
     .video-tag {
         padding: 0.125rem 0.375rem;
     }
-    
+
     /* Selection panel */
     .selection-header {
         padding: 0.5rem;
         gap: 0.5rem;
     }
-    
+
     .selection-actions {
         flex-direction: column;
     }
-    
+
     .btn-selection {
         width: 100%;
         min-width: 100%;
     }
-    
+
     .selection-item {
         padding: 0.5rem;
     }
-    
+
     .selection-footer {
         padding: 0.75rem;
     }
-    
+
     .code-output {
         padding: 0.5rem;
         height: 5rem;
         min-height: 5rem;
         max-height: 5rem;
     }
-    
+
     /* Loading overlay */
     .loading-spinner {
         width: 3rem;
         height: 3rem;
     }
-    
+
     .loading-bar-container {
         width: 80vw;
         max-width: 15rem;
     }
-    
+
     /* Detail modal */
     .detail-modal {
         width: 95vw;
         max-height: 90vh;
         margin: 0.5rem;
     }
-    
+
     .detail-modal-header {
         padding: 0.75rem 1rem;
     }
-    
+
     .detail-modal-body {
         padding: 1rem;
     }
-    
+
     /* Hide hover preview on mobile (touch devices) */
     .hover-preview-card {
         display: none;
     }
-    
+
     /* Improve touch targets */
     .btn-remove,
     .btn-detail {
@@ -599,7 +603,7 @@
         height: 2rem;
         font-size: 1.125rem;
     }
-    
+
     .filter-option input[type="checkbox"],
     .filter-group-title-checkbox input[type="checkbox"] {
         width: 1.25rem;
@@ -612,17 +616,17 @@
     .version-badge {
         padding: 0.15rem 0.625rem;
     }
-    
+
     .btn-group {
         padding: 0.2rem 0.25rem;
         gap: 0.15rem;
     }
-    
+
     .btn-toolbar {
         padding: 0.125rem 0.25rem;
         font-size: 0.5rem;
     }
-    
+
     .btn-selection {
         padding: 0.25rem 0.5rem;
     }
@@ -635,17 +639,17 @@
         min-height: 250px;
         max-height: 40%;
     }
-    
+
     .code-output {
         height: 1.5rem;
         min-height: 1.5rem;
         max-height: 1.5rem;
     }
-    
+
     .selection-header {
         padding: 0.4rem 0.5rem;
     }
-    
+
     .selection-footer {
         padding: 0.4rem;
     }
@@ -656,21 +660,21 @@
     .app-container {
         flex-direction: row;
     }
-    
+
     .filter-panel {
         width: 30%;
         max-height: 100vh;
     }
-    
+
     .video-panel {
         width: 40%;
     }
-    
+
     .selection-panel {
         width: 30%;
         max-height: 100vh;
     }
-    
+
     .detail-modal {
         max-height: 95vh;
     }
@@ -681,18 +685,17 @@
     body {
         font-size: 12pt;
     }
-    
+
     .filter-panel,
     .selection-panel {
         display: none;
     }
-    
+
     .video-panel {
         width: 100%;
     }
-    
+
     .video-card {
         page-break-inside: avoid;
     }
 }
-

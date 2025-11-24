@@ -9,7 +9,7 @@ const Templates = {
     /**
      * Filter Group Templates
      */
-    
+
     /**
      * Build flat filter group HTML
      * @param {string} key - Filter key
@@ -84,7 +84,7 @@ const Templates = {
 
     buildHierarchyOption(key, value, fullPath, hasChildren, level, baseIndent, childrenHTML = '') {
         const indent = baseIndent;
-        
+
         if (hasChildren) {
             return `
                 <div class="filter-option-wrapper" style="margin-left: ${indent}px;" data-level="${level}">
@@ -119,7 +119,7 @@ const Templates = {
     /**
      * Video Card Templates
      */
-    
+
     /**
      * Build video card HTML
      * @param {Dataset} ds - Dataset object
@@ -138,7 +138,7 @@ const Templates = {
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <div class="video-error" style="display:none;">No Thumbnail</div>
                 <div class="play-indicator" style="display:none;">▶</div>
-                ${listDatasets.has(ds.path) ? '<div class="video-success-badge">📋</div>' : ''}
+                ${listDatasets.has(ds.path) ? '<div class="video-success-badge">✓</div>' : ''}
             </div>
             <div class="video-info">
                 <div class="video-title">${ds.name}</div>
@@ -158,7 +158,7 @@ const Templates = {
     },
 
     buildVideoSuccessBadge() {
-        return '<div class="video-success-badge">📋</div>';
+        return '<div class="video-success-badge">✓</div>';
     },
 
     /**
@@ -166,42 +166,42 @@ const Templates = {
      */
     buildHoverOverlay(ds) {
         let html = `<div class="hover-title">${ds.name}</div>`;
-        
+
         // Scene information
         if (ds.scenes && ds.scenes.length > 0) {
             html += this.buildHoverInfoGroup('scene', ds.scenes.map(s => this.buildHoverTag(s)).join(''));
         }
-        
+
         // Robot model
         if (ds.robot) {
             const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
             html += this.buildHoverInfoGroup('robot', robots.map(r => this.buildHoverTag(r)).join(''));
         }
-        
+
         // End effector
         if (ds.endEffector) {
             html += this.buildHoverInfoGroup('end effector', this.buildHoverTag(ds.endEffector));
         }
-        
+
         // Actions
         if (ds.actions && ds.actions.length > 0) {
             html += this.buildHoverInfoGroup(`action(${ds.actions.length})`, ds.actions.map(a => this.buildHoverTag(a)).join(''));
         }
-        
+
         // Objects
         if (ds.objects && ds.objects.length > 0) {
             const objectChains = ds.objects.map(obj => obj.hierarchy.join(' → '));
             html += this.buildHoverInfoGroup(
-                `operation object(${ds.objects.length})`, 
+                `operation object(${ds.objects.length})`,
                 objectChains.map(chain => this.buildHoverTag(chain)).join('')
             );
         }
-        
+
         // Description
         if (ds.description) {
             html += this.buildHoverInfoGroup('discription', ds.description, false);
         }
-        
+
         return html;
     },
 
@@ -269,11 +269,11 @@ const Templates = {
         const scenesText = Array.isArray(dataset.scenes) && dataset.scenes.length > 0
             ? dataset.scenes.join(', ')
             : 'N/A';
-        
+
         const actionsText = Array.isArray(dataset.actions) && dataset.actions.length > 0
             ? dataset.actions.join(', ')
             : 'N/A';
-        
+
         let objectsHTML = 'N/A';
         if (Array.isArray(dataset.objects) && dataset.objects.length > 0) {
             objectsHTML = dataset.objects.map(obj => {
@@ -281,7 +281,7 @@ const Templates = {
                 return `<div style="margin-bottom: 4px;">• ${obj.name} (${hierarchyText})</div>`;
             }).join('');
         }
-        
+
         return `
             <div class="detail-modal">
                 <div class="detail-modal-header">
@@ -339,13 +339,13 @@ const Templates = {
         const sceneText = Array.isArray(dataset.scenes) && dataset.scenes.length > 0
             ? dataset.scenes.slice(0, 2).join(', ') + (dataset.scenes.length > 2 ? '...' : '')
             : 'N/A';
-        
+
         const actionText = Array.isArray(dataset.actions) && dataset.actions.length > 0
             ? dataset.actions.slice(0, 2).join(', ') + (dataset.actions.length > 2 ? '...' : '')
             : 'N/A';
-        
+
         const robotText = dataset.robot || 'N/A';
-        
+
         return `
             <div class="hover-preview-video">
                 <video src="${dataset.video_url}" autoplay loop muted preload="auto"></video>
