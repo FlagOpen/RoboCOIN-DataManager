@@ -86,6 +86,7 @@
     width: 100%;
     padding: 0.75rem 1.5rem;
     font-size: 0.9375rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #copyCodeBtn:hover {
@@ -95,8 +96,28 @@
     transform: translateY(-1px);
 }
 
-#copyCodeBtn:active {
+#copyCodeBtn.success {
+    animation: copySuccessAnimation 1.5s ease-in-out;
     transform: translateY(0);
+}
+
+@keyframes copySuccessAnimation {
+    0% {
+        background: var(--color-primary);
+        border-color: var(--color-primary);
+    }
+    25% {
+        background: var(--btn-success-gradient);
+        border-color: var(--color-accent);
+    }
+    50% {
+        background: var(--btn-success-gradient);
+        border-color: var(--color-accent);
+    }
+    100% {
+        background: var(--color-primary);
+        border-color: var(--color-primary);
+    }
 }
 
 /* ==================== Selection List ==================== */
@@ -151,6 +172,7 @@
 
 .selection-item:hover {
     border-color: var(--color-primary-light);
+    border-width: 0.15rem;
     transform: translateX(2px);
     box-shadow: var(--shadow-md);
 }

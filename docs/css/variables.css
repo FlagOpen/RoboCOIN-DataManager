@@ -86,6 +86,13 @@
     #0066ff 80%,
     #92c5ff 90%);
 
+    --btn-success-gradient: linear-gradient(135deg,
+    #5b21b6 0%, 
+    #6366f1 25%,
+    #3b82f6 50%,
+    #60a5fa 75%,
+    #93c5fd 100%);
+
     --item-gradient-light: linear-gradient(45deg,
     rgba(78, 70, 229, 0.09) 0%,
     rgba(122, 187, 240, 0.09) 30%,
