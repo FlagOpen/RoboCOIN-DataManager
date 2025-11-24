@@ -7,10 +7,11 @@
     /* ==================== Loading Parameters ==================== */
     --loading-batch-size: 150;
 
-    /* ==================== Layout Width Parameters ==================== */
-    --filter-panel-width: 0%;
-    --video-panel-width: 65%;
-    --selection-panel-width: 35%;
+/* ==================== Layout Width Parameters ==================== */
+--filter-panel-width: 0%;
+--video-panel-width: 65%;
+--selection-panel-width: 35%;
+--selection-panel-max-width: 480px;
 
     /* ==================== Layout Spacing Parameters ==================== */
     --content-padding: 1rem;

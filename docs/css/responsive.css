@@ -58,11 +58,24 @@
     }
 
     .selection-panel {
-        width: 30%;
+        width: 25%;
+        max-width: 480px;
     }
 
     .video-panel {
-        width: 70%;
+        width: 75%;
+    }
+
+    .code-output {
+        font-size: 0.75rem;
+        height: 6rem;
+        min-height: 6rem;
+        max-height: 10rem;
+    }
+
+    .btn-selection {
+        font-size: 0.8125rem;
+        padding: 0.5rem 0.875rem;
     }
 }
 

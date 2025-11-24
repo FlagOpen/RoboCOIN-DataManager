@@ -9,6 +9,17 @@ html {
     font-size: clamp(14px, 0.875rem + 0.25vw, 16px);
 }
 
+/* ==================== High DPI Screen Optimization ==================== */
+/* Reduce UI density on high-resolution displays to prevent content from appearing too large */
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi),
+       (min-resolution: 2dppx) {
+    html {
+        /* Use 12px base font size on high DPI screens for better density */
+        font-size: 12px;
+    }
+}
+
 /* ==================== Basic Resets ==================== */
 * {
     box-sizing: border-box;

@@ -49,6 +49,7 @@
 /* ==================== Selection Panel ==================== */
 .selection-panel {
     width: var(--selection-panel-width);
+    max-width: var(--selection-panel-max-width);
     background: #ffffff;
     border-left: 1px solid #d0d7de;
     display: flex;
