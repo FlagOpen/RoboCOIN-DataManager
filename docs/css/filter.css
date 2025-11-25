@@ -525,6 +525,13 @@
     border-color: var(--color-primary-dark);
 }
 
+/* Hover state for selected options - enhanced visibility */
+.filter-dropdown-content .filter-option.selected:hover {
+    background: var(--item-gradient-dark);
+    border-color: var(--color-primary-dark);
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
 .filter-dropdown-content .filter-option.selected .filter-option-label {
     color: var(--color-primary);
     font-weight: 600;

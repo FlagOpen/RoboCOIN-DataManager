@@ -108,7 +108,6 @@ export class EventHandlers {
                 this.addClickAnimation(resetFiltersBtn);
                 document.getElementById('searchBox').value = '';
                 this.managers.filter.resetFilters();
-                document.dispatchEvent(new CustomEvent('filtersChanged'));
             });
         }
 

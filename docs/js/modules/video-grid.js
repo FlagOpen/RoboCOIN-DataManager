@@ -65,7 +65,8 @@ export class VideoGridManager {
         const container = grid.parentElement;
         if (!container) return;
         
-        // Calculate layout parameters
+        // 直接使用 grid 的实际宽度，因为卡片是相对于 grid 定位的
+        // 这样可以确保计算的宽度与实际的 grid 宽度一致
         const gridWidth = grid.clientWidth;
         
         // Get actual pixel values from computed styles
@@ -155,7 +156,9 @@ export class VideoGridManager {
             
             // Set absolute positioning and size
             card.style.position = 'absolute';
-            card.style.left = `${col * (cardWidth + gapPx)}px`;
+            // 确保最后一列的位置计算正确
+            const leftPosition = col * (cardWidth + gapPx);
+            card.style.left = `${leftPosition}px`;
             card.style.top = `${row * itemHeight}px`;
             card.style.width = 'var(--grid-card-width)';
             card.style.height = 'var(--grid-card-height)';

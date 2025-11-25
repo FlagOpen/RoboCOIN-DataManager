@@ -265,6 +265,10 @@ export class FilterManager {
                         const children = wrapper.querySelector('.filter-children');
                         if (children) {
                             children.classList.toggle('collapsed');
+                            // After expanding, apply selected states to newly visible options
+                            if (!children.classList.contains('collapsed')) {
+                                this.applySelectedStylesToContainer(children);
+                            }
                         }
                     });
                     return;
@@ -287,6 +291,9 @@ export class FilterManager {
                     });
                 }
             });
+
+            // Apply selected states to already selected filters in this category
+            this.applySelectedStylesToCategory(categoryKey);
         });
     }
 
@@ -497,6 +504,41 @@ export class FilterManager {
     }
 
     /**
+     * Apply selected styles to all options in a specific category
+     * @param {string} categoryKey - The category key
+     */
+    applySelectedStylesToCategory(categoryKey) {
+        this.selectedFilters.forEach(filterId => {
+            if (filterId.startsWith(`${categoryKey}:`)) {
+                const option = this.filterOptionCache.get(filterId);
+                if (option) {
+                    option.classList.add('selected');
+                }
+            }
+        });
+    }
+
+    /**
+     * Apply selected styles to all options within a container (including nested)
+     * @param {HTMLElement} container - The container element
+     */
+    applySelectedStylesToContainer(container) {
+        if (!container) return;
+        
+        const options = container.querySelectorAll('.filter-option[data-filter][data-value]');
+        options.forEach(option => {
+            const filterKey = option.dataset.filter;
+            const filterValue = option.dataset.value;
+            if (filterKey && filterValue) {
+                const filterId = `${filterKey}:${filterValue}`;
+                if (this.selectedFilters.has(filterId)) {
+                    option.classList.add('selected');
+                }
+            }
+        });
+    }
+
+    /**
      * Get human-readable filter label
      * @param {string} filterKey - Filter key
      * @param {string} filterValue - Filter value
@@ -595,6 +637,9 @@ export class FilterManager {
         }
 
         this.updateTriggerCount();
+        this.scheduleFilterUpdate();
+        // Reset should also trigger re-render because it changed the video-grid height
+
     }
 
     /**
@@ -794,10 +839,6 @@ export class FilterManager {
                 const filterId = `${groupKey}:${value}`;
                 if (!this.selectedFilters.has(filterId)) {
                     this.selectedFilters.add(filterId);
-                    const option = this.filterOptionCache.get(filterId);
-                    if (option) {
-                        option.classList.add('selected');
-                    }
                     this.addFilterTag(filterId, this.getFilterLabel(groupKey, value));
                 }
             });
@@ -805,6 +846,9 @@ export class FilterManager {
             // Select all leaf nodes in hierarchy
             this.selectAllInHierarchy(groupKey, group.values);
         }
+
+        // Apply styles to currently visible (cached and rendered) options
+        this.applySelectedStylesToCategory(groupKey);
 
         this.updateTriggerCount();
         this.scheduleFilterUpdate();
@@ -824,10 +868,6 @@ export class FilterManager {
                 const filterId = `${groupKey}:${value}`;
                 if (!this.selectedFilters.has(filterId)) {
                     this.selectedFilters.add(filterId);
-                    const option = this.filterOptionCache.get(filterId);
-                    if (option) {
-                        option.classList.add('selected');
-                    }
                     this.addFilterTag(filterId, this.getFilterLabel(groupKey, value));
                 }
             }
@@ -880,6 +920,19 @@ export class FilterManager {
 
         // Select all leaf nodes under this path
         this.selectLeafNodesRecursive(groupKey, node.children, path);
+
+        // Apply styles to currently visible options under this path
+        const container = document.getElementById('filterGroups');
+        if (container) {
+            const pathOption = container.querySelector(`.filter-option[data-path="${path}"]`);
+            if (pathOption) {
+                const wrapper = pathOption.closest('.filter-option-wrapper');
+                const childrenContainer = wrapper?.querySelector('.filter-children');
+                if (childrenContainer) {
+                    this.applySelectedStylesToContainer(childrenContainer);
+                }
+            }
+        }
 
         this.updateTriggerCount();
         this.scheduleFilterUpdate();
@@ -942,10 +995,6 @@ export class FilterManager {
                 const filterId = `${groupKey}:${value}`;
                 if (!this.selectedFilters.has(filterId)) {
                     this.selectedFilters.add(filterId);
-                    const option = this.filterOptionCache.get(filterId);
-                    if (option) {
-                        option.classList.add('selected');
-                    }
                     this.addFilterTag(filterId, this.getFilterLabel(groupKey, value));
                 }
             }

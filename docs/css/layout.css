@@ -17,7 +17,7 @@
 
 /* ==================== Video Panel ==================== */
 .video-panel {
-    width: var(--video-panel-width);
+    /* width: var(--video-panel-width); */
     display: flex;
     flex-direction: column;
     background: #ffffff;
@@ -54,6 +54,7 @@
     border-left: 1px solid #d0d7de;
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
     overflow: hidden;
 }
 
