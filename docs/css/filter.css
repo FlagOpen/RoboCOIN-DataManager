@@ -771,6 +771,7 @@
 .filter-option.hierarchy-name-only .hierarchy-label {
     font-weight: 500;
     transition: color 0.15s ease;
+    padding-left: 1em;
 }
 
 .filter-option-control:hover+* .hierarchy-label,
