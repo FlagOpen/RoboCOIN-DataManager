@@ -95,7 +95,7 @@ export class DataManager {
     createDatasetObject(path, raw) {
         return {
             path: path,
-            name: raw.dataset_name || path,
+            name: path || raw.dataset_name,
             video_url: `${this.config.paths.videos}/${path}.mp4`,
             // Thumbnails are provided directly from assets/thumbnails directory
             // No automatic thumbnail generation - thumbnails must exist in assets/thumbnails/${path}.jpg
