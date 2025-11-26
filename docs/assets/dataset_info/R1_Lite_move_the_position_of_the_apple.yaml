@@ -1,272 +1,801 @@
 dataset_name: move_the_position_of_the_apple
-dataset_uuid: null
-task_descriptions:
-- put the apple in the designated position.
-scene_type:
-- home
-atomic_actions:
-- place
-- pick
-- grasp
-objects:
-- object_name: table
-  level1: furniture
-  level2: table
-  level3: null
-  level4: null
-  level5: null
-- object_name: pen
-  level1: office_supplies
-  level2: pen
-  level3: null
-  level4: null
-  level5: null
-- object_name: banana
-  level1: fruit
-  level2: banana
-  level3: null
-  level4: null
-  level5: null
-- object_name: bath_ball
-  level1: daily_necessities
-  level2: bath_ball
-  level3: null
-  level4: null
-  level5: null
-- object_name: bowl
-  level1: container
-  level2: bowl
-  level3: null
-  level4: null
-  level5: null
-- object_name: plate
-  level1: container
-  level2: plate
-  level3: null
-  level4: null
-  level5: null
-- object_name: can
-  level1: container
-  level2: can
-  level3: null
-  level4: null
-  level5: null
-- object_name: eraser
-  level1: office_supplies
-  level2: eraser
-  level3: null
-  level4: null
-  level5: null
-- object_name: hard_cleanser
-  level1: daily_necessities
-  level2: hard_cleanser
-  level3: null
-  level4: null
-  level5: null
-- object_name: long_bread
-  level1: food
-  level2: long_bread
-  level3: null
-  level4: null
-  level5: null
-- object_name: peeler
-  level1: tool
-  level2: peeler
-  level3: null
-  level4: null
-  level5: null
-- object_name: block
-  level1: toy
-  level2: block
-  level3: null
-  level4: null
-  level5: null
-- object_name: duck
-  level1: toy
-  level2: duck
-  level3: null
-  level4: null
-  level5: null
-- object_name: soap
-  level1: daily_necessities
-  level2: soap
-  level3: null
-  level4: null
-  level5: null
-- object_name: box
-  level1: container
-  level2: box
-  level3: null
-  level4: null
-  level5: null
-- object_name: basket
-  level1: container
-  level2: basket
-  level3: null
-  level4: null
-  level5: null
-- object_name: cola
-  level1: drink
-  level2: cola
-  level3: null
-  level4: null
-  level5: null
-- object_name: detergent
-  level1: daily_necessities
-  level2: detergent
-  level3: null
-  level4: null
-  level5: null
-- object_name: egg_beater
-  level1: electrical_appliances
-  level2: egg_beater
-  level3: null
-  level4: null
-  level5: null
-- object_name: towel
-  level1: clothing
-  level2: towel
-  level3: null
-  level4: null
-  level5: null
-- object_name: orange
-  level1: fruit
-  level2: orange
-  level3: null
-  level4: null
-  level5: null
-- object_name: peach
-  level1: fruit
-  level2: peach
-  level3: null
-  level4: null
-  level5: null
-- object_name: marker
-  level1: office_supplies
-  level2: marker
-  level3: null
-  level4: null
-  level5: null
-- object_name: rubiks_cube
-  level1: toy
-  level2: rubiks_cube
-  level3: null
-  level4: null
-  level5: null
-- object_name: bread_slice
-  level1: food
-  level2: bread_slice
-  level3: null
-  level4: null
-  level5: null
-- object_name: brush
-  level1: daily_necessities
-  level2: brush
-  level3: null
-  level4: null
-  level5: null
-- object_name: yogurt
-  level1: drink
-  level2: yogurt
-  level3: null
-  level4: null
-  level5: null
-- object_name: power_strip
-  level1: electric_appliance
-  level2: power_strip
-  level3: null
-  level4: null
-  level5: null
-- object_name: milk
-  level1: drink
-  level2: milk
-  level3: null
-  level4: null
-  level5: null
-- object_name: soda
-  level1: drink
-  level2: soda
-  level3: null
-  level4: null
-  level5: null
-- object_name: lime
-  level1: fruit
-  level2: lime
-  level3: null
-  level4: null
-  level5: null
-- object_name: coffee_capsule
-  level1: drink
-  level2: coffee_capsule
-  level3: null
-  level4: null
-  level5: null
-- object_name: dish
-  level1: container
-  level2: dish
-  level3: null
-  level4: null
-  level5: null
-- object_name: glass
-  level1: furniture
-  level2: glass
-  level3: null
-  level4: null
-  level5: null
-- object_name: egg_yolk_pastry
-  level1: food
-  level2: egg_yolk_pastry
-  level3: null
-  level4: null
-  level5: null
-- object_name: glasses_case
-  level1: daily_necessities
-  level2: glasses_case
-  level3: null
-  level4: null
-  level5: null
-- object_name: gum
-  level1: daily_necessities
-  level2: gum
-  level3: null
-  level4: null
-  level5: null
-- object_name: tape
-  level1: daily_necessities
-  level2: tape
-  level3: null
-  level4: null
-  level5: null
-- object_name: soft_cleanser
-  level1: daily_necessities
-  level2: soft_cleanser
-  level3: null
-  level4: null
-  level5: null
-- object_name: chips
-  level1: food
-  level2: chips
-  level3: null
-  level4: null
-  level5: null
-- object_name: chocolate
-  level1: food
-  level2: chocolate
-  level3: null
-  level4: null
-  level5: null
-- object_name: cookie
-  level1: food
-  level2: cookie
-  level3: null
-  level4: null
-  level5: null
-- object_name: spoon
-  level1: tableware
-  level2: spoon
-  level3: null
-  level4: null
-  level5: null
-device_model: R1_Lite
+dataset_uuid: 9155fbd7-8bc2-44d0-a2dc-16b1fad44af0
+scene_type: []
+atomic_actions: []
 end_effector_type: two_finger_gripper
 operation_platform_height: 77.2
+objects: []
+path: R1_Lite_move_the_position_of_the_apple
+video_url: ./assets/videos/R1_Lite_move_the_position_of_the_apple.mp4
+thumbnail_url: ./assets/thumbnails/R1_Lite_move_the_position_of_the_apple.jpg
+license: apache-2.0
+language:
+- en
+- zh
+task_categories:
+- robotics
+tags:
+- RoboCOIN
+- LeRobot
+size_categories: 1K-10K
+configs:
+- config_name: default
+  data_files: data/*/*.parquet
+authors:
+  contributed_by:
+  - name: RoboCOIN
+    url: https://flagopen.github.io/RoboCOIN/
+    affiliation: RoboCOIN Team
+  annotated_by:
+  - name: RoboCOIN
+    url: https://flagopen.github.io/RoboCOIN/
+    affiliation: RoboCOIN Team
+dataset_description: This dataset uses an extended format based on LeRobot and is
+  fully compatible with LeRobot.
+homepage: https://flagopen.github.io/RoboCOIN/
+paper: https://arxiv.org/abs/2511.17441
+repository: https://github.com/FlagOpen/RoboCOIN
+project_page: https://flagopen.github.io/RoboCOIN/
+robot_type: galaxea_r1_lite
+codebase_version: v2.1
+statistics:
+  total_episodes: 35
+  total_frames: 5959
+  total_tasks: 1
+  total_videos: 140
+  total_chunks: 1
+  chunks_size: 1000
+  fps: 30
+splits:
+  train: 0:34
+data_path: data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet
+video_path: videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mp4
+features:
+  observation.images.cam_high_left_rgb:
+    dtype: video
+    shape:
+    - 720
+    - 1280
+    - 3
+    names:
+    - height
+    - width
+    - channels
+    info:
+      video.height: 720
+      video.width: 1280
+      video.codec: av1
+      video.pix_fmt: yuv420p
+      video.is_depth_map: false
+      video.fps: 30
+      video.channels: 3
+      has_audio: false
+  observation.images.cam_high_right_rgb:
+    dtype: video
+    shape:
+    - 720
+    - 1280
+    - 3
+    names:
+    - height
+    - width
+    - channels
+    info:
+      video.height: 720
+      video.width: 1280
+      video.codec: av1
+      video.pix_fmt: yuv420p
+      video.is_depth_map: false
+      video.fps: 30
+      video.channels: 3
+      has_audio: false
+  observation.images.cam_left_wrist_rgb:
+    dtype: video
+    shape:
+    - 720
+    - 1280
+    - 3
+    names:
+    - height
+    - width
+    - channels
+    info:
+      video.height: 720
+      video.width: 1280
+      video.codec: av1
+      video.pix_fmt: yuv420p
+      video.is_depth_map: false
+      video.fps: 30
+      video.channels: 3
+      has_audio: false
+  observation.images.cam_right_wrist_rgb:
+    dtype: video
+    shape:
+    - 720
+    - 1280
+    - 3
+    names:
+    - height
+    - width
+    - channels
+    info:
+      video.height: 720
+      video.width: 1280
+      video.codec: av1
+      video.pix_fmt: yuv420p
+      video.is_depth_map: false
+      video.fps: 30
+      video.channels: 3
+      has_audio: false
+  observation.state:
+    dtype: float32
+    shape:
+    - 16
+    names:
+    - left_arm_joint_1_rad
+    - left_arm_joint_2_rad
+    - left_arm_joint_3_rad
+    - left_arm_joint_4_rad
+    - left_arm_joint_5_rad
+    - left_arm_joint_6_rad
+    - left_arm_joint_7_rad
+    - right_arm_joint_1_rad
+    - right_arm_joint_2_rad
+    - right_arm_joint_3_rad
+    - right_arm_joint_4_rad
+    - right_arm_joint_5_rad
+    - right_arm_joint_6_rad
+    - right_arm_joint_7_rad
+    - left_gripper_open
+    - right_gripper_open
+  action:
+    dtype: float32
+    shape:
+    - 18
+    names:
+    - left_arm_joint_1_rad
+    - left_arm_joint_2_rad
+    - left_arm_joint_3_rad
+    - left_arm_joint_4_rad
+    - left_arm_joint_5_rad
+    - left_arm_joint_6_rad
+    - left_arm_joint_7_rad
+    - right_arm_joint_1_rad
+    - right_arm_joint_2_rad
+    - right_arm_joint_3_rad
+    - right_arm_joint_4_rad
+    - right_arm_joint_5_rad
+    - right_arm_joint_6_rad
+    - right_arm_joint_7_rad
+    - left_gripper_open
+    - right_gripper_open
+  timestamp:
+    dtype: float32
+    shape:
+    - 1
+    names: null
+  frame_index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  episode_index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  task_index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  subtask_annotation:
+    names: null
+    dtype: int32
+    shape:
+    - 5
+  scene_annotation:
+    names: null
+    dtype: int32
+    shape:
+    - 1
+  eef_sim_pose_state:
+    names:
+    - left_eef_pos_x
+    - left_eef_pos_y
+    - left_eef_pos_z
+    - left_eef_ori_x
+    - left_eef_ori_y
+    - left_eef_ori_z
+    - right_eef_pos_x
+    - right_eef_pos_y
+    - right_eef_pos_z
+    - right_eef_ori_x
+    - right_eef_ori_y
+    - right_eef_ori_z
+    dtype: float32
+    shape:
+    - 12
+  eef_sim_pose_action:
+    names:
+    - left_eef_pos_x
+    - left_eef_pos_y
+    - left_eef_pos_z
+    - left_eef_ori_x
+    - left_eef_ori_y
+    - left_eef_ori_z
+    - right_eef_pos_x
+    - right_eef_pos_y
+    - right_eef_pos_z
+    - right_eef_ori_x
+    - right_eef_ori_y
+    - right_eef_ori_z
+    dtype: float32
+    shape:
+    - 12
+  eef_direction_state:
+    names:
+    - left_eef_direction
+    - right_eef_direction
+    dtype: int32
+    shape:
+    - 2
+  eef_direction_action:
+    names:
+    - left_eef_direction
+    - right_eef_direction
+    dtype: int32
+    shape:
+    - 2
+  eef_velocity_state:
+    names:
+    - left_eef_velocity
+    - right_eef_velocity
+    dtype: int32
+    shape:
+    - 2
+  eef_velocity_action:
+    names:
+    - left_eef_velocity
+    - right_eef_velocity
+    dtype: int32
+    shape:
+    - 2
+  eef_acc_mag_state:
+    names:
+    - left_eef_acc_mag
+    - right_eef_acc_mag
+    dtype: int32
+    shape:
+    - 2
+  eef_acc_mag_action:
+    names:
+    - left_eef_acc_mag
+    - right_eef_acc_mag
+    dtype: int32
+    shape:
+    - 2
+  gripper_open_scale_state:
+    names:
+    - left_gripper_open_scale
+    - right_gripper_open_scale
+    dtype: float32
+    shape:
+    - 2
+  gripper_open_scale_action:
+    names:
+    - left_gripper_open_scale
+    - right_gripper_open_scale
+    dtype: float32
+    shape:
+    - 2
+  gripper_mode_state:
+    names:
+    - left_gripper_mode
+    - right_gripper_mode
+    dtype: int32
+    shape:
+    - 2
+  gripper_mode_action:
+    names:
+    - left_gripper_mode
+    - right_gripper_mode
+    dtype: int32
+    shape:
+    - 2
+  gripper_activity_state:
+    names:
+    - left_gripper_activity
+    - right_gripper_activity
+    dtype: int32
+    shape:
+    - 2
+tasks: put the apple in the designated position.
+sub_tasks:
+- Abnormal
+- End
+- Grasp the apple with left gripper
+- Grasp the apple with right gripper
+- 'null'
+- Place the apple on the table with left gripper
+- Place the apple on the table with right gripper
+- Static
+annotations:
+  subtask_annotation: auto_generated
+  scene_annotation: auto_generated
+  eef_direction: auto_generated
+  eef_velocity: auto_generated
+  eef_acc_mag: auto_generated
+  gripper_mode: auto_generated
+  gripper_activity: auto_generated
+cameras:
+- key: observation.images.cam_high_left_rgb
+  name: cam_high_left_rgb
+  dtype: video
+  shape:
+  - 720
+  - 1280
+  - 3
+  resolution:
+  - 720
+  - 1280
+  fps: 30
+  is_depth: false
+- key: observation.images.cam_high_right_rgb
+  name: cam_high_right_rgb
+  dtype: video
+  shape:
+  - 720
+  - 1280
+  - 3
+  resolution:
+  - 720
+  - 1280
+  fps: 30
+  is_depth: false
+- key: observation.images.cam_left_wrist_rgb
+  name: cam_left_wrist_rgb
+  dtype: video
+  shape:
+  - 720
+  - 1280
+  - 3
+  resolution:
+  - 720
+  - 1280
+  fps: 30
+  is_depth: false
+- key: observation.images.cam_right_wrist_rgb
+  name: cam_right_wrist_rgb
+  dtype: video
+  shape:
+  - 720
+  - 1280
+  - 3
+  resolution:
+  - 720
+  - 1280
+  fps: 30
+  is_depth: false
+observation_space:
+  images:
+  - key: observation.images.cam_high_left_rgb
+    dtype: video
+    shape:
+    - 720
+    - 1280
+    - 3
+    names:
+    - height
+    - width
+    - channels
+  - key: observation.images.cam_high_right_rgb
+    dtype: video
+    shape:
+    - 720
+    - 1280
+    - 3
+    names:
+    - height
+    - width
+    - channels
+  - key: observation.images.cam_left_wrist_rgb
+    dtype: video
+    shape:
+    - 720
+    - 1280
+    - 3
+    names:
+    - height
+    - width
+    - channels
+  - key: observation.images.cam_right_wrist_rgb
+    dtype: video
+    shape:
+    - 720
+    - 1280
+    - 3
+    names:
+    - height
+    - width
+    - channels
+  state:
+    dtype: float32
+    shape:
+    - 16
+    names:
+    - left_arm_joint_1_rad
+    - left_arm_joint_2_rad
+    - left_arm_joint_3_rad
+    - left_arm_joint_4_rad
+    - left_arm_joint_5_rad
+    - left_arm_joint_6_rad
+    - left_arm_joint_7_rad
+    - right_arm_joint_1_rad
+    - right_arm_joint_2_rad
+    - right_arm_joint_3_rad
+    - right_arm_joint_4_rad
+    - right_arm_joint_5_rad
+    - right_arm_joint_6_rad
+    - right_arm_joint_7_rad
+    - left_gripper_open
+    - right_gripper_open
+action_space:
+  dtype: float32
+  shape:
+  - 18
+  names:
+  - left_arm_joint_1_rad
+  - left_arm_joint_2_rad
+  - left_arm_joint_3_rad
+  - left_arm_joint_4_rad
+  - left_arm_joint_5_rad
+  - left_arm_joint_6_rad
+  - left_arm_joint_7_rad
+  - right_arm_joint_1_rad
+  - right_arm_joint_2_rad
+  - right_arm_joint_3_rad
+  - right_arm_joint_4_rad
+  - right_arm_joint_5_rad
+  - right_arm_joint_6_rad
+  - right_arm_joint_7_rad
+  - left_gripper_open
+  - right_gripper_open
+eef_sim_pose: auto_generated
+gripper_open_scale: auto_generated
+depth_enabled: false
+data_schema: auto_generated
+structure: "R1_Lite_move_the_position_of_the_apple_qced_hardlink/\n├── annotations/\n\
+  │   ├── eef_acc_mag_annotation.jsonl\n│   ├── eef_direction_annotation.jsonl\n│\
+  \   ├── eef_velocity_annotation.jsonl\n│   ├── gripper_activity_annotation.jsonl\n\
+  │   ├── gripper_mode_annotation.jsonl\n│   └── (...)\n├── data/\n│   └── chunk-000/\n\
+  │       ├── episode_000000.parquet\n│       ├── episode_000001.parquet\n│      \
+  \ ├── episode_000002.parquet\n│       ├── episode_000003.parquet\n│       ├── episode_000004.parquet\n\
+  │       └── (...)\n├── meta/\n│   ├── episodes.jsonl\n│   ├── episodes_stats.jsonl\n\
+  │   ├── info.json\n│   └── tasks.jsonl\n└── videos/\n    └── chunk-000/\n      \
+  \  ├── observation.images.cam_high_left_rgb/\n        │   ├── episode_000000.mp4\n\
+  \        │   ├── episode_000001.mp4\n        │   ├── episode_000002.mp4\n      \
+  \  │   ├── episode_000003.mp4\n        │   ├── episode_000004.mp4\n        │   └──\
+  \ (...)\n        ├── observation.images.cam_high_right_rgb/\n        │   ├── episode_000000.mp4\n\
+  \        │   ├── episode_000001.mp4\n        │   ├── episode_000002.mp4\n      \
+  \  │   ├── episode_000003.mp4\n        │   ├── episode_000004.mp4\n        │   └──\
+  \ (...)\n        ├── observation.images.cam_left_wrist_rgb/\n        │   ├── episode_000000.mp4\n\
+  \        │   ├── episode_000001.mp4\n        │   ├── episode_000002.mp4\n      \
+  \  │   ├── episode_000003.mp4\n        │   ├── episode_000004.mp4\n        │   └──\
+  \ (...)\n        └── observation.images.cam_right_wrist_rgb/\n            ├── episode_000000.mp4\n\
+  \            ├── episode_000001.mp4\n            ├── episode_000002.mp4\n      \
+  \      ├── episode_000003.mp4\n            ├── episode_000004.mp4\n            └──\
+  \ (...)"
+contact_email: null
+contact_info: For questions, issues, or feedback regarding this dataset, please contact
+  us.
+support_info: For technical support, please open an issue on our GitHub repository.
+license_details: Please refer to the LICENSE file for full license terms and conditions.
+citation_bibtex: "@misc{RoboCOINReport,\n        author = {Shihan Wu, Xuecheng Liu,\
+  \ Shaoxuan Xie, Pengwei Wang, Xinghang Li, Bowen Yang, Zhe Li, Kai Zhu, Hongyu Wu,\
+  \ Yiheng Liu, Zhaoye Long, Yue Wang, Chong Liu, Dihan Wang, Ziqiang Ni, Xiang Yang,\
+  \ You Liu, Ruoxuan Feng, Runtian Xu, Lei Zhang, Denghang Huang, Chenghao Jin, Anlan\
+  \ Yin, Xinlong Wang, Zhenguo Sun, Junkai Zhao, Mengfei Du, Mingyu Cao, Xiansheng\
+  \ Chen, Hongyang Cheng, Xiaojie Zhang, Yankai Fu, Ning Chen, Cheng Chi, Sixiang\
+  \ Chen, Huaihai Lyu, Xiaoshuai Hao, Yankai Fu, Yequan Wang, Bo Lei, Dong Liu, Xi\
+  \ Yang, Yance Jiao, Tengfei Pan, Yunyan Zhang, Songjing Wang, Ziqian Zhang, Xu Liu,\
+  \ Ji Zhang, Caowei Meng, Zhizheng Zhang, Jiyang Gao, Song Wang, Xiaokun Leng, Zhiqiang\
+  \ Xie, Zhenzhen Zhou, Peng Huang, Wu Yang, Yandong Guo, Yichao Zhu, Suibing Zheng,\
+  \ Hao Cheng, Xinmin Ding, Yang Yue, Huanqian Wang, Chi Chen, Jingrui Pang, YuXi\
+  \ Qian, Haoran Geng, Lianli Gao, Haiyuan Li, Bin Fang, Gao Huang, Yaodong Yang,\
+  \ Hao Dong, He Wang, Hang Zhao, Yadong Mu, Di Hu, Hao Zhao, Tiejun Huang, Shanghang\
+  \ Zhang, Yonghua Lin, Zhongyuan Wang and Guocai Yao},\n        title = {RoboCOIN:\
+  \ An Open-Sourced Bimanual Robotic Data Collection for Integrated Manipulation},\n\
+  \        year = {2025},\n        eprint = {2511.17441},\n        archivePrefix =\
+  \ {arXiv},\n        url = {https://arxiv.org/abs/2511.17441}\n    }"
+additional_citations: 'If you use this dataset, please also consider citing:
+
+  - LeRobot Framework: https://github.com/huggingface/lerobot'
+version_info: '## Version History
+
+  - v1.0.0 (2025-11): Initial release'
+raw:
+  dataset_name: move_the_position_of_the_apple
+  dataset_uuid: null
+  task_descriptions:
+  - put the apple in the designated position.
+  scene_type:
+  - home
+  atomic_actions:
+  - place
+  - pick
+  - grasp
+  objects:
+  - object_name: table
+    level1: furniture
+    level2: table
+    level3: null
+    level4: null
+    level5: null
+  - object_name: pen
+    level1: office_supplies
+    level2: pen
+    level3: null
+    level4: null
+    level5: null
+  - object_name: banana
+    level1: fruit
+    level2: banana
+    level3: null
+    level4: null
+    level5: null
+  - object_name: apple
+    level1: fruit
+    level2: apple
+    level3: null
+    level4: null
+    level5: null
+  - object_name: bath_ball
+    level1: daily_necessities
+    level2: bath_ball
+    level3: null
+    level4: null
+    level5: null
+  - object_name: bowl
+    level1: container
+    level2: bowl
+    level3: null
+    level4: null
+    level5: null
+  - object_name: plate
+    level1: container
+    level2: plate
+    level3: null
+    level4: null
+    level5: null
+  - object_name: can
+    level1: container
+    level2: can
+    level3: null
+    level4: null
+    level5: null
+  - object_name: eraser
+    level1: office_supplies
+    level2: eraser
+    level3: null
+    level4: null
+    level5: null
+  - object_name: hard_cleanser
+    level1: daily_necessities
+    level2: hard_cleanser
+    level3: null
+    level4: null
+    level5: null
+  - object_name: long_bread
+    level1: food
+    level2: long_bread
+    level3: null
+    level4: null
+    level5: null
+  - object_name: peeler
+    level1: tool
+    level2: peeler
+    level3: null
+    level4: null
+    level5: null
+  - object_name: block
+    level1: toy
+    level2: block
+    level3: null
+    level4: null
+    level5: null
+  - object_name: duck
+    level1: toy
+    level2: duck
+    level3: null
+    level4: null
+    level5: null
+  - object_name: soap
+    level1: daily_necessities
+    level2: soap
+    level3: null
+    level4: null
+    level5: null
+  - object_name: box
+    level1: container
+    level2: box
+    level3: null
+    level4: null
+    level5: null
+  - object_name: basket
+    level1: container
+    level2: basket
+    level3: null
+    level4: null
+    level5: null
+  - object_name: cola
+    level1: drink
+    level2: cola
+    level3: null
+    level4: null
+    level5: null
+  - object_name: detergent
+    level1: daily_necessities
+    level2: detergent
+    level3: null
+    level4: null
+    level5: null
+  - object_name: egg_beater
+    level1: electrical_appliances
+    level2: egg_beater
+    level3: null
+    level4: null
+    level5: null
+  - object_name: towel
+    level1: clothing
+    level2: towel
+    level3: null
+    level4: null
+    level5: null
+  - object_name: orange
+    level1: fruit
+    level2: orange
+    level3: null
+    level4: null
+    level5: null
+  - object_name: peach
+    level1: fruit
+    level2: peach
+    level3: null
+    level4: null
+    level5: null
+  - object_name: marker
+    level1: office_supplies
+    level2: marker
+    level3: null
+    level4: null
+    level5: null
+  - object_name: rubiks_cube
+    level1: toy
+    level2: rubiks_cube
+    level3: null
+    level4: null
+    level5: null
+  - object_name: bread_slice
+    level1: food
+    level2: bread_slice
+    level3: null
+    level4: null
+    level5: null
+  - object_name: brush
+    level1: daily_necessities
+    level2: brush
+    level3: null
+    level4: null
+    level5: null
+  - object_name: yogurt
+    level1: drink
+    level2: yogurt
+    level3: null
+    level4: null
+    level5: null
+  - object_name: power_strip
+    level1: electric_appliance
+    level2: power_strip
+    level3: null
+    level4: null
+    level5: null
+  - object_name: milk
+    level1: drink
+    level2: milk
+    level3: null
+    level4: null
+    level5: null
+  - object_name: soda
+    level1: drink
+    level2: soda
+    level3: null
+    level4: null
+    level5: null
+  - object_name: lime
+    level1: fruit
+    level2: lime
+    level3: null
+    level4: null
+    level5: null
+  - object_name: coffee_capsule
+    level1: drink
+    level2: coffee_capsule
+    level3: null
+    level4: null
+    level5: null
+  - object_name: dish
+    level1: container
+    level2: dish
+    level3: null
+    level4: null
+    level5: null
+  - object_name: glass
+    level1: furniture
+    level2: glass
+    level3: null
+    level4: null
+    level5: null
+  - object_name: egg_yolk_pastry
+    level1: food
+    level2: egg_yolk_pastry
+    level3: null
+    level4: null
+    level5: null
+  - object_name: glasses_case
+    level1: daily_necessities
+    level2: glasses_case
+    level3: null
+    level4: null
+    level5: null
+  - object_name: gum
+    level1: daily_necessities
+    level2: gum
+    level3: null
+    level4: null
+    level5: null
+  - object_name: tape
+    level1: daily_necessities
+    level2: tape
+    level3: null
+    level4: null
+    level5: null
+  - object_name: soft_cleanser
+    level1: daily_necessities
+    level2: soft_cleanser
+    level3: null
+    level4: null
+    level5: null
+  - object_name: chips
+    level1: food
+    level2: chips
+    level3: null
+    level4: null
+    level5: null
+  - object_name: chocolate
+    level1: food
+    level2: chocolate
+    level3: null
+    level4: null
+    level5: null
+  - object_name: cookie
+    level1: food
+    level2: cookie
+    level3: null
+    level4: null
+    level5: null
+  - object_name: spoon
+    level1: tableware
+    level2: spoon
+    level3: null
+    level4: null
+    level5: null
+  device_model:
+  - galaxea_r1_lite
+  end_effector_type: two_finger_gripper
+  operation_platform_height: 77.2

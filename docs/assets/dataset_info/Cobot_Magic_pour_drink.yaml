@@ -1,178 +1,877 @@
 dataset_name: pour_drink
-dataset_uuid: null
-task_descriptions:
-- fill the black mug completely with NFC orange juice.
-- pour half of the NFC orange juice into the black mug.
-- pour three quarters of the NFC orange juice into the black mug.
-- pour quarter of the NFC orange juice into the black mug.
-- fill the paper cup completely with NFC orange juice.
-- pour half of the NFC orange juice into the paper cup.
-- pour three quarters of the NFC orange juice into the paper cup.
-- pour quarter of the NFC orange juice into the paper cup.
-- fill the transparent cup completely with NFC orange juice.
-- pour half of the NFC orange juice into the transparent cup.
-- pour three quarters of the NFC orange juice into the transparent cup.
-- pour quarter of the NFC orange juice into the transparent cup.
-- fill the black mug completely with red wine.
-- pour half of the red wine into the black mug.
-- pour three quarters of the red wine into the black mug.
-- pour quarter of the red wine into the black mug.
-- fill the paper cup completely with red wine.
-- pour half of the red wine into the paper cup.
-- pour three quarters of the red wine into the paper cup.
-- pour quarter of the red wine into the paper cup.
-- fill the transparent cup completely with red wine.
-- pour half of the red wine into the transparent cup.
-- pour three quarters of the red wine into the transparent cup.
-- pour quarter of the red wine into the transparent cup.
-- fill the black mug completely with sprite.
-- pour half of the sprite into the black mug.
-- pour three quarters of the sprite into the black mug.
-- pour quarter of the sprite into the black mug.
-- fill the paper cup completely with sprite.
-- pour half of the sprite into the paper cup.
-- pour three quarters of the sprite into the paper cup.
-- pour quarter of the sprite into the paper cup.
-- fill the transparent cup completely with sprite.
-- pour half of the sprite into the transparent cup.
-- pour three quarters of the sprite into the transparent cup.
-- pour quarter of the sprite into the transparent cup.
-- pour the cestbon into the black cup.
-- pour the cestbon into the gray cup.
-- pour the cestbon into the red cup.
-- pour the cestbon into the white cup.
-- pour the cestbon into the yellow cup.
-- pour the coffee into the black cup.
-- pour the coffee into the gray cup.
-- pour the coffee into the red cup.
-- pour the coffee into the white cup.
-- pour the coffee into the yellow cup.
-- pour the cola into the black cup.
-- pour the cola into the gray cup.
-- pour the cola into the red cup.
-- pour the cola into the white cup.
-- pour the cola into the yellow cup.
-- pour the milk into the black cup.
-- pour the milk into the gray cup.
-- pour the milk into the red cup.
-- pour the milk into the white cup.
-- pour the milk into the yellow cup.
-- pour the sprite into the black cup.
-- pour the sprite into the gray cup.
-- pour the sprite into the red cup.
-- pour the sprite into the white cup.
-- pour the sprite into the yellow cup.
-- pour the cestbon onto the black tablecloth into the black cup.
-- pour the cestbon onto the black tablecloth into the grey cup.
-- pour the cestbon onto the black tablecloth into the red cup.
-- pour the cestbon onto the black tablecloth into the white cup.
-- pour the cestbon onto the black tablecloth into the yellow cup.
-- pour the coffee onto the black tablecloth into the black cup.
-- pour the coffee onto the black tablecloth into the grey cup.
-- pour the coffee onto the black tablecloth into the red cup.
-- pour the coffee onto the black tablecloth into the white cup.
-- pour the coffee onto the black tablecloth into the yellow cup.
-- pour the cola into the black cup on the black tablecloth.
-- pour the cola into the grey cup on the black tablecloth.
-- pour the cola into the red cup on the black tablecloth.
-- pour the cola into the white cup on the black tablecloth.
-- pour the cola into the yellow cup on the black tablecloth.
-- pour the milk onto the black tablecloth into the black cup.
-- pour the milk onto the black tablecloth into the grey cup.
-- pour the milk onto the black tablecloth into the red cup.
-- pour the milk onto the black tablecloth into the white cup.
-- pour the milk onto the black tablecloth into the yellow cup.
-- pour sprite into a black cup on a black tablecloth.
-- pour sprite into a black cup on a grey tablecloth.
-- pour sprite into a black cup on a red tablecloth.
-- pour sprite into a black cup on a white tablecloth.
-- pour sprite into a black cup on a yellow tablecloth.
-scene_type:
-- home
-atomic_actions:
-- grasp
-- pick
-- place
-- pour
-objects:
-- object_name: table
-  level1: furniture
-  level2: table
-  level3: null
-  level4: null
-  level5: null
-- object_name: NFC_orange_juice
-  level1: drink
-  level2: NFC_orange_juice
-  level3: null
-  level4: null
-  level5: null
-- object_name: red_wine
-  level1: drink
-  level2: red_wine
-  level3: null
-  level4: null
-  level5: null
-- object_name: sprite
-  level1: drink
-  level2: sprite
-  level3: null
-  level4: null
-  level5: null
-- object_name: black_mug
-  level1: container
-  level2: black_mug
-  level3: null
-  level4: null
-  level5: null
-- object_name: paper_cup
-  level1: container
-  level2: paper_cup
-  level3: null
-  level4: null
-  level5: null
-- object_name: transparent_cup
-  level1: container
-  level2: transparent_cup
-  level3: null
-  level4: null
-  level5: null
-- object_name: tablecloth
-  level1: clothing
-  level2: tablecloth
-  level3: null
-  level4: null
-  level5: null
-- object_name: cestbon
-  level1: drink
-  level2: cestbon
-  level3: null
-  level4: null
-  level5: null
-- object_name: coffee
-  level1: drink
-  level2: coffee
-  level3: null
-  level4: null
-  level5: null
-- object_name: cola
-  level1: drink
-  level2: cola
-  level3: null
-  level4: null
-  level5: null
-- object_name: milk
-  level1: drink
-  level2: milk
-  level3: null
-  level4: null
-  level5: null
-- object_name: cup
-  level1: container
-  level2: cup
-  level3: null
-  level4: null
-  level5: null
-operation_platform_height: 77.2
-device_model: Cobot_Magic
+dataset_uuid: 9b6b4d09-0c15-4d1f-b8f9-12be94c871cd
+scene_type: []
+atomic_actions: []
 end_effector_type: two_finger_gripper
+operation_platform_height: 77.2
+objects: []
+path: Cobot_Magic_pour_drink
+video_url: ./assets/videos/Cobot_Magic_pour_drink.mp4
+thumbnail_url: ./assets/thumbnails/Cobot_Magic_pour_drink.jpg
+license: apache-2.0
+language:
+- en
+- zh
+task_categories:
+- robotics
+tags:
+- RoboCOIN
+- LeRobot
+size_categories: 100K-1M
+configs:
+- config_name: default
+  data_files: data/*/*.parquet
+authors:
+  contributed_by:
+  - name: RoboCOIN
+    url: https://flagopen.github.io/RoboCOIN/
+    affiliation: RoboCOIN Team
+  annotated_by:
+  - name: RoboCOIN
+    url: https://flagopen.github.io/RoboCOIN/
+    affiliation: RoboCOIN Team
+dataset_description: This dataset uses an extended format based on LeRobot and is
+  fully compatible with LeRobot.
+homepage: https://flagopen.github.io/RoboCOIN/
+paper: https://arxiv.org/abs/2511.17441
+repository: https://github.com/FlagOpen/RoboCOIN
+project_page: https://flagopen.github.io/RoboCOIN/
+robot_type: agilex_cobot_decoupled_magic
+codebase_version: v2.1
+statistics:
+  total_episodes: 1613
+  total_frames: 862292
+  total_tasks: 61
+  total_videos: 4839
+  total_chunks: 2
+  chunks_size: 1000
+  fps: 30
+splits:
+  train: 0:1612
+data_path: data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet
+video_path: videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mp4
+features:
+  observation.images.cam_high_rgb:
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+    info:
+      video.height: 480
+      video.width: 640
+      video.codec: av1
+      video.pix_fmt: yuv420p
+      video.is_depth_map: false
+      video.fps: 30
+      video.channels: 3
+      has_audio: false
+  observation.images.cam_left_wrist_rgb:
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+    info:
+      video.height: 480
+      video.width: 640
+      video.codec: av1
+      video.pix_fmt: yuv420p
+      video.is_depth_map: false
+      video.fps: 30
+      video.channels: 3
+      has_audio: false
+  observation.images.cam_right_wrist_rgb:
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+    info:
+      video.height: 480
+      video.width: 640
+      video.codec: av1
+      video.pix_fmt: yuv420p
+      video.is_depth_map: false
+      video.fps: 30
+      video.channels: 3
+      has_audio: false
+  observation.state:
+    dtype: float32
+    shape:
+    - 26
+    names:
+    - left_arm_joint_1_rad
+    - left_arm_joint_2_rad
+    - left_arm_joint_3_rad
+    - left_arm_joint_4_rad
+    - left_arm_joint_5_rad
+    - left_arm_joint_6_rad
+    - left_gripper_open
+    - left_eef_pos_x_m
+    - left_eef_pos_y_m
+    - left_eef_pos_z_m
+    - left_eef_rot_euler_x_rad
+    - left_eef_rot_euler_y_rad
+    - left_eef_rot_euler_z_rad
+    - right_arm_joint_1_rad
+    - right_arm_joint_2_rad
+    - right_arm_joint_3_rad
+    - right_arm_joint_4_rad
+    - right_arm_joint_5_rad
+    - right_arm_joint_6_rad
+    - right_gripper_open
+    - right_eef_pos_x_m
+    - right_eef_pos_y_m
+    - right_eef_pos_z_m
+    - right_eef_rot_euler_x_rad
+    - right_eef_rot_euler_y_rad
+    - right_eef_rot_euler_z_rad
+  action:
+    dtype: float32
+    shape:
+    - 26
+    names:
+    - left_arm_joint_1_rad
+    - left_arm_joint_2_rad
+    - left_arm_joint_3_rad
+    - left_arm_joint_4_rad
+    - left_arm_joint_5_rad
+    - left_arm_joint_6_rad
+    - left_gripper_open
+    - left_eef_pos_x_m
+    - left_eef_pos_y_m
+    - left_eef_pos_z_m
+    - left_eef_rot_euler_x_rad
+    - left_eef_rot_euler_y_rad
+    - left_eef_rot_euler_z_rad
+    - right_arm_joint_1_rad
+    - right_arm_joint_2_rad
+    - right_arm_joint_3_rad
+    - right_arm_joint_4_rad
+    - right_arm_joint_5_rad
+    - right_arm_joint_6_rad
+    - right_gripper_open
+    - right_eef_pos_x_m
+    - right_eef_pos_y_m
+    - right_eef_pos_z_m
+    - right_eef_rot_euler_x_rad
+    - right_eef_rot_euler_y_rad
+    - right_eef_rot_euler_z_rad
+  timestamp:
+    dtype: float32
+    shape:
+    - 1
+    names: null
+  frame_index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  episode_index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  task_index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  subtask_annotation:
+    names: null
+    dtype: int32
+    shape:
+    - 5
+  scene_annotation:
+    names: null
+    dtype: int32
+    shape:
+    - 1
+  eef_sim_pose_state:
+    names:
+    - left_eef_pos_x
+    - left_eef_pos_y
+    - left_eef_pos_z
+    - left_eef_ori_x
+    - left_eef_ori_y
+    - left_eef_ori_z
+    - right_eef_pos_x
+    - right_eef_pos_y
+    - right_eef_pos_z
+    - right_eef_ori_x
+    - right_eef_ori_y
+    - right_eef_ori_z
+    dtype: float32
+    shape:
+    - 12
+  eef_sim_pose_action:
+    names:
+    - left_eef_pos_x
+    - left_eef_pos_y
+    - left_eef_pos_z
+    - left_eef_ori_x
+    - left_eef_ori_y
+    - left_eef_ori_z
+    - right_eef_pos_x
+    - right_eef_pos_y
+    - right_eef_pos_z
+    - right_eef_ori_x
+    - right_eef_ori_y
+    - right_eef_ori_z
+    dtype: float32
+    shape:
+    - 12
+  eef_direction_state:
+    names:
+    - left_eef_direction
+    - right_eef_direction
+    dtype: int32
+    shape:
+    - 2
+  eef_direction_action:
+    names:
+    - left_eef_direction
+    - right_eef_direction
+    dtype: int32
+    shape:
+    - 2
+  eef_velocity_state:
+    names:
+    - left_eef_velocity
+    - right_eef_velocity
+    dtype: int32
+    shape:
+    - 2
+  eef_velocity_action:
+    names:
+    - left_eef_velocity
+    - right_eef_velocity
+    dtype: int32
+    shape:
+    - 2
+  eef_acc_mag_state:
+    names:
+    - left_eef_acc_mag
+    - right_eef_acc_mag
+    dtype: int32
+    shape:
+    - 2
+  eef_acc_mag_action:
+    names:
+    - left_eef_acc_mag
+    - right_eef_acc_mag
+    dtype: int32
+    shape:
+    - 2
+  gripper_open_scale_state:
+    names:
+    - left_gripper_open_scale
+    - right_gripper_open_scale
+    dtype: float32
+    shape:
+    - 2
+  gripper_open_scale_action:
+    names:
+    - left_gripper_open_scale
+    - right_gripper_open_scale
+    dtype: float32
+    shape:
+    - 2
+  gripper_mode_state:
+    names:
+    - left_gripper_mode
+    - right_gripper_mode
+    dtype: int32
+    shape:
+    - 2
+  gripper_mode_action:
+    names:
+    - left_gripper_mode
+    - right_gripper_mode
+    dtype: int32
+    shape:
+    - 2
+  gripper_activity_state:
+    names:
+    - left_gripper_activity
+    - right_gripper_activity
+    dtype: int32
+    shape:
+    - 2
+tasks: 'fill the black mug completely with NFC orange juice.
+
+  pour half of the NFC orange juice into the black mug.
+
+  pour three quarters of the NFC orange juice into the black mug.
+
+  pour quarter of the NFC orange juice into the black mug.
+
+  fill the paper cup completely with NFC orange juice.
+
+  pour half of the NFC orange juice into the paper cup.
+
+  pour three quarters of the NFC orange juice into the paper cup.
+
+  pour quarter of the NFC orange juice into the paper cup.
+
+  fill the transparent cup completely with NFC orange juice.
+
+  pour half of the NFC orange juice into the transparent cup.
+
+  pour three quarters of the NFC orange juice into the transparent cup.
+
+  pour quarter of the NFC orange juice into the transparent cup.
+
+  fill the black mug completely with red wine.
+
+  pour half of the red wine into the black mug.
+
+  pour three quarters of the red wine into the black mug.
+
+  pour quarter of the red wine into the black mug.
+
+  fill the paper cup completely with red wine.
+
+  pour half of the red wine into the paper cup.
+
+  pour three quarters of the red wine into the paper cup.
+
+  pour quarter of the red wine into the paper cup.
+
+  fill the transparent cup completely with red wine.
+
+  pour half of the red wine into the transparent cup.
+
+  pour three quarters of the red wine into the transparent cup.
+
+  pour quarter of the red wine into the transparent cup.
+
+  fill the black mug completely with sprite.
+
+  pour half of the sprite into the black mug.
+
+  pour three quarters of the sprite into the black mug.
+
+  pour quarter of the sprite into the black mug.
+
+  fill the paper cup completely with sprite.
+
+  pour half of the sprite into the paper cup.
+
+  pour three quarters of the sprite into the paper cup.
+
+  pour quarter of the sprite into the paper cup.
+
+  fill the transparent cup completely with sprite.
+
+  pour half of the sprite into the transparent cup.
+
+  pour three quarters of the sprite into the transparent cup.
+
+  pour quarter of the sprite into the transparent cup.
+
+  pour the cestbon into the black cup.
+
+  pour the cestbon into the gray cup.
+
+  pour the cestbon into the red cup.
+
+  pour the cestbon into the white cup.
+
+  pour the cestbon into the yellow cup.
+
+  pour the coffee into the black cup.
+
+  pour the coffee into the gray cup.
+
+  pour the coffee into the white cup.
+
+  pour the coffee into the yellow cup.
+
+  pour the coffee into the red cup.
+
+  pour the cola into the black cup.
+
+  pour the cola into the gray cup.
+
+  pour the cola into the red cup.
+
+  pour the cola into the white cup.
+
+  pour the cola into the yellow cup.
+
+  pour the milk into the black cup.
+
+  pour the milk into the gray cup.
+
+  pour the milk into the red cup.
+
+  pour the milk into the white cup.
+
+  pour the milk into the yellow cup.
+
+  pour the sprite into the black cup.
+
+  pour the sprite into the gray cup.
+
+  pour the sprite into the red cup.
+
+  pour the sprite into the yellow cup.
+
+  pour the sprite into the white cup.'
+sub_tasks:
+- Abnormal
+- End
+- Grasp the black cup with left gripper
+- Grasp the black cup with right gripper
+- Grasp the bottle filled water with right gripper
+- Grasp the bottle with coffee with right gripper
+- Grasp the bottle with cola with right gripper
+- Grasp the bottle with orange juice with left gripper
+- Grasp the bottle with red wine with left gripper
+- Grasp the bottle with sprite with left gripper
+- Grasp the bottle with sprite with right gripper
+- Grasp the bottle with water with right gripper
+- Grasp the bottle with yuexian Milk with right gripper
+- Grasp the grey cup with left gripper
+- Grasp the red cup with left gripper
+- Grasp the transparent cup with right gripper
+- Grasp the white cup with left gripper
+- Grasp the white cup with right gripper
+- Grasp the yellow paper cup with left gripper
+- Grasp the yellow paper cup with right gripper
+- Lift the black cup with left gripper
+- Lift the grey cup with left gripper
+- Lift the grey cup with right gripper
+- Lift the red cup with left gripper
+- Lift the white cup with left gripper
+- Lift the white cup with right gripper
+- Lift the yellow paper cup with left gripper
+- Lift the yellow paper cup with right gripper
+- 'null'
+- Place the black cup in the center of view with right gripper
+- Place the black cup on the table with left gripper
+- Place the coffee bottle on the table with right gripper
+- Place the cola bottle on the table with left gripper
+- Place the cola bottle on the table with right gripper
+- Place the grey cup on the table with left gripper
+- Place the orange juice bottle on the table with left gripper
+- Place the red cup on the table with left gripper
+- Place the red wine bottle on the table with left gripper
+- Place the sprite bottle on the table with left gripper
+- Place the sprite bottle on the table with right gripper
+- Place the transparent cup on the table with right gripper
+- Place the water bottle on the table with right gripper
+- Place the white cup on the table with left gripper
+- Place the white cup on the table with right gripper
+- Place the yellow paper cup on the table with left gripper
+- Place the yellow paper cup on the table with right gripper
+- Place the yuexian Milk bottle on the table with right gripper
+- Pour the coffee from bottle to cup with right gripper
+- Pour the cola from bottle to cup with right gripper
+- Pour the orange juice from bottle to cup with left gripper
+- Pour the red wine from bottle to cup with left gripper
+- Pour the sprite from bottle to cup with left gripper
+- Pour the sprite from bottle to cup with right gripper
+- Pour the water from bottle to cup with right gripper
+- Pour the yogurt from bottle to cup with left gripper
+- Pour the yuexian Milk from bottle to cup with right gripper
+- Static
+annotations:
+  subtask_annotation: auto_generated
+  scene_annotation: auto_generated
+  eef_direction: auto_generated
+  eef_velocity: auto_generated
+  eef_acc_mag: auto_generated
+  gripper_mode: auto_generated
+  gripper_activity: auto_generated
+cameras:
+- key: observation.images.cam_high_rgb
+  name: cam_high_rgb
+  dtype: video
+  shape:
+  - 480
+  - 640
+  - 3
+  resolution:
+  - 480
+  - 640
+  fps: 30
+  is_depth: false
+- key: observation.images.cam_left_wrist_rgb
+  name: cam_left_wrist_rgb
+  dtype: video
+  shape:
+  - 480
+  - 640
+  - 3
+  resolution:
+  - 480
+  - 640
+  fps: 30
+  is_depth: false
+- key: observation.images.cam_right_wrist_rgb
+  name: cam_right_wrist_rgb
+  dtype: video
+  shape:
+  - 480
+  - 640
+  - 3
+  resolution:
+  - 480
+  - 640
+  fps: 30
+  is_depth: false
+observation_space:
+  images:
+  - key: observation.images.cam_high_rgb
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+  - key: observation.images.cam_left_wrist_rgb
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+  - key: observation.images.cam_right_wrist_rgb
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+  state:
+    dtype: float32
+    shape:
+    - 26
+    names:
+    - left_arm_joint_1_rad
+    - left_arm_joint_2_rad
+    - left_arm_joint_3_rad
+    - left_arm_joint_4_rad
+    - left_arm_joint_5_rad
+    - left_arm_joint_6_rad
+    - left_gripper_open
+    - left_eef_pos_x_m
+    - left_eef_pos_y_m
+    - left_eef_pos_z_m
+    - left_eef_rot_euler_x_rad
+    - left_eef_rot_euler_y_rad
+    - left_eef_rot_euler_z_rad
+    - right_arm_joint_1_rad
+    - right_arm_joint_2_rad
+    - right_arm_joint_3_rad
+    - right_arm_joint_4_rad
+    - right_arm_joint_5_rad
+    - right_arm_joint_6_rad
+    - right_gripper_open
+    - right_eef_pos_x_m
+    - right_eef_pos_y_m
+    - right_eef_pos_z_m
+    - right_eef_rot_euler_x_rad
+    - right_eef_rot_euler_y_rad
+    - right_eef_rot_euler_z_rad
+action_space:
+  dtype: float32
+  shape:
+  - 26
+  names:
+  - left_arm_joint_1_rad
+  - left_arm_joint_2_rad
+  - left_arm_joint_3_rad
+  - left_arm_joint_4_rad
+  - left_arm_joint_5_rad
+  - left_arm_joint_6_rad
+  - left_gripper_open
+  - left_eef_pos_x_m
+  - left_eef_pos_y_m
+  - left_eef_pos_z_m
+  - left_eef_rot_euler_x_rad
+  - left_eef_rot_euler_y_rad
+  - left_eef_rot_euler_z_rad
+  - right_arm_joint_1_rad
+  - right_arm_joint_2_rad
+  - right_arm_joint_3_rad
+  - right_arm_joint_4_rad
+  - right_arm_joint_5_rad
+  - right_arm_joint_6_rad
+  - right_gripper_open
+  - right_eef_pos_x_m
+  - right_eef_pos_y_m
+  - right_eef_pos_z_m
+  - right_eef_rot_euler_x_rad
+  - right_eef_rot_euler_y_rad
+  - right_eef_rot_euler_z_rad
+eef_sim_pose: auto_generated
+gripper_open_scale: auto_generated
+depth_enabled: false
+data_schema: auto_generated
+structure: "Cobot_Magic_pour_drink_qced_hardlink/\n├── annotations/\n│   ├── eef_acc_mag_annotation.jsonl\n\
+  │   ├── eef_direction_annotation.jsonl\n│   ├── eef_velocity_annotation.jsonl\n\
+  │   ├── gripper_activity_annotation.jsonl\n│   ├── gripper_mode_annotation.jsonl\n\
+  │   └── (...)\n├── data/\n│   ├── chunk-000/\n│   │   ├── episode_000000.parquet\n\
+  │   │   ├── episode_000001.parquet\n│   │   ├── episode_000002.parquet\n│   │  \
+  \ ├── episode_000003.parquet\n│   │   ├── episode_000004.parquet\n│   │   └── (...)\n\
+  │   └── chunk-001/\n│       ├── episode_001000.parquet\n│       ├── episode_001001.parquet\n\
+  │       ├── episode_001002.parquet\n│       ├── episode_001003.parquet\n│      \
+  \ ├── episode_001004.parquet\n│       └── (...)\n├── meta/\n│   ├── episodes.jsonl\n\
+  │   ├── episodes_stats.jsonl\n│   ├── info.json\n│   └── tasks.jsonl\n└── videos/\n\
+  \    ├── chunk-000/\n    │   ├── observation.images.cam_high_rgb/\n    │   │   ├──\
+  \ episode_000000.mp4\n    │   │   ├── episode_000001.mp4\n    │   │   ├── episode_000002.mp4\n\
+  \    │   │   ├── episode_000003.mp4\n    │   │   ├── episode_000004.mp4\n    │ \
+  \  │   └── (...)\n    │   ├── observation.images.cam_left_wrist_rgb/\n    │   │\
+  \   ├── episode_000000.mp4\n    │   │   ├── episode_000001.mp4\n    │   │   ├──\
+  \ episode_000002.mp4\n    │   │   ├── episode_000003.mp4\n    │   │   ├── episode_000004.mp4\n\
+  \    │   │   └── (...)\n    │   └── observation.images.cam_right_wrist_rgb/\n  \
+  \  │       ├── episode_000000.mp4\n    │       ├── episode_000001.mp4\n    │   \
+  \    ├── episode_000002.mp4\n    │       ├── episode_000003.mp4\n    │       ├──\
+  \ episode_000004.mp4\n    │       └── (...)\n    └── chunk-001/\n        ├── observation.images.cam_high_rgb/\n\
+  \        │   ├── episode_001000.mp4\n        │   ├── episode_001001.mp4\n      \
+  \  │   ├── episode_001002.mp4\n        │   ├── episode_001003.mp4\n        │   ├──\
+  \ episode_001004.mp4\n        │   └── (...)\n        ├── observation.images.cam_left_wrist_rgb/\n\
+  \        │   ├── episode_001000.mp4\n        │   ├── episode_001001.mp4\n      \
+  \  │   ├── episode_001002.mp4\n        │   ├── episode_001003.mp4\n        │   ├──\
+  \ episode_001004.mp4\n        │   └── (...)\n        └── observation.images.cam_right_wrist_rgb/\n\
+  \            ├── episode_001000.mp4\n            ├── episode_001001.mp4\n      \
+  \      ├── episode_001002.mp4\n            ├── episode_001003.mp4\n            ├──\
+  \ episode_001004.mp4\n            └── (...)"
+contact_email: null
+contact_info: For questions, issues, or feedback regarding this dataset, please contact
+  us.
+support_info: For technical support, please open an issue on our GitHub repository.
+license_details: Please refer to the LICENSE file for full license terms and conditions.
+citation_bibtex: "@misc{RoboCOINReport,\n        author = {Shihan Wu, Xuecheng Liu,\
+  \ Shaoxuan Xie, Pengwei Wang, Xinghang Li, Bowen Yang, Zhe Li, Kai Zhu, Hongyu Wu,\
+  \ Yiheng Liu, Zhaoye Long, Yue Wang, Chong Liu, Dihan Wang, Ziqiang Ni, Xiang Yang,\
+  \ You Liu, Ruoxuan Feng, Runtian Xu, Lei Zhang, Denghang Huang, Chenghao Jin, Anlan\
+  \ Yin, Xinlong Wang, Zhenguo Sun, Junkai Zhao, Mengfei Du, Mingyu Cao, Xiansheng\
+  \ Chen, Hongyang Cheng, Xiaojie Zhang, Yankai Fu, Ning Chen, Cheng Chi, Sixiang\
+  \ Chen, Huaihai Lyu, Xiaoshuai Hao, Yankai Fu, Yequan Wang, Bo Lei, Dong Liu, Xi\
+  \ Yang, Yance Jiao, Tengfei Pan, Yunyan Zhang, Songjing Wang, Ziqian Zhang, Xu Liu,\
+  \ Ji Zhang, Caowei Meng, Zhizheng Zhang, Jiyang Gao, Song Wang, Xiaokun Leng, Zhiqiang\
+  \ Xie, Zhenzhen Zhou, Peng Huang, Wu Yang, Yandong Guo, Yichao Zhu, Suibing Zheng,\
+  \ Hao Cheng, Xinmin Ding, Yang Yue, Huanqian Wang, Chi Chen, Jingrui Pang, YuXi\
+  \ Qian, Haoran Geng, Lianli Gao, Haiyuan Li, Bin Fang, Gao Huang, Yaodong Yang,\
+  \ Hao Dong, He Wang, Hang Zhao, Yadong Mu, Di Hu, Hao Zhao, Tiejun Huang, Shanghang\
+  \ Zhang, Yonghua Lin, Zhongyuan Wang and Guocai Yao},\n        title = {RoboCOIN:\
+  \ An Open-Sourced Bimanual Robotic Data Collection for Integrated Manipulation},\n\
+  \        year = {2025},\n        eprint = {2511.17441},\n        archivePrefix =\
+  \ {arXiv},\n        url = {https://arxiv.org/abs/2511.17441}\n    }"
+additional_citations: 'If you use this dataset, please also consider citing:
+
+  - LeRobot Framework: https://github.com/huggingface/lerobot'
+version_info: '## Version History
+
+  - v1.0.0 (2025-11): Initial release'
+raw:
+  dataset_name: pour_drink
+  dataset_uuid: null
+  task_descriptions:
+  - fill the black mug completely with NFC orange juice.
+  - pour half of the NFC orange juice into the black mug.
+  - pour three quarters of the NFC orange juice into the black mug.
+  - pour quarter of the NFC orange juice into the black mug.
+  - fill the paper cup completely with NFC orange juice.
+  - pour half of the NFC orange juice into the paper cup.
+  - pour three quarters of the NFC orange juice into the paper cup.
+  - pour quarter of the NFC orange juice into the paper cup.
+  - fill the transparent cup completely with NFC orange juice.
+  - pour half of the NFC orange juice into the transparent cup.
+  - pour three quarters of the NFC orange juice into the transparent cup.
+  - pour quarter of the NFC orange juice into the transparent cup.
+  - fill the black mug completely with red wine.
+  - pour half of the red wine into the black mug.
+  - pour three quarters of the red wine into the black mug.
+  - pour quarter of the red wine into the black mug.
+  - fill the paper cup completely with red wine.
+  - pour half of the red wine into the paper cup.
+  - pour three quarters of the red wine into the paper cup.
+  - pour quarter of the red wine into the paper cup.
+  - fill the transparent cup completely with red wine.
+  - pour half of the red wine into the transparent cup.
+  - pour three quarters of the red wine into the transparent cup.
+  - pour quarter of the red wine into the transparent cup.
+  - fill the black mug completely with sprite.
+  - pour half of the sprite into the black mug.
+  - pour three quarters of the sprite into the black mug.
+  - pour quarter of the sprite into the black mug.
+  - fill the paper cup completely with sprite.
+  - pour half of the sprite into the paper cup.
+  - pour three quarters of the sprite into the paper cup.
+  - pour quarter of the sprite into the paper cup.
+  - fill the transparent cup completely with sprite.
+  - pour half of the sprite into the transparent cup.
+  - pour three quarters of the sprite into the transparent cup.
+  - pour quarter of the sprite into the transparent cup.
+  - pour the cestbon into the black cup.
+  - pour the cestbon into the gray cup.
+  - pour the cestbon into the red cup.
+  - pour the cestbon into the white cup.
+  - pour the cestbon into the yellow cup.
+  - pour the coffee into the black cup.
+  - pour the coffee into the gray cup.
+  - pour the coffee into the red cup.
+  - pour the coffee into the white cup.
+  - pour the coffee into the yellow cup.
+  - pour the cola into the black cup.
+  - pour the cola into the gray cup.
+  - pour the cola into the red cup.
+  - pour the cola into the white cup.
+  - pour the cola into the yellow cup.
+  - pour the milk into the black cup.
+  - pour the milk into the gray cup.
+  - pour the milk into the red cup.
+  - pour the milk into the white cup.
+  - pour the milk into the yellow cup.
+  - pour the sprite into the black cup.
+  - pour the sprite into the gray cup.
+  - pour the sprite into the red cup.
+  - pour the sprite into the white cup.
+  - pour the sprite into the yellow cup.
+  - pour the cestbon onto the black tablecloth into the black cup.
+  - pour the cestbon onto the black tablecloth into the grey cup.
+  - pour the cestbon onto the black tablecloth into the red cup.
+  - pour the cestbon onto the black tablecloth into the white cup.
+  - pour the cestbon onto the black tablecloth into the yellow cup.
+  - pour the coffee onto the black tablecloth into the black cup.
+  - pour the coffee onto the black tablecloth into the grey cup.
+  - pour the coffee onto the black tablecloth into the red cup.
+  - pour the coffee onto the black tablecloth into the white cup.
+  - pour the coffee onto the black tablecloth into the yellow cup.
+  - pour the cola into the black cup on the black tablecloth.
+  - pour the cola into the grey cup on the black tablecloth.
+  - pour the cola into the red cup on the black tablecloth.
+  - pour the cola into the white cup on the black tablecloth.
+  - pour the cola into the yellow cup on the black tablecloth.
+  - pour the milk onto the black tablecloth into the black cup.
+  - pour the milk onto the black tablecloth into the grey cup.
+  - pour the milk onto the black tablecloth into the red cup.
+  - pour the milk onto the black tablecloth into the white cup.
+  - pour the milk onto the black tablecloth into the yellow cup.
+  - pour sprite into a black cup on a black tablecloth.
+  - pour sprite into a black cup on a grey tablecloth.
+  - pour sprite into a black cup on a red tablecloth.
+  - pour sprite into a black cup on a white tablecloth.
+  - pour sprite into a black cup on a yellow tablecloth.
+  scene_type:
+  - home
+  atomic_actions:
+  - grasp
+  - pick
+  - place
+  - pour
+  objects:
+  - object_name: table
+    level1: furniture
+    level2: table
+    level3: null
+    level4: null
+    level5: null
+  - object_name: NFC_orange_juice
+    level1: drink
+    level2: NFC_orange_juice
+    level3: null
+    level4: null
+    level5: null
+  - object_name: red_wine
+    level1: drink
+    level2: red_wine
+    level3: null
+    level4: null
+    level5: null
+  - object_name: sprite
+    level1: drink
+    level2: sprite
+    level3: null
+    level4: null
+    level5: null
+  - object_name: black_mug
+    level1: container
+    level2: black_mug
+    level3: null
+    level4: null
+    level5: null
+  - object_name: paper_cup
+    level1: container
+    level2: paper_cup
+    level3: null
+    level4: null
+    level5: null
+  - object_name: transparent_cup
+    level1: container
+    level2: transparent_cup
+    level3: null
+    level4: null
+    level5: null
+  - object_name: tablecloth
+    level1: clothing
+    level2: tablecloth
+    level3: null
+    level4: null
+    level5: null
+  - object_name: cestbon
+    level1: drink
+    level2: cestbon
+    level3: null
+    level4: null
+    level5: null
+  - object_name: coffee
+    level1: drink
+    level2: coffee
+    level3: null
+    level4: null
+    level5: null
+  - object_name: cola
+    level1: drink
+    level2: cola
+    level3: null
+    level4: null
+    level5: null
+  - object_name: milk
+    level1: drink
+    level2: milk
+    level3: null
+    level4: null
+    level5: null
+  - object_name: cup
+    level1: container
+    level2: cup
+    level3: null
+    level4: null
+    level5: null
+  operation_platform_height: 77.2
+  device_model:
+  - agilex_cobot_decoupled_magic
+  end_effector_type: two_finger_gripper

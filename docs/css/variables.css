@@ -11,7 +11,7 @@
 --filter-panel-width: 0%;
 --video-panel-width: 70%;
 --selection-panel-width: 30%;
---selection-panel-max-width: 480px;
+--selection-panel-max-width: 768px;
 
     /* ==================== Layout Spacing Parameters ==================== */
     --content-padding: 1rem;
