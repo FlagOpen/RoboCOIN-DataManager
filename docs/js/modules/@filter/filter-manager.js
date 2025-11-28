@@ -682,7 +682,9 @@ export class FilterManager {
         this.datasets.forEach(ds => {
             let match = false;
 
-            if (filterKey === 'scene') {
+            if (filterKey === 'frame range') {
+                match = ds.frameRange === filterValue;
+            } else if (filterKey === 'scene') {
                 match = ds.scenes && ds.scenes.includes(filterValue);
             } else if (filterKey === 'robot') {
                 const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
