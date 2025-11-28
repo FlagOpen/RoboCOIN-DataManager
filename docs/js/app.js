@@ -14,6 +14,7 @@ import UIUtils from './modules/ui-utils.js';
 import EventHandlers from './modules/event-handlers.js';
 import RobotAliasManager from './modules/robot-aliases.js';
 import ErrorNotifier from './modules/error-notifier.js';
+import DownloadManager from './modules/download-manager.js';
 
 /**
  * Main Application Class
@@ -123,6 +124,9 @@ class Application {
             this.listDatasets,
             dataManager.datasetMap
         );
+
+        // Set initial hub for download manager
+        DownloadManager.setCurrentHub(this.selectionPanelManager.currentHub);
         
         // UI Utilities
         this.uiUtils = new UIUtils();

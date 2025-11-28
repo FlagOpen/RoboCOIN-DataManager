@@ -155,6 +155,11 @@ const Templates = {
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <div class="video-error" style="display:none;">No Thumbnail</div>
                 <div class="play-indicator" style="display:none;">▶</div>
+                <button class="download-button" data-dataset-path="${ds.path}" title="Copy download command">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                        <path d="M12 2C13.1 2 14 2.9 14 4V5H16V7H8V5H10V4C10 3.45 10.45 3 11 3H12V2ZM12 3C12.55 3 13 3.45 13 4V5H11V4C11 3.45 11.45 3 12 3ZM3 8H21V20C21 21.1 20.1 22 19 22H5C3.9 22 3 21.1 3 20V8ZM5 10V20H19V10H5ZM7 12H17V14H7V12ZM7 16H17V18H7V16Z"/>
+                    </svg>
+                </button>
             </div>
             <div class="video-info">
                 <div class="video-title">${ds.name}</div>

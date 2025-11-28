@@ -8,6 +8,7 @@
 import ConfigManager from './config.js';
 import { debounce } from './virtual-scroll.js';
 import { selectAllChildrenInHierarchy, clearAllChildrenInHierarchy } from './@filter/filter-hierarchy.js';
+import DownloadManager from './download-manager.js';
 
 /**
  * Event Handlers Manager Class
@@ -119,6 +120,7 @@ export class EventHandlers {
         if (hubBtnHuggingFace) {
             hubBtnHuggingFace.addEventListener('click', () => {
                 this.managers.selectionPanel.setHub('huggingface');
+                DownloadManager.setCurrentHub('huggingface');
                 this.updateHubButtons('huggingface');
             });
         }
@@ -126,6 +128,7 @@ export class EventHandlers {
         if (hubBtnModelScope) {
             hubBtnModelScope.addEventListener('click', () => {
                 this.managers.selectionPanel.setHub('modelscope');
+                DownloadManager.setCurrentHub('modelscope');
                 this.updateHubButtons('modelscope');
             });
         }

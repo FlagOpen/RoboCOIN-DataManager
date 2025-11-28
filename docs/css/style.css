@@ -31,6 +31,7 @@
 @import './selection/selection-hub-buttons.css';
 @import './components/code-detail.css';
 @import './components/modal.css';
+@import './components/toast.css';
 
 /* Animations */
 @import './animations/animations.css';

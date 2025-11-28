@@ -9,6 +9,7 @@ import ConfigManager from './config.js';
 import Templates from '../templates.js';
 import { calculateVisibleRange, ElementCache } from './virtual-scroll.js';
 import RobotAliasManager from './robot-aliases.js';
+import DownloadManager from './download-manager.js';
 
 /**
  * Video Grid Manager Class
@@ -180,6 +181,9 @@ export class VideoGridManager {
         
         // Observe videos for auto-play
         this.observeVideos();
+
+        // Bind download button events
+        DownloadManager.bindDownloadButtons();
     }
     
     /**
