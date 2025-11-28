@@ -11,7 +11,7 @@
     box-shadow: var(--shadow-lg);
     padding: 1rem;
     width: 320px;
-    max-height: 300px;
+    max-height: 18.75rem;
     overflow-y: auto;
     z-index: 1000;
     opacity: 0;

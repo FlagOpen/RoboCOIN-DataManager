@@ -198,9 +198,8 @@ export class VideoGridManager {
         if (this.selectedDatasets.has(ds.path)) card.classList.add('selected');
         
         card.innerHTML = Templates.buildVideoCard(
-            ds, 
-            this.formatMetaTags.bind(this), 
-            this.formatHoverOverlay.bind(this), 
+            ds,
+            this.formatMetaTags.bind(this),
             this.listDatasets
         );
         
@@ -402,14 +401,6 @@ export class VideoGridManager {
         return tags.join('');
     }
     
-    /**
-     * Format hover overlay
-     * @param {Dataset} ds - Dataset
-     * @returns {string} HTML string
-     */
-    formatHoverOverlay(ds) {
-        return Templates.buildHoverOverlay(ds);
-    }
 }
 
 export default VideoGridManager;

@@ -17,8 +17,6 @@
 }
 
 .video-card:hover {
-    border-color: var(--color-primary-light);
-    box-shadow: var(--shadow-hover);
     transform: translateY(-4px);
     z-index: 10;
 }
@@ -27,4 +25,19 @@
     border-color: var(--color-primary);
     box-shadow: 0 0 0 2px var(--color-primary), var(--shadow-md);
     transform: translateY(-2px);
+}
+
+.video-card.selected .video-info {
+    background: var(--item-gradient-light-alt);
+}
+
+.video-card.selected .video-title {
+    color: var(--color-primary-light);
+}
+
+.video-card.selected .video-tag {
+    color: var(--color-cart-tag-text);
+    background: var(--color-cart-tag-bg);
+    border-color: var(--color-cart-tag-border);
+    border-width: 0.085rem;
 }

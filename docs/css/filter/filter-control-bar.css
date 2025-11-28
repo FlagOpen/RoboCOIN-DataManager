@@ -138,7 +138,7 @@
 /* Search Box */
 .filter-search-container {
     flex: 1;
-    min-width: 240px;
+    min-width: 15rem;
     max-width: 480px;
     position: relative;
 }

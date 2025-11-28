@@ -1,74 +1,80 @@
 /* ==================== Video Hover Overlay ==================== */
 
+.video-card {
+    position: absolute;
+}
+
 .video-hover-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(4px);
-    color: var(--color-text-primary);
-    padding: 1.25rem;
+    inset: 0;
+    background: linear-gradient(180deg,
+        rgba(15, 23, 42, 0.92) 0%,
+        rgba(15, 23, 42, 0.96) 40%,
+        rgba(15, 23, 42, 0.98) 100%);
+    color: var(--color-text-on-accent);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 10;
-    overflow-y: auto;
+    pointer-events: none;
+    transition: opacity 0.18s ease-out, visibility 0.18s ease-out;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-    cursor: pointer;
 }
 
-.video-hover-overlay.delayed-show {
+.video-card.hover-overlay-visible .video-hover-overlay {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
+    z-index: 20;
 }
 
-.hover-title {
-    font-size: 0.9375rem;
-    font-weight: 700;
+.video-hover-content {
+    padding: 0.85rem 0.9rem 0.9rem;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.video-hover-content {
+    margin: 0;
+    font-family: inherit;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: inherit;
+}
+
+.video-hover-title {
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1rem;
+    font-weight: bold;
     margin-bottom: 0.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--color-border);
-    color: var(--color-primary);
-    word-break: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
 }
 
-.hover-info-group {
-    margin-bottom: 0.5rem;
+.video-hover-title:hover {
+    opacity: 0.8;
 }
 
-.hover-info-label {
-    font-size: 0.6875rem;
-    color: var(--color-text-muted);
-    margin-bottom: 0.25rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+.video-hover-details {
+    word-wrap: break-word;
 }
 
-.hover-info-content {
-    font-size: 0.8125rem;
-    line-height: 1.5;
-    color: var(--color-text-secondary);
+.video-hover-details strong {
+    font-weight: bold;
 }
 
-.hover-info-content.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem;
+.video-hover-details ul {
+    margin: 0.5rem 0;
+    padding-left: 1rem;
 }
 
-.hover-tag {
-    display: inline-block;
-    padding: 0.125rem 0.5rem;
-    background: var(--color-bg-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 0.25rem;
-    font-size: 0.75rem;
-    color: var(--color-text-primary);
+.video-hover-details li {
+    margin: 0.25rem 0;
 }
+
+.video-hover-details br {
+    display: block;
+    content: "";
+    margin: 0.5rem 0;
+}
+
+

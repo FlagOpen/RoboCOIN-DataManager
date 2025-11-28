@@ -136,7 +136,7 @@ export class UIUtils {
         if (!dataset) return;
         
         this.hideHoverPreview();
-        
+
         const itemRect = itemElement.getBoundingClientRect();
         
         const card = document.createElement('div');
@@ -144,7 +144,7 @@ export class UIUtils {
         card.className = 'hover-preview-card';
         
         card.innerHTML = Templates.buildHoverPreview(dataset);
-        
+
         document.body.appendChild(card);
         
         const cardRect = card.getBoundingClientRect();
@@ -186,7 +186,16 @@ export class UIUtils {
         
         card.style.left = x + 'px';
         card.style.top = y + 'px';
-        
+
+        // Wire up explicit "View details" action inside hover preview
+        const detailBtn = card.querySelector('.hover-preview-detail-btn');
+        if (detailBtn) {
+            detailBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.showDetailModal(datasetPath, datasetMap);
+            });
+        }
+
         card.addEventListener('mouseenter', () => {
             // Keep showing when hovering preview
         });

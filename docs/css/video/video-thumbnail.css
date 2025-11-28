@@ -60,10 +60,10 @@
 
 .download-button {
     position: absolute;
-    bottom: 8px;
-    right: 8px;
-    width: 32px;
-    height: 32px;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
     border-radius: var(--border-radius-pill);
     background: rgba(33, 37, 41, 0.8);
     border: 1px solid rgba(33, 37, 41, 0.6);
@@ -91,6 +91,8 @@
 }
 
 .download-button svg {
+    width: 1.25rem;
+    height: 1.25rem;
     transition: transform var(--transition-duration) ease;
 }
 

@@ -5,19 +5,21 @@
 
 class ToastManager {
     constructor() {
-        this.container = null;
+        this.toastElement = null;
+        this.currentTimer = null;
         this.init();
     }
 
     /**
-     * Initialize the toast container
+     * Initialize the toast element
      */
     init() {
-        // Create toast container if it doesn't exist
-        if (!this.container) {
-            this.container = document.createElement('div');
-            this.container.className = 'toast-container';
-            document.body.appendChild(this.container);
+        // Create toast element if it doesn't exist
+        if (!this.toastElement) {
+            this.toastElement = document.createElement('div');
+            this.toastElement.className = 'toast-notification';
+            this.toastElement.style.display = 'none';
+            document.body.appendChild(this.toastElement);
         }
     }
 
@@ -25,45 +27,55 @@ class ToastManager {
      * Show a toast notification
      * @param {string} message - The message to display
      * @param {string} type - The type of toast ('success', 'error', 'info')
-     * @param {number} duration - Duration in milliseconds (default: 3000)
+     * @param {number} duration - Duration in milliseconds (default: 2000)
      */
-    show(message, type = 'info', duration = 3000) {
-        if (!this.container) {
+    show(message, type = 'info', duration = 2000) {
+        if (!this.toastElement) {
             this.init();
         }
 
-        // Create toast element
-        const toast = document.createElement('div');
-        toast.className = `toast-notification ${type}`;
-        toast.textContent = message;
+        // Clear any existing timer
+        if (this.currentTimer) {
+            clearTimeout(this.currentTimer);
+            this.currentTimer = null;
+        }
 
-        // Add to container
-        this.container.appendChild(toast);
+        // Update toast content and type
+        this.toastElement.textContent = message;
+        this.toastElement.className = `toast-notification ${type}`;
+
+        // Show the toast
+        this.toastElement.style.display = 'flex';
 
         // Trigger animation
         requestAnimationFrame(() => {
-            toast.classList.add('show');
+            this.toastElement.classList.add('show');
         });
 
         // Auto-hide after duration
-        setTimeout(() => {
-            this.hide(toast);
+        this.currentTimer = setTimeout(() => {
+            this.hide();
         }, duration);
     }
 
     /**
-     * Hide a toast notification
-     * @param {HTMLElement} toast - The toast element to hide
+     * Hide the toast notification
      */
-    hide(toast) {
-        if (!toast) return;
+    hide() {
+        if (!this.toastElement) return;
 
-        toast.classList.remove('show');
+        // Clear timer if exists
+        if (this.currentTimer) {
+            clearTimeout(this.currentTimer);
+            this.currentTimer = null;
+        }
 
-        // Remove from DOM after animation
+        this.toastElement.classList.remove('show');
+
+        // Hide after animation
         setTimeout(() => {
-            if (toast.parentNode) {
-                toast.parentNode.removeChild(toast);
+            if (this.toastElement) {
+                this.toastElement.style.display = 'none';
             }
         }, 300);
     }

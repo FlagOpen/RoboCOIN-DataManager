@@ -141,15 +141,14 @@ const Templates = {
      * Build video card HTML
      * @param {Dataset} ds - Dataset object
      * @param {Function} formatMetaTags - Function to format meta tags
-     * @param {Function} formatHoverOverlay - Function to format hover overlay
      * @param {Set<string>} listDatasets - Set of dataset paths in cart
      * @returns {string} HTML string
      */
-    buildVideoCard(ds, formatMetaTags, formatHoverOverlay, listDatasets) {
+    buildVideoCard(ds, formatMetaTags, listDatasets) {
         return `
             <div class="video-thumbnail" data-video-url="${ds.video_url}">
-                <img src="${ds.thumbnail_url}" 
-                     alt="${ds.name}" 
+                <img src="${ds.thumbnail_url}"
+                     alt="${ds.name}"
                      class="thumbnail-image"
                      loading="lazy"
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -157,7 +156,7 @@ const Templates = {
                 <div class="play-indicator" style="display:none;">▶</div>
                 <button class="download-button" data-dataset-path="${ds.path}" title="Copy download command">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                        <path d="M12 2C13.1 2 14 2.9 14 4V5H16V7H8V5H10V4C10 3.45 10.45 3 11 3H12V2ZM12 3C12.55 3 13 3.45 13 4V5H11V4C11 3.45 11.45 3 12 3ZM3 8H21V20C21 21.1 20.1 22 19 22H5C3.9 22 3 21.1 3 20V8ZM5 10V20H19V10H5ZM7 12H17V14H7V12ZM7 16H17V18H7V16Z"/>
+                        <path d="M19,14 L19,19 L5,19 L5,14 L3,14 L3,19 C3,20.1 3.9,21 5,21 L19,21 C20.1,21 21,20.1 21,19 L21,14 L19,14 Z M12.5,2 L12.5,15 L8.5,11 L7,12.5 L12,17.5 L17,12.5 L15.5,11 L11.5,15 L11.5,2 L12.5,2 Z"/>
                     </svg>
                 </button>
             </div>
@@ -165,7 +164,12 @@ const Templates = {
                 <div class="video-title">${ds.name}</div>
                 <div class="video-tags">${formatMetaTags(ds)}</div>
             </div>
-            <div class="video-hover-overlay">${formatHoverOverlay(ds)}</div>
+            <div class="video-hover-overlay">
+                <div class="video-hover-content">
+                    <div class="video-hover-title" data-path="${ds.path}">${ds.name}</div>
+                    <div class="video-hover-details">${this.buildHoverDetailsHTML(ds)}</div>
+                </div>
+            </div>
         `;
     },
 
@@ -181,65 +185,40 @@ const Templates = {
     /**
      * Hover Overlay Templates
      */
-    buildHoverOverlay(ds) {
-        let html = `<div class="hover-title">${ds.name}</div>`;
+    buildHoverDetailsHTML(ds) {
+        let html = '';
 
-        // Scene information
-        if (ds.scenes && ds.scenes.length > 0) {
-            html += this.buildHoverInfoGroup('scene', ds.scenes.map(s => this.buildHoverTag(s)).join(''));
-        }
-
-        // Robot model (use friendly names when available)
+        // Basic info
         if (ds.robot) {
             const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
             const displayRobots = robots.map(r => this.getRobotDisplayLabel(r));
-            html += this.buildHoverInfoGroup(
-                'robot',
-                displayRobots.map(r => this.buildHoverTag(r)).join('')
-            );
+            html += `<strong>Robot:</strong> ${displayRobots.join(', ')}<br><br>`;
         }
 
-        // Dataset size
+        if (ds.scenes && ds.scenes.length > 0) {
+            html += `<strong>Scene:</strong> ${ds.scenes.join(', ')}<br><br>`;
+        }
+
         if (ds.datasetSize) {
-            html += this.buildHoverInfoGroup('dataset size', this.buildHoverTag(ds.datasetSize));
+            html += `<strong>Dataset Size:</strong> ${ds.datasetSize}<br><br>`;
         }
 
-        // Dataset statistics
+        // Statistics
         if (ds.statistics) {
             const stats = ds.statistics;
-            const statDetails = [];
-            if (stats.total_episodes) statDetails.push(`episodes: ${stats.total_episodes.toLocaleString()}`);
-            if (stats.total_frames) statDetails.push(`frames: ${stats.total_frames.toLocaleString()}`);
-            if (stats.total_tasks) statDetails.push(`tasks: ${stats.total_tasks}`);
-            if (stats.total_videos) statDetails.push(`videos: ${stats.total_videos}`);
-            if (stats.fps) statDetails.push(`fps: ${stats.fps}`);
-            if (statDetails.length > 0) {
-                html += this.buildHoverInfoGroup('statistics', statDetails.join(', '), false);
+            if (stats.total_episodes || stats.total_frames) {
+                html += `<strong>Statistics:</strong><ul>`;
+                if (stats.total_episodes) html += `<li>Episodes: ${stats.total_episodes.toLocaleString()}</li>`;
+                if (stats.total_frames) html += `<li>Frames: ${stats.total_frames.toLocaleString()}</li>`;
+                if (stats.total_videos) html += `<li>Videos: ${stats.total_videos}</li>`;
+                if (stats.fps) html += `<li>FPS: ${stats.fps}</li>`;
+                html += `</ul><br>`;
             }
         }
 
-        // End effector
-        if (ds.endEffector) {
-            html += this.buildHoverInfoGroup('end effector', this.buildHoverTag(ds.endEffector));
-        }
-
-        // Actions
-        if (ds.actions && ds.actions.length > 0) {
-            html += this.buildHoverInfoGroup(`action(${ds.actions.length})`, ds.actions.map(a => this.buildHoverTag(a)).join(''));
-        }
-
-        // Objects
-        if (ds.objects && ds.objects.length > 0) {
-            const objectChains = ds.objects.map(obj => obj.hierarchy.join(' → '));
-            html += this.buildHoverInfoGroup(
-                `operation object(${ds.objects.length})`,
-                objectChains.map(chain => this.buildHoverTag(chain)).join('')
-            );
-        }
-
-        // Description
-        if (ds.description) {
-            html += this.buildHoverInfoGroup('description', ds.description, false);
+        // Description (if available and not too long)
+        if (ds.description && ds.description.length < 200) {
+            html += `<strong>Description:</strong><br>${ds.description.replace(/\n/g, '<br>')}`;
         }
 
         return html;
@@ -386,6 +365,11 @@ const Templates = {
                     ${this.buildHoverPreviewMetaItem('Robot', robotText)}
                     ${this.buildHoverPreviewMetaItem('Scene', sceneText)}
                     ${this.buildHoverPreviewMetaItem('Action', actionText)}
+                </div>
+                <div class="hover-preview-actions">
+                    <button class="hover-preview-detail-btn" type="button">
+                        View full details
+                    </button>
                 </div>
             </div>
         `;

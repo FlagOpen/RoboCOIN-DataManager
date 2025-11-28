@@ -28,7 +28,7 @@
     }
 
     .filter-search-container {
-        min-width: 100px;
+        min-width: 6.25rem;
         flex: 1;
     }
 

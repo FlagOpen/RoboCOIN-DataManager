@@ -308,99 +308,101 @@ export class EventHandlers {
         if (!grid) return;
 
         const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-        // Store hover timers for each card
-        const hoverTimers = new WeakMap();
-
-        // Setup delayed hover overlay display (0.5s delay)
-        // Use MutationObserver to attach listeners to newly created cards
-        if (!isTouchDevice) {
-            const setupCardHoverListeners = (card) => {
-                const overlay = card.querySelector('.video-hover-overlay');
-                if (!overlay || card.dataset.hoverListenerSetup) return;
-
-                card.dataset.hoverListenerSetup = 'true';
-
-                card.addEventListener('mouseenter', () => {
-                    // Clear any existing timer
-                    const existingTimer = hoverTimers.get(card);
-                    if (existingTimer) {
-                        clearTimeout(existingTimer);
-                    }
-
-                    // Set timer to show overlay immediately (no delay)
-                    const timer = setTimeout(() => {
-                        overlay.classList.add('delayed-show');
-                        hoverTimers.delete(card);
-                    }, 0);
-
-                    hoverTimers.set(card, timer);
-                });
-
-                card.addEventListener('mouseleave', () => {
-                    // Clear timer
-                    const timer = hoverTimers.get(card);
-                    if (timer) {
-                        clearTimeout(timer);
-                        hoverTimers.delete(card);
-                    }
-
-                    // Remove overlay immediately
-                    overlay.classList.remove('delayed-show');
-                });
-            };
-
-            // Setup listeners for existing cards
-            grid.querySelectorAll('.video-card').forEach(setupCardHoverListeners);
-
-            // Use MutationObserver to setup listeners for newly created cards
-            const observer = new MutationObserver((mutations) => {
-                mutations.forEach((mutation) => {
-                    mutation.addedNodes.forEach((node) => {
-                        if (node.nodeType === Node.ELEMENT_NODE) {
-                            if (node.classList?.contains('video-card')) {
-                                setupCardHoverListeners(node);
-                            }
-                            // Also check children
-                            node.querySelectorAll?.('.video-card').forEach(setupCardHoverListeners);
-                        }
-                    });
-                });
-            });
-
-            observer.observe(grid, { childList: true, subtree: true });
-        }
+        // Hover overlay timers (desktop / non-touch only)
+        this._hoverOverlayShowTimeout = null;
+        this._hoverOverlayHideTimeout = null;
+        this._hoverOverlayActiveCard = null;
 
         // Event delegation: click on video-card
         grid.addEventListener('click', (e) => {
-            if (e.target.tagName === 'VIDEO') return;
-
-            const card = e.target.closest('.video-card');
-            if (!card) return;
-
-            const path = card.dataset.path;
-            if (!path) return;
-
-            // Touch device overlay handling
-            const overlay = e.target.closest('.video-hover-overlay');
-            if (isTouchDevice && overlay) {
-                overlay.classList.remove('touch-active');
-                return;
-            }
-
-            if (isTouchDevice) {
-                const cardOverlay = card.querySelector('.video-hover-overlay');
-                if (cardOverlay && !cardOverlay.classList.contains('touch-active')) {
-                    document.querySelectorAll('.video-hover-overlay.touch-active').forEach(o => {
-                        o.classList.remove('touch-active');
-                    });
-                    cardOverlay.classList.add('touch-active');
+            try {
+                // Clickable title inside hover overlay
+                const hoverTitle = e.target.closest('.video-hover-title');
+                if (hoverTitle && this.managers && this.managers.ui) {
+                    e.stopPropagation();
+                    const detailPath = hoverTitle.dataset.path;
+                    if (detailPath) {
+                        this.managers.ui.showDetailModal(detailPath, this.datasetMap);
+                    }
                     return;
                 }
-            }
 
-            this.toggleSelection(path);
+                // Allow clicks on the autoplay preview video to also toggle selection
+                // so users can click anywhere on the video pane (thumbnail or video)
+                const card = e.target.closest('.video-card');
+                if (!card) return;
+
+                const path = card.dataset.path;
+                if (!path) return;
+
+                if (this.managers && this.managers.selectionPanel) {
+                    this.toggleSelection(path);
+                }
+            } catch (error) {
+                console.error('Error in video grid click handler:', error);
+            }
         });
+
+        // Desktop hover: show in-card hover overlay with detailed info
+        if (!isTouchDevice) {
+            grid.addEventListener('mouseover', (e) => {
+                const card = e.target.closest('.video-card');
+                if (!card || !grid.contains(card)) return;
+
+                const path = card.dataset.path;
+                if (!path) return;
+
+                // Cancel any pending hide while moving between cards
+                if (this._hoverOverlayHideTimeout) {
+                    clearTimeout(this._hoverOverlayHideTimeout);
+                    this._hoverOverlayHideTimeout = null;
+                }
+
+                // Debounce show to avoid flicker when quickly moving across cards
+                if (this._hoverOverlayShowTimeout) {
+                    clearTimeout(this._hoverOverlayShowTimeout);
+                }
+
+                const hoverDelay = this.config?.timing?.hoverDelay || 500;
+                this._hoverOverlayShowTimeout = setTimeout(() => {
+                    // Hide any previously active overlay
+                    if (this._hoverOverlayActiveCard && this._hoverOverlayActiveCard !== card) {
+                        this._hoverOverlayActiveCard.classList.remove('hover-overlay-visible');
+                    }
+                    card.classList.add('hover-overlay-visible');
+                    this._hoverOverlayActiveCard = card;
+                    this._hoverOverlayShowTimeout = null;
+                }, hoverDelay);
+            });
+
+            grid.addEventListener('mouseout', (e) => {
+                const card = e.target.closest('.video-card');
+                if (!card || !grid.contains(card)) return;
+
+                const related = /** @type {HTMLElement|null} */ (e.relatedTarget);
+                const stayingInSameCard = !!(related && card.contains(related));
+
+                // If still inside the same card (including overlay), don't hide
+                if (stayingInSameCard) {
+                    return;
+                }
+
+                // Cancel pending show
+                if (this._hoverOverlayShowTimeout) {
+                    clearTimeout(this._hoverOverlayShowTimeout);
+                    this._hoverOverlayShowTimeout = null;
+                }
+
+                const hoverDelay = this.config?.timing?.hoverDelay || 500;
+                this._hoverOverlayHideTimeout = setTimeout(() => {
+                    card.classList.remove('hover-overlay-visible');
+                    if (this._hoverOverlayActiveCard === card) {
+                        this._hoverOverlayActiveCard = null;
+                    }
+                    this._hoverOverlayHideTimeout = null;
+                }, hoverDelay);
+            });
+        }
 
         // Video load error handling
         grid.addEventListener('error', (e) => {
@@ -412,17 +414,6 @@ export class EventHandlers {
                 }
             }
         }, true);
-
-        // Touch device: close overlays when clicking outside
-        if (isTouchDevice) {
-            document.addEventListener('click', (e) => {
-                if (!e.target.closest('.video-card')) {
-                    document.querySelectorAll('.video-hover-overlay.touch-active').forEach(o => {
-                        o.classList.remove('touch-active');
-                    });
-                }
-            });
-        }
     }
 
     /**
@@ -512,37 +503,6 @@ export class EventHandlers {
             });
         }
 
-        // Cart actions
-        const addToListBtn = document.getElementById('addToListBtn');
-        const deleteFromListBtn = document.getElementById('deleteFromListBtn');
-        const clearListBtn = document.getElementById('clearListBtn');
-
-        if (addToListBtn) {
-            addToListBtn.addEventListener('click', () => {
-                this.addClickAnimation(addToListBtn);
-                this.managers.selectionPanel.addToList();
-                this.managers.videoGrid.updateCardStyles();
-                this.managers.selectionPanel.updateSelectionPanel();
-            });
-        }
-
-        if (deleteFromListBtn) {
-            deleteFromListBtn.addEventListener('click', () => {
-                this.addClickAnimation(deleteFromListBtn);
-                this.managers.selectionPanel.deleteFromList();
-                this.managers.videoGrid.updateCardStyles();
-                this.managers.selectionPanel.updateSelectionPanel();
-            });
-        }
-
-        if (clearListBtn) {
-            clearListBtn.addEventListener('click', () => {
-                this.addClickAnimation(clearListBtn);
-                this.managers.selectionPanel.clearList();
-                this.managers.videoGrid.updateCardStyles();
-                this.managers.selectionPanel.updateSelectionPanel();
-            });
-        }
 
         // Import/Export
         const importBtn = document.getElementById('importBtn');
@@ -693,8 +653,12 @@ export class EventHandlers {
     toggleSelection(path) {
         if (this.selectedDatasets.has(path)) {
             this.selectedDatasets.delete(path);
+            this.managers.selectionPanel.listDatasets.delete(path);
+            this.managers.selectionPanel.markListChanged();
         } else {
             this.selectedDatasets.add(path);
+            this.managers.selectionPanel.listDatasets.add(path);
+            this.managers.selectionPanel.markListChanged();
         }
         this.managers.videoGrid.updateCardStyles();
         this.managers.selectionPanel.updateSelectionPanel();
@@ -709,7 +673,9 @@ export class EventHandlers {
         );
         filteredDatasets.forEach(ds => {
             this.selectedDatasets.add(ds.path);
+            this.managers.selectionPanel.listDatasets.add(ds.path);
         });
+        this.managers.selectionPanel.markListChanged();
         this.managers.videoGrid.updateCardStyles();
         this.managers.selectionPanel.updateSelectionPanel();
     }
@@ -723,7 +689,9 @@ export class EventHandlers {
         );
         filteredDatasets.forEach(ds => {
             this.selectedDatasets.delete(ds.path);
+            this.managers.selectionPanel.listDatasets.delete(ds.path);
         });
+        this.managers.selectionPanel.markListChanged();
         this.managers.videoGrid.updateCardStyles();
         this.managers.selectionPanel.updateSelectionPanel();
     }

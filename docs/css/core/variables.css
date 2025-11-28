@@ -57,6 +57,19 @@
     --fade-duration: 300ms;
     --micro-anim-duration: 0.4s;
 
+    /* ==================== Toast Parameters ==================== */
+    --toast-bg-color: linear-gradient(135deg, 
+    rgba(70, 97, 229, 0.95) 0%, 
+    rgba(37, 77, 235, 0.95) 82%,
+    rgba(139, 92, 246, 0.95) 100%);
+    --toast-text-color: #ffffff;
+    --toast-border-color: rgba(255, 255, 255, 0.2);
+    --toast-font-weight: 500;
+    --toast-padding: 0.75rem 1.5rem;
+    --toast-border-radius: 9999px;
+    --toast-font-size: 0.95rem;
+    --toast-max-width: 28rem;
+
     /* ==================== UI Element Parameters ==================== */
     --button-size: 2.25rem;
     --icon-size: 1.125rem;

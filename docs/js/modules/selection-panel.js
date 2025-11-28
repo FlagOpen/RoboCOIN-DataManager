@@ -62,7 +62,6 @@ export class SelectionPanelManager {
      */
     updateSelectionPanel() {
         document.getElementById('selectedCount').textContent = this.selectedDatasets.size;
-        document.getElementById('cartCount').textContent = this.listDatasets.size;
         
         const list = document.getElementById('selectionList');
         if (!list) return;
@@ -199,33 +198,6 @@ export class SelectionPanelManager {
         }, 100);
     }
     
-    /**
-     * Add selected datasets to list
-     */
-    addToList() {
-        this.selectedDatasets.forEach(path => {
-            this.listDatasets.add(path);
-        });
-        this.markListChanged();
-    }
-    
-    /**
-     * Delete selected datasets from list
-     */
-    deleteFromList() {
-        this.selectedDatasets.forEach(path => {
-            this.listDatasets.delete(path);
-        });
-        this.markListChanged();
-    }
-    
-    /**
-     * Clear all datasets from list
-     */
-    clearList() {
-        this.listDatasets.clear();
-        this.markListChanged();
-    }
     
     /**
      * Export selection as JSON file
