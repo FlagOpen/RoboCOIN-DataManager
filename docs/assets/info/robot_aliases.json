@@ -6,9 +6,10 @@
   },
   "RMC-AIDA-L": {
     "common_name": "RealMan", 
-    "aliases": ["瑞尔曼", "ADIA", "RealMan", "REALMAN", "RMC", "aida", "aidal","rmcaida",
-    "realman", "rmc", "adial", "adialrmc","realmanrmc","realmanrmcaida", "ruierman",
-    "睿尔曼"]
+    "aliases": ["瑞尔曼", "ADIA", "RealMan", "REALMAN", "RMC", 
+    "aida", "aidal","rmcaida",
+    "realman", "rmc", "adial", "adialrmc","realmanrmc","realmanrmcaida", "ruierman", "睿尔曼",
+    "rs", "rs01", "rs02", "rs-01", "rs-02"]
   },
   "AIRBOT_MMK2": {
     "common_name": "Discover MMK",
@@ -18,7 +19,7 @@
   "AgiBot-g1": {
     "common_name": "AgiBot G1",
     "aliases": ["AgiBot", "AGIBOT", "agi","agibotg1", "agig1", "智元", "zhiyuan", "agibot",
-    "agi"]
+    "agi", "a2d", "a2-d"]
   },
   "Cobot_Magic": {
     "common_name": "Cobot Magic", 
@@ -47,6 +48,7 @@
   "leju_robot": {
     "common_name": "Leju",
     "aliases": ["Leju","LEJU", "robot", "lejurobot",
-    "乐聚"]
+    "乐聚",
+    "kuavo", "夸父", "kuafu"]
   }
 }
