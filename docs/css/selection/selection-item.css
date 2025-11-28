@@ -1,0 +1,81 @@
+/* ==================== Selection Item ==================== */
+
+.selection-item {
+    position: absolute;
+    left: var(--selection-item-padding);
+    right: var(--selection-item-padding);
+    height: calc(var(--selection-item-height) - 0.25rem);
+    padding: 0 1rem;
+    background: var(--item-gradient-light-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 0;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    user-select: none;
+    box-shadow: var(--shadow-sm);
+}
+
+.selection-item:hover {
+    border-color: var(--color-primary-light);
+    border-width: 0.15rem;
+    transform: translateX(2px);
+    box-shadow: var(--shadow-md);
+}
+
+.selection-item-name {
+    flex: 1;
+    font-size: 0.875rem;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--color-text-primary);
+}
+
+.btn-remove {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+}
+
+.btn-remove:hover {
+    background: var(--color-danger);
+    color: white;
+}
+
+.btn-detail {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+}
+
+.btn-detail:hover {
+    background: var(--color-primary-bg);
+}

@@ -1,0 +1,28 @@
+/* ==================== Video Grid & Toolbar ==================== */
+
+.toolbar-actions {
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    padding-right: 0.5rem;
+}
+
+.toolbar-actions::-webkit-scrollbar {
+    height: 0.3rem;
+}
+
+.toolbar-actions::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.toolbar-actions::-webkit-scrollbar-thumb {
+    background: var(--color-bg-gray-dark);
+    border-radius: var(--border-radius-pill);
+}

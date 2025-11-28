@@ -1,0 +1,30 @@
+/* ==================== Video Card ==================== */
+
+.video-card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--color-border);
+    position: absolute;
+    display: flex;
+    width: var(--grid-card-width);
+    height: var(--grid-card-height);
+    margin: 0;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+}
+
+.video-card:hover {
+    border-color: var(--color-primary-light);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+    z-index: 10;
+}
+
+.video-card.selected {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary), var(--shadow-md);
+    transform: translateY(-2px);
+}

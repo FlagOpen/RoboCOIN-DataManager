@@ -1,0 +1,59 @@
+/* ==================== Video Thumbnail ==================== */
+
+.video-thumbnail {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--color-bg-surface);
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.video-thumbnail .thumbnail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.video-card:hover .thumbnail-image {
+    transform: scale(1.05);
+}
+
+.video-thumbnail video,
+.video-thumbnail .lazy-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.video-thumbnail video[style*="opacity: 1"],
+.video-thumbnail .lazy-video[style*="opacity: 1"] {
+    pointer-events: auto;
+}
+
+.video-error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    background: var(--color-bg-surface);
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--border-radius-sm);
+    display: none;
+    border: 1px solid var(--color-border);
+}
+
+/* Badge removed - using info area highlight for selected items */

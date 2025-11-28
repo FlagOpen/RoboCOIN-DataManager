@@ -1,0 +1,31 @@
+/* ==================== Video Panel ==================== */
+
+.video-panel {
+    width: var(--video-panel-width);
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg-body);
+    padding: 0;
+}
+
+.video-grid-container {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    isolation: isolate;
+}
+
+.video-grid {
+    position: relative;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-card-width), 1fr));
+    gap: var(--grid-gap);
+    align-items: start;
+    width: calc(100% - var(--grid-padding) * 2);
+    margin: var(--grid-padding) auto;
+    padding: 0;
+}

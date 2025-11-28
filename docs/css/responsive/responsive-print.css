@@ -1,0 +1,19 @@
+/* ==================== Print Styles ==================== */
+@media print {
+    body {
+        font-size: 12pt;
+    }
+
+    .filter-panel,
+    .selection-panel {
+        display: none;
+    }
+
+    .video-panel {
+        width: 100%;
+    }
+
+    .video-card {
+        page-break-inside: avoid;
+    }
+}

@@ -1,0 +1,74 @@
+/* ==================== Video Hover Overlay ==================== */
+
+.video-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    color: var(--color-text-primary);
+    padding: 1.25rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.video-hover-overlay.delayed-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hover-title {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-primary);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.hover-info-group {
+    margin-bottom: 0.5rem;
+}
+
+.hover-info-label {
+    font-size: 0.6875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hover-info-content {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+}
+
+.hover-info-content.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.hover-tag {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--color-text-primary);
+}

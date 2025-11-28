@@ -1,0 +1,191 @@
+/* ==================== Filter Dropdown Overlay ==================== */
+.filter-dropdown-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.5);
+    /* No blur for performance */
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+    /* No transition to avoid animation */
+    will-change: opacity;
+    /* GPU acceleration hint */
+}
+
+.filter-dropdown-overlay.active {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4rem 2rem;
+    overflow-y: auto;
+    /* Enable smooth scrolling with GPU acceleration */
+    -webkit-overflow-scrolling: touch;
+}
+
+.filter-dropdown-overlay.active.show {
+    opacity: 1;
+}
+
+.filter-dropdown {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 900px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0.95) translateZ(0);
+    /* translateZ for GPU acceleration */
+    /* transition removed for performance */
+    /* Faster transition */
+    will-change: transform;
+    /* GPU acceleration hint */
+    contain: layout style;
+    /* Limit repaints to this element */
+}
+
+.filter-dropdown-overlay.show .filter-dropdown {
+    transform: scale(1) translateZ(0);
+}
+
+.filter-dropdown-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    background: white;
+    border-bottom: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+
+.filter-dropdown-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+}
+
+.filter-dropdown-content {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    /* Optimize scrolling performance */
+    will-change: scroll-position;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+    contain: layout style paint;
+    /* Aggressive containment for scroll container */
+}
+
+/* Categories Sidebar */
+.filter-categories-sidebar {
+    flex: 0 0 auto;
+    max-width: 30%;
+    min-width: 200px;
+    overflow-y: auto;
+    padding: 1rem;
+    border-right: 1px solid var(--color-border);
+    background: var(--color-bg-surface);
+}
+
+/* Options Content */
+.filter-options-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    /* Optimize scrolling performance */
+    will-change: scroll-position;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Category Sidebar Buttons */
+.filter-category-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: var(--border-radius);
+    background: white;
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.filter-category-btn:hover {
+    border-color: var(--color-primary);
+    background: var(--item-gradient-light);
+}
+
+.filter-category-btn.selected {
+    background: var(--selected-gradient);
+    border-color: var(--color-primary-dark);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.category-label {
+    flex: 1;
+}
+
+.category-count {
+    background: var(--color-bg-gray);
+    color: var(--color-text-muted);
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    min-width: 1.5rem;
+    text-align: center;
+}
+
+.filter-category-btn.selected .category-count {
+    background: var(--color-primary-dark);
+    color: white;
+}
+
+/* Options Placeholder */
+.filter-options-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.filter-dropdown-footer {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    justify-content: flex-end;
+    background: var(--color-bg-surface);
+    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+}
+
+.filter-dropdown-done {
+    padding: 0.75rem 2rem;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.filter-dropdown-done:hover {
+    background: var(--color-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
