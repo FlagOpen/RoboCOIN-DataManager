@@ -5,9 +5,9 @@
 
 /// <reference path="../types.js" />
 
-import ConfigManager from './config.js';
-import Templates from '../templates.js';
-import { qs, setHTML, removeClass, toggleClass } from './dom-utils.js';
+import ConfigManager from '../config.js';
+import Templates from '../../templates.js';
+import { qs, setHTML, removeClass, toggleClass } from '../dom-utils.js';
 
 /**
  * @typedef {import('./filter-manager.js').FilterManager} FilterManager

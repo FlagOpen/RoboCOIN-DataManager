@@ -3,7 +3,7 @@
  * @description Encapsulates Filter Finder (search/navigate/highlight) logic for filters.
  */
 
-import { qs, addClass, removeClass } from './dom-utils.js';
+import { qs, addClass, removeClass } from '../dom-utils.js';
 
 export class FilterSearchHelper {
     /**

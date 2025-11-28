@@ -7,7 +7,7 @@
 
 import ConfigManager from './config.js';
 import { debounce } from './virtual-scroll.js';
-import { selectAllChildrenInHierarchy, clearAllChildrenInHierarchy } from './filter-hierarchy.js';
+import { selectAllChildrenInHierarchy, clearAllChildrenInHierarchy } from './@filter/filter-hierarchy.js';
 
 /**
  * Event Handlers Manager Class

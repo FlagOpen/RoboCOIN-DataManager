@@ -7,7 +7,7 @@
 
 import ConfigManager from './modules/config.js';
 import dataManager from './modules/data-manager.js';
-import FilterManager from './modules/filter-manager.js';
+import FilterManager from './modules/@filter/index.js';
 import VideoGridManager from './modules/video-grid.js';
 import SelectionPanelManager from './modules/selection-panel.js';
 import UIUtils from './modules/ui-utils.js';

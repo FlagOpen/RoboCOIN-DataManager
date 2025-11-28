@@ -6,7 +6,7 @@
  * 便于后续进一步拆分和测试。
  */
 
-import { qs } from './dom-utils.js';
+import { qs } from '../dom-utils.js';
 
 /**
  * Add object hierarchy to Map structure.

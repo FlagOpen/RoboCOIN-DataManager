@@ -6,16 +6,21 @@
 /// <reference path="../types.js" />
 
 import FilterState from './filter-state.js';
-import { qs, qsa, addClass, removeClass, toggleClass, setHTML, setText } from './dom-utils.js';
+import { qs, qsa, addClass, removeClass, toggleClass, setHTML, setText } from '../dom-utils.js';
 import {
-    addToHierarchy,
-    countHierarchyItems,
     selectAllInHierarchy,
     selectAllChildrenInHierarchy,
     clearAllChildrenInHierarchy
 } from './filter-hierarchy.js';
 import FilterSearchHelper from './filter-search.js';
 import FilterRenderer from './filter-renderer.js';
+import {
+    buildFilterGroups,
+    calculateStaticFilterCounts,
+    getCategoryItemCount,
+    calculateAffectedCount,
+    calculateStaticHierarchyCounts
+} from './data.js';
 
 /**
  * Filter Manager Class
@@ -74,71 +79,7 @@ export class FilterManager {
      * Build filter groups from datasets
      */
     buildFilterGroups() {
-        const groups = {
-            'frame range': {
-                title: 'frame range',
-                values: new Set(),
-                type: 'flat'
-            },
-            'scene': {
-                title: 'scene',
-                values: new Set(),
-                type: 'flat'
-            },
-            'robot': {
-                title: 'robot',
-                values: new Set(),
-                type: 'flat'
-            },
-            'end': {
-                title: 'end effector',
-                values: new Set(),
-                type: 'flat'
-            },
-            'action': {
-                title: 'action',
-                values: new Set(),
-                type: 'flat'
-            },
-            'object': {
-                title: 'operation object',
-                values: new Map(),
-                type: 'hierarchical'
-            }
-        };
-
-        // Collect all filter options
-        this.datasets.forEach(ds => {
-            // Frame range field
-            if (ds.frameRange) {
-                groups['frame range'].values.add(ds.frameRange);
-            }
-
-            // Flat multi-value fields
-            if (ds.scenes) {
-                ds.scenes.forEach(scene => groups.scene.values.add(scene));
-            }
-            if (ds.robot) {
-                const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
-                robots.forEach(r => groups.robot.values.add(r));
-            }
-            if (ds.endEffector) {
-                groups.end.values.add(ds.endEffector);
-            }
-            if (ds.actions) {
-                ds.actions.forEach(action => groups.action.values.add(action));
-            }
-
-            // Hierarchical object field
-            if (ds.objects) {
-                ds.objects.forEach(obj => {
-                    addToHierarchy(groups.object.values, obj.hierarchy);
-                });
-            }
-        });
-
-        this.filterGroups = groups;
-
+        this.filterGroups = buildFilterGroups(this.datasets);
         // Render UI
         this.renderFilterGroups();
     }
@@ -195,15 +136,7 @@ export class FilterManager {
      * @returns {number} Count of items
      */
     getCategoryItemCount(categoryKey) {
-        const group = this.filterGroups[categoryKey];
-        if (!group) return 0;
-
-        if (group.type === 'flat') {
-            return group.values.size;
-        } else if (group.type === 'hierarchical') {
-            return countHierarchyItems(group.values);
-        }
-        return 0;
+        return getCategoryItemCount(this.filterGroups, categoryKey);
     }
 
     /**
@@ -642,19 +575,7 @@ export class FilterManager {
      * Calculate static filter counts for UI display (only called once at initialization)
      */
     calculateStaticFilterCounts() {
-        this.staticFilterCounts.clear();
-
-        // Count for each filter option
-        for (const [key, group] of Object.entries(this.filterGroups)) {
-            if (group.type === 'flat') {
-                group.values.forEach(value => {
-                    const count = this.calculateAffectedCount(key, value);
-                    this.staticFilterCounts.set(`${key}:${value}`, count);
-                });
-            } else if (group.type === 'hierarchical') {
-                this.calculateStaticHierarchyCounts(key, group.values);
-            }
-        }
+        this.staticFilterCounts = calculateStaticFilterCounts(this.datasets, this.filterGroups);
     }
 
     /**
@@ -663,14 +584,7 @@ export class FilterManager {
      * @param {Map} hierarchyMap - Hierarchy map
      */
     calculateStaticHierarchyCounts(key, hierarchyMap) {
-        hierarchyMap.forEach((node, value) => {
-            const count = this.calculateAffectedCount(key, value);
-            this.staticFilterCounts.set(`${key}:${value}`, count);
-
-            if (node.children.size > 0) {
-                this.calculateStaticHierarchyCounts(key, node.children);
-            }
-        });
+        calculateStaticHierarchyCounts(this.datasets, key, hierarchyMap, this.staticFilterCounts);
     }
 
     /**
@@ -684,7 +598,7 @@ export class FilterManager {
         // Recalculate counts for this category
         if (group.type === 'flat') {
             group.values.forEach(value => {
-                const count = this.calculateAffectedCount(categoryKey, value);
+                const count = calculateAffectedCount(this.datasets, categoryKey, value);
                 this.staticFilterCounts.set(`${categoryKey}:${value}`, count);
             });
         } else if (group.type === 'hierarchical') {
@@ -731,7 +645,7 @@ export class FilterManager {
         for (const [key, group] of Object.entries(this.filterGroups)) {
             if (group.type === 'flat') {
                 group.values.forEach(value => {
-                    const count = this.calculateAffectedCount(key, value);
+                    const count = calculateAffectedCount(this.datasets, key, value);
                     this.filterCounts.set(`${key}:${value}`, count);
                 });
             } else if (group.type === 'hierarchical') {
