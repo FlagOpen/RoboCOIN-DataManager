@@ -363,7 +363,7 @@ export class EventHandlers {
                     clearTimeout(this._hoverOverlayShowTimeout);
                 }
 
-                const hoverDelay = this.config?.timing?.hoverDelay || 500;
+                const hoverDelay = this.config?.timing?.hoverDelay || 800;
                 this._hoverOverlayShowTimeout = setTimeout(() => {
                     // Hide any previously active overlay
                     if (this._hoverOverlayActiveCard && this._hoverOverlayActiveCard !== card) {
@@ -393,14 +393,11 @@ export class EventHandlers {
                     this._hoverOverlayShowTimeout = null;
                 }
 
-                const hoverDelay = this.config?.timing?.hoverDelay || 500;
-                this._hoverOverlayHideTimeout = setTimeout(() => {
-                    card.classList.remove('hover-overlay-visible');
-                    if (this._hoverOverlayActiveCard === card) {
-                        this._hoverOverlayActiveCard = null;
-                    }
-                    this._hoverOverlayHideTimeout = null;
-                }, hoverDelay);
+                // Immediately remove hover overlay
+                card.classList.remove('hover-overlay-visible');
+                if (this._hoverOverlayActiveCard === card) {
+                    this._hoverOverlayActiveCard = null;
+                }
             });
         }
 

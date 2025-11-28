@@ -42,7 +42,7 @@
     --badge-margin: 0.5rem;
 
     /* ==================== Interaction Timing Parameters ==================== */
-    --hover-delay: 500ms;
+    --hover-delay: 650ms;
     --resize-debounce: 200ms;
     --scroll-throttle: 16ms;
 

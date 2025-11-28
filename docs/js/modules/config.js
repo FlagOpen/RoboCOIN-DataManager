@@ -135,7 +135,7 @@ class ConfigManager {
                 margin: this.getCSSValue('--badge-margin', 8)
             },
             timing: {
-                hoverDelay: this.getCSSValue('--hover-delay', 500),
+                hoverDelay: this.getCSSValue('--hover-delay', 800),
                 resizeDebounce: this.getCSSValue('--resize-debounce', 200),
                 scrollThrottle: this.getCSSValue('--scroll-throttle', 16),
                 transitionDuration: this.getCSSValue('--transition-duration', 200),
