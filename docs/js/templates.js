@@ -288,7 +288,7 @@ const Templates = {
     buildEmptyCartHint() {
         return `
             <div class="empty-cart-hint">
-                Click the download icon on the right side of the video pane for individual downloads.<br>
+                Click the download icon on the right side of the video card for individual downloads.<br>
                 Use Filter to select datasets, then click on selected datasets and use Batch Downloader here for bulk downloads.
             </div>
         `;
