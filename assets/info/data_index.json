@@ -1,9 +1,14 @@
 {
   "datasets": [
+    "AgiBot-g1_box_storage_a",
+    "AgiBot-g1_box_storage_b",
+    "AgiBot-g1_box_storage_c",
     "AgiBot-g1_box_storage_cardboard_box_a",
     "AgiBot-g1_box_storage_cardboard_box_b",
     "AgiBot-g1_box_storage_cardboard_box_c",
+    "AgiBot-g1_box_storage_part_a",
     "AgiBot-g1_left_capture_part",
+    "AgiBot-g1_pick_up_battery",
     "AgiBot-g1_picks_up_battery_a",
     "AgiBot-g1_picks_up_cardboard_box",
     "AgiBot-g1_picks_up_parts_a",
@@ -14,5 +19,5 @@
     "Cobot_Magic_pour_water_a",
     "Split_aloha_fold_the_pants"
   ],
-  "count": 13
+  "count": 18
 }
