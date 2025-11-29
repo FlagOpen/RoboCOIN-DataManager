@@ -1,0 +1,589 @@
+dataset_name: fold_the_pants
+dataset_uuid: 2d20404b-b035-4962-9e8e-055858867cb3
+scene_type:
+- home
+atomic_actions:
+- grasp
+- fold
+end_effector_type: two_finger_gripper
+operation_platform_height: 77.2
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: pants
+  level1: clothing
+  level2: pants
+  level3: null
+  level4: null
+  level5: null
+path: Split_aloha_fold_the_pants
+video_url: ./assets/videos/Split_aloha_fold_the_pants.mp4
+thumbnail_url: ./assets/thumbnails/Split_aloha_fold_the_pants.jpg
+license: apache-2.0
+language:
+- en
+- zh
+task_categories:
+- robotics
+tags:
+- RoboCOIN
+- LeRobot
+frame_range: 100K-1M
+dataset_size: 8.3GB
+configs:
+- config_name: default
+  data_files: data/*/*.parquet
+authors:
+  contributed_by:
+  - name: RoboCOIN
+    url: https://flagopen.github.io/RoboCOIN/
+    affiliation: RoboCOIN Team
+  annotated_by:
+  - name: RoboCOIN
+    url: https://flagopen.github.io/RoboCOIN/
+    affiliation: RoboCOIN Team
+dataset_description: This dataset uses an extended format based on LeRobot and is
+  fully compatible with LeRobot.
+homepage: https://flagopen.github.io/RoboCOIN/
+paper: https://arxiv.org/abs/2511.17441
+repository: https://github.com/FlagOpen/RoboCOIN
+project_page: https://flagopen.github.io/RoboCOIN/
+issues_url: https://github.com/FlagOpen/RoboCOIN/issues
+robot_type: Split_aloha
+codebase_version: v2.1
+statistics:
+  total_episodes: 494
+  total_frames: 400404
+  total_tasks: 4
+  total_videos: 1482
+  total_chunks: 1
+  chunks_size: 1000
+  fps: 30
+splits:
+  train: 0:493
+data_path: data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet
+video_path: videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mp4
+features:
+  observation.images.cam_high_rgb:
+    dtype: video
+    shape:
+    - 720
+    - 1280
+    - 3
+    names:
+    - height
+    - width
+    - channels
+    info:
+      video.height: 720
+      video.width: 1280
+      video.codec: av1
+      video.pix_fmt: yuv420p
+      video.is_depth_map: false
+      video.fps: 30
+      video.channels: 3
+      has_audio: false
+  observation.images.cam_left_wrist_rgb:
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+    info:
+      video.height: 480
+      video.width: 640
+      video.codec: av1
+      video.pix_fmt: yuv420p
+      video.is_depth_map: false
+      video.fps: 30
+      video.channels: 3
+      has_audio: false
+  observation.images.cam_right_wrist_rgb:
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+    info:
+      video.height: 480
+      video.width: 640
+      video.codec: av1
+      video.pix_fmt: yuv420p
+      video.is_depth_map: false
+      video.fps: 30
+      video.channels: 3
+      has_audio: false
+  observation.state:
+    dtype: float32
+    shape:
+    - 26
+    names:
+    - left_arm_joint_1_rad
+    - left_arm_joint_2_rad
+    - left_arm_joint_3_rad
+    - left_arm_joint_4_rad
+    - left_arm_joint_5_rad
+    - left_arm_joint_6_rad
+    - left_gripper_open
+    - left_eef_pos_x_m
+    - left_eef_pos_y_m
+    - left_eef_pos_z_m
+    - left_eef_rot_euler_x_rad
+    - left_eef_rot_euler_y_rad
+    - left_eef_rot_euler_z_rad
+    - right_arm_joint_1_rad
+    - right_arm_joint_2_rad
+    - right_arm_joint_3_rad
+    - right_arm_joint_4_rad
+    - right_arm_joint_5_rad
+    - right_arm_joint_6_rad
+    - right_gripper_open
+    - right_eef_pos_x_m
+    - right_eef_pos_y_m
+    - right_eef_pos_z_m
+    - right_eef_rot_euler_x_rad
+    - right_eef_rot_euler_y_rad
+    - right_eef_rot_euler_z_rad
+  action:
+    dtype: float32
+    shape:
+    - 26
+    names:
+    - left_arm_joint_1_rad
+    - left_arm_joint_2_rad
+    - left_arm_joint_3_rad
+    - left_arm_joint_4_rad
+    - left_arm_joint_5_rad
+    - left_arm_joint_6_rad
+    - left_gripper_open
+    - left_eef_pos_x_m
+    - left_eef_pos_y_m
+    - left_eef_pos_z_m
+    - left_eef_rot_euler_x_rad
+    - left_eef_rot_euler_y_rad
+    - left_eef_rot_euler_z_rad
+    - right_arm_joint_1_rad
+    - right_arm_joint_2_rad
+    - right_arm_joint_3_rad
+    - right_arm_joint_4_rad
+    - right_arm_joint_5_rad
+    - right_arm_joint_6_rad
+    - right_gripper_open
+    - right_eef_pos_x_m
+    - right_eef_pos_y_m
+    - right_eef_pos_z_m
+    - right_eef_rot_euler_x_rad
+    - right_eef_rot_euler_y_rad
+    - right_eef_rot_euler_z_rad
+  timestamp:
+    dtype: float32
+    shape:
+    - 1
+    names: null
+  frame_index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  episode_index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  task_index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  subtask_annotation:
+    names: null
+    dtype: int32
+    shape:
+    - 5
+  scene_annotation:
+    names: null
+    dtype: int32
+    shape:
+    - 1
+  eef_sim_pose_state:
+    names:
+    - left_eef_pos_x
+    - left_eef_pos_y
+    - left_eef_pos_z
+    - left_eef_ori_x
+    - left_eef_ori_y
+    - left_eef_ori_z
+    - right_eef_pos_x
+    - right_eef_pos_y
+    - right_eef_pos_z
+    - right_eef_ori_x
+    - right_eef_ori_y
+    - right_eef_ori_z
+    dtype: float32
+    shape:
+    - 12
+  eef_sim_pose_action:
+    names:
+    - left_eef_pos_x
+    - left_eef_pos_y
+    - left_eef_pos_z
+    - left_eef_ori_x
+    - left_eef_ori_y
+    - left_eef_ori_z
+    - right_eef_pos_x
+    - right_eef_pos_y
+    - right_eef_pos_z
+    - right_eef_ori_x
+    - right_eef_ori_y
+    - right_eef_ori_z
+    dtype: float32
+    shape:
+    - 12
+  eef_direction_state:
+    names:
+    - left_eef_direction
+    - right_eef_direction
+    dtype: int32
+    shape:
+    - 2
+  eef_direction_action:
+    names:
+    - left_eef_direction
+    - right_eef_direction
+    dtype: int32
+    shape:
+    - 2
+  eef_velocity_state:
+    names:
+    - left_eef_velocity
+    - right_eef_velocity
+    dtype: int32
+    shape:
+    - 2
+  eef_velocity_action:
+    names:
+    - left_eef_velocity
+    - right_eef_velocity
+    dtype: int32
+    shape:
+    - 2
+  eef_acc_mag_state:
+    names:
+    - left_eef_acc_mag
+    - right_eef_acc_mag
+    dtype: int32
+    shape:
+    - 2
+  eef_acc_mag_action:
+    names:
+    - left_eef_acc_mag
+    - right_eef_acc_mag
+    dtype: int32
+    shape:
+    - 2
+  gripper_open_scale_state:
+    names:
+    - left_gripper_open_scale
+    - right_gripper_open_scale
+    dtype: float32
+    shape:
+    - 2
+  gripper_open_scale_action:
+    names:
+    - left_gripper_open_scale
+    - right_gripper_open_scale
+    dtype: float32
+    shape:
+    - 2
+  gripper_mode_state:
+    names:
+    - left_gripper_mode
+    - right_gripper_mode
+    dtype: int32
+    shape:
+    - 2
+  gripper_mode_action:
+    names:
+    - left_gripper_mode
+    - right_gripper_mode
+    dtype: int32
+    shape:
+    - 2
+  gripper_activity_state:
+    names:
+    - left_gripper_activity
+    - right_gripper_activity
+    dtype: int32
+    shape:
+    - 2
+tasks: 'the pants are placed with the back facing upwards, the cuffs facing to the
+  left, the left gripper grasp the cuffs, the right gripper grasp the leg and fold
+  it forward, the left gripper lift the folded cuffs and fold them against the leg,
+  adjust the position of the pants to the center of the table.
+
+  the pants are placed with the back facing upwards, the cuffs facing to the right,
+  the right gripper grasp the cuffs, the left gripper grasp the leg and fold it forward,
+  the right gripper lift the folded cuffs and fold them against the leg, adjust the
+  position of the pants to the center of the table.
+
+  the pants are placed with the front facing upwards, the cuffs facing to the left,
+  the left gripper grasp the cuffs, the right gripper grasp the leg and fold it forward,
+  the left gripper lift the folded cuffs and fold them against the leg, adjust the
+  position of the pants to the center of the table.
+
+  the pants are placed with the front facing upwards, the cuffs facing to the right,
+  the right gripper grasp the cuffs, the left gripper grasp the leg and fold it forward,
+  the right gripper lift the folded cuffs and fold them against the leg, adjust the
+  position of the pants to the center of the table.'
+sub_tasks:
+- Fold the bottom of the pants upward
+- Fold the pants from  left  to right
+- Fold your pants from right to left
+- 'null'
+annotations:
+  subtask_annotation: auto_generated
+  scene_annotation: auto_generated
+  eef_direction: auto_generated
+  eef_velocity: auto_generated
+  eef_acc_mag: auto_generated
+  gripper_mode: auto_generated
+  gripper_activity: auto_generated
+cameras:
+- key: observation.images.cam_high_rgb
+  name: cam_high_rgb
+  dtype: video
+  shape:
+  - 720
+  - 1280
+  - 3
+  resolution:
+  - 720
+  - 1280
+  fps: 30
+  is_depth: false
+- key: observation.images.cam_left_wrist_rgb
+  name: cam_left_wrist_rgb
+  dtype: video
+  shape:
+  - 480
+  - 640
+  - 3
+  resolution:
+  - 480
+  - 640
+  fps: 30
+  is_depth: false
+- key: observation.images.cam_right_wrist_rgb
+  name: cam_right_wrist_rgb
+  dtype: video
+  shape:
+  - 480
+  - 640
+  - 3
+  resolution:
+  - 480
+  - 640
+  fps: 30
+  is_depth: false
+observation_space:
+  images:
+  - key: observation.images.cam_high_rgb
+    dtype: video
+    shape:
+    - 720
+    - 1280
+    - 3
+    names:
+    - height
+    - width
+    - channels
+  - key: observation.images.cam_left_wrist_rgb
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+  - key: observation.images.cam_right_wrist_rgb
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+  state:
+    dtype: float32
+    shape:
+    - 26
+    names:
+    - left_arm_joint_1_rad
+    - left_arm_joint_2_rad
+    - left_arm_joint_3_rad
+    - left_arm_joint_4_rad
+    - left_arm_joint_5_rad
+    - left_arm_joint_6_rad
+    - left_gripper_open
+    - left_eef_pos_x_m
+    - left_eef_pos_y_m
+    - left_eef_pos_z_m
+    - left_eef_rot_euler_x_rad
+    - left_eef_rot_euler_y_rad
+    - left_eef_rot_euler_z_rad
+    - right_arm_joint_1_rad
+    - right_arm_joint_2_rad
+    - right_arm_joint_3_rad
+    - right_arm_joint_4_rad
+    - right_arm_joint_5_rad
+    - right_arm_joint_6_rad
+    - right_gripper_open
+    - right_eef_pos_x_m
+    - right_eef_pos_y_m
+    - right_eef_pos_z_m
+    - right_eef_rot_euler_x_rad
+    - right_eef_rot_euler_y_rad
+    - right_eef_rot_euler_z_rad
+action_space:
+  dtype: float32
+  shape:
+  - 26
+  names:
+  - left_arm_joint_1_rad
+  - left_arm_joint_2_rad
+  - left_arm_joint_3_rad
+  - left_arm_joint_4_rad
+  - left_arm_joint_5_rad
+  - left_arm_joint_6_rad
+  - left_gripper_open
+  - left_eef_pos_x_m
+  - left_eef_pos_y_m
+  - left_eef_pos_z_m
+  - left_eef_rot_euler_x_rad
+  - left_eef_rot_euler_y_rad
+  - left_eef_rot_euler_z_rad
+  - right_arm_joint_1_rad
+  - right_arm_joint_2_rad
+  - right_arm_joint_3_rad
+  - right_arm_joint_4_rad
+  - right_arm_joint_5_rad
+  - right_arm_joint_6_rad
+  - right_gripper_open
+  - right_eef_pos_x_m
+  - right_eef_pos_y_m
+  - right_eef_pos_z_m
+  - right_eef_rot_euler_x_rad
+  - right_eef_rot_euler_y_rad
+  - right_eef_rot_euler_z_rad
+eef_sim_pose: auto_generated
+gripper_open_scale: auto_generated
+depth_enabled: false
+data_schema: auto_generated
+structure: "Split_aloha_fold_the_pants_qced_hardlink/\n├── annotations/\n│   ├── eef_acc_mag_annotation.jsonl\n\
+  │   ├── eef_direction_annotation.jsonl\n│   ├── eef_velocity_annotation.jsonl\n\
+  │   ├── gripper_activity_annotation.jsonl\n│   ├── gripper_mode_annotation.jsonl\n\
+  │   └── (...)\n├── data/\n│   └── chunk-000/\n│       ├── episode_000000.parquet\n\
+  │       ├── episode_000001.parquet\n│       ├── episode_000002.parquet\n│      \
+  \ ├── episode_000003.parquet\n│       ├── episode_000004.parquet\n│       └── (...)\n\
+  ├── meta/\n│   ├── episodes.jsonl\n│   ├── episodes_stats.jsonl\n│   ├── info.json\n\
+  │   └── tasks.jsonl\n└── videos/\n    └── chunk-000/\n        ├── observation.images.cam_high_rgb/\n\
+  \        │   ├── episode_000000.mp4\n        │   ├── episode_000001.mp4\n      \
+  \  │   ├── episode_000002.mp4\n        │   ├── episode_000003.mp4\n        │   ├──\
+  \ episode_000004.mp4\n        │   └── (...)\n        ├── observation.images.cam_left_wrist_rgb/\n\
+  \        │   ├── episode_000000.mp4\n        │   ├── episode_000001.mp4\n      \
+  \  │   ├── episode_000002.mp4\n        │   ├── episode_000003.mp4\n        │   ├──\
+  \ episode_000004.mp4\n        │   └── (...)\n        └── observation.images.cam_right_wrist_rgb/\n\
+  \            ├── episode_000000.mp4\n            ├── episode_000001.mp4\n      \
+  \      ├── episode_000002.mp4\n            ├── episode_000003.mp4\n            ├──\
+  \ episode_000004.mp4\n            └── (...)"
+contact_email: null
+contact_info: For questions, issues, or feedback regarding this dataset, please contact
+  us.
+support_info: For technical support, please open an issue on our GitHub repository.
+license_details: Please refer to the LICENSE file for full license terms and conditions.
+citation_bibtex: "@article{robocoin,\n    title={RoboCOIN: An Open-Sourced Bimanual\
+  \ Robotic Data Collection for Integrated Manipulation},\n    author={Shihan Wu,\
+  \ Xuecheng Liu, Shaoxuan Xie, Pengwei Wang, Xinghang Li, Bowen Yang, Zhe Li, Kai\
+  \ Zhu, Hongyu Wu, Yiheng Liu, Zhaoye Long, Yue Wang, Chong Liu, Dihan Wang, Ziqiang\
+  \ Ni, Xiang Yang, You Liu, Ruoxuan Feng, Runtian Xu, Lei Zhang, Denghang Huang,\
+  \ Chenghao Jin, Anlan Yin, Xinlong Wang, Zhenguo Sun, Junkai Zhao, Mengfei Du, Mingyu\
+  \ Cao, Xiansheng Chen, Hongyang Cheng, Xiaojie Zhang, Yankai Fu, Ning Chen, Cheng\
+  \ Chi, Sixiang Chen, Huaihai Lyu, Xiaoshuai Hao, Yequan Wang, Bo Lei, Dong Liu,\
+  \ Xi Yang, Yance Jiao, Tengfei Pan, Yunyan Zhang, Songjing Wang, Ziqian Zhang, Xu\
+  \ Liu, Ji Zhang, Caowei Meng, Zhizheng Zhang, Jiyang Gao, Song Wang, Xiaokun Leng,\
+  \ Zhiqiang Xie, Zhenzhen Zhou, Peng Huang, Wu Yang, Yandong Guo, Yichao Zhu, Suibing\
+  \ Zheng, Hao Cheng, Xinmin Ding, Yang Yue, Huanqian Wang, Chi Chen, Jingrui Pang,\
+  \ YuXi Qian, Haoran Geng, Lianli Gao, Haiyuan Li, Bin Fang, Gao Huang, Yaodong Yang,\
+  \ Hao Dong, He Wang, Hang Zhao, Yadong Mu, Di Hu, Hao Zhao, Tiejun Huang, Shanghang\
+  \ Zhang, Yonghua Lin, Zhongyuan Wang and Guocai Yao},\n    journal={arXiv preprint\
+  \ arXiv:2511.17441},\n    url = {https://arxiv.org/abs/2511.17441},\n    year={2025}\n\
+  \    }"
+additional_citations: 'If you use this dataset, please also consider citing:
+
+  - LeRobot Framework: https://github.com/huggingface/lerobot'
+version_info: '## Version History
+
+  - v1.0.0 (2025-11): Initial release'
+raw:
+  dataset_name: fold_the_pants
+  dataset_uuid: null
+  task_descriptions:
+  - the pants are placed with the back facing upwards, the cuffs facing to the left,
+    the left gripper grasp the cuffs, the right gripper grasp the leg and fold it
+    forward, the left gripper lift the folded cuffs and fold them against the leg,
+    adjust the position of the pants to the center of the table.
+  - the pants are placed with the back facing upwards, the cuffs facing to the right,
+    the right gripper grasp the cuffs, the left gripper grasp the leg and fold it
+    forward, the right gripper lift the folded cuffs and fold them against the leg,
+    adjust the position of the pants to the center of the table.
+  - the pants are placed with the front facing upwards, the cuffs facing to the left,
+    the left gripper grasp the cuffs, the right gripper grasp the leg and fold it
+    forward, the left gripper lift the folded cuffs and fold them against the leg,
+    adjust the position of the pants to the center of the table.
+  - the pants are placed with the front facing upwards, the cuffs facing to the right,
+    the right gripper grasp the cuffs, the left gripper grasp the leg and fold it
+    forward, the right gripper lift the folded cuffs and fold them against the leg,
+    adjust the position of the pants to the center of the table.
+  scene_type:
+  - home
+  atomic_actions:
+  - grasp
+  - fold
+  objects:
+  - object_name: table
+    level1: furniture
+    level2: table
+    level3: null
+    level4: null
+    level5: null
+  - object_name: pants
+    level1: clothing
+    level2: pants
+    level3: null
+    level4: null
+    level5: null
+  operation_platform_height: 77.2
+  device_model:
+  - agilex_cobot_magic_aloha
+  end_effector_type: two_finger_gripper

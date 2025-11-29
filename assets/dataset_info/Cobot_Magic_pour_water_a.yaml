@@ -1,0 +1,706 @@
+dataset_name: pour_water_a
+dataset_uuid: 1cf008f5-6677-4b28-8eae-d7a325544806
+scene_type:
+- home
+atomic_actions:
+- grasp
+- place
+- pick
+end_effector_type: two_finger_gripper
+operation_platform_height: 77.2
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: nongfu_spring_mineral_water
+  level1: drink
+  level2: nongfu_spring_mineral_water
+  level3: null
+  level4: null
+  level5: null
+- object_name: yibao_mineral_water
+  level1: drink
+  level2: yibao_mineral_water
+  level3: null
+  level4: null
+  level5: null
+- object_name: baisui_mountain_mineral_water
+  level1: drink
+  level2: baisui_mountain_mineral_water
+  level3: null
+  level4: null
+  level5: null
+- object_name: wahaha_mineral_water
+  level1: drink
+  level2: wahaha_mineral_water
+  level3: null
+  level4: null
+  level5: null
+- object_name: cup
+  level1: container
+  level2: cup
+  level3: null
+  level4: null
+  level5: null
+path: Cobot_Magic_pour_water_a
+video_url: ./assets/videos/Cobot_Magic_pour_water_a.mp4
+thumbnail_url: ./assets/thumbnails/Cobot_Magic_pour_water_a.jpg
+license: apache-2.0
+language:
+- en
+- zh
+task_categories:
+- robotics
+tags:
+- RoboCOIN
+- LeRobot
+frame_range: 1M-10M
+dataset_size: 13.6GB
+configs:
+- config_name: default
+  data_files: data/*/*.parquet
+authors:
+  contributed_by:
+  - name: RoboCOIN
+    url: https://flagopen.github.io/RoboCOIN/
+    affiliation: RoboCOIN Team
+  annotated_by:
+  - name: RoboCOIN
+    url: https://flagopen.github.io/RoboCOIN/
+    affiliation: RoboCOIN Team
+dataset_description: This dataset uses an extended format based on LeRobot and is
+  fully compatible with LeRobot.
+homepage: https://flagopen.github.io/RoboCOIN/
+paper: https://arxiv.org/abs/2511.17441
+repository: https://github.com/FlagOpen/RoboCOIN
+project_page: https://flagopen.github.io/RoboCOIN/
+issues_url: https://github.com/FlagOpen/RoboCOIN/issues
+robot_type: Cobot_Magic
+codebase_version: v2.1
+statistics:
+  total_episodes: 891
+  total_frames: 1283817
+  total_tasks: 8
+  total_videos: 2673
+  total_chunks: 1
+  chunks_size: 1000
+  fps: 30
+splits:
+  train: 0:890
+data_path: data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet
+video_path: videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mp4
+features:
+  observation.images.cam_high_rgb:
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+    info:
+      video.height: 480
+      video.width: 640
+      video.codec: av1
+      video.pix_fmt: yuv420p
+      video.is_depth_map: false
+      video.fps: 30
+      video.channels: 3
+      has_audio: false
+  observation.images.cam_left_wrist_rgb:
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+    info:
+      video.height: 480
+      video.width: 640
+      video.codec: av1
+      video.pix_fmt: yuv420p
+      video.is_depth_map: false
+      video.fps: 30
+      video.channels: 3
+      has_audio: false
+  observation.images.cam_right_wrist_rgb:
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+    info:
+      video.height: 480
+      video.width: 640
+      video.codec: av1
+      video.pix_fmt: yuv420p
+      video.is_depth_map: false
+      video.fps: 30
+      video.channels: 3
+      has_audio: false
+  observation.state:
+    dtype: float32
+    shape:
+    - 26
+    names:
+    - left_arm_joint_1_rad
+    - left_arm_joint_2_rad
+    - left_arm_joint_3_rad
+    - left_arm_joint_4_rad
+    - left_arm_joint_5_rad
+    - left_arm_joint_6_rad
+    - left_gripper_open
+    - left_eef_pos_x_m
+    - left_eef_pos_y_m
+    - left_eef_pos_z_m
+    - left_eef_rot_euler_x_rad
+    - left_eef_rot_euler_y_rad
+    - left_eef_rot_euler_z_rad
+    - right_arm_joint_1_rad
+    - right_arm_joint_2_rad
+    - right_arm_joint_3_rad
+    - right_arm_joint_4_rad
+    - right_arm_joint_5_rad
+    - right_arm_joint_6_rad
+    - right_gripper_open
+    - right_eef_pos_x_m
+    - right_eef_pos_y_m
+    - right_eef_pos_z_m
+    - right_eef_rot_euler_x_rad
+    - right_eef_rot_euler_y_rad
+    - right_eef_rot_euler_z_rad
+  action:
+    dtype: float32
+    shape:
+    - 26
+    names:
+    - left_arm_joint_1_rad
+    - left_arm_joint_2_rad
+    - left_arm_joint_3_rad
+    - left_arm_joint_4_rad
+    - left_arm_joint_5_rad
+    - left_arm_joint_6_rad
+    - left_gripper_open
+    - left_eef_pos_x_m
+    - left_eef_pos_y_m
+    - left_eef_pos_z_m
+    - left_eef_rot_euler_x_rad
+    - left_eef_rot_euler_y_rad
+    - left_eef_rot_euler_z_rad
+    - right_arm_joint_1_rad
+    - right_arm_joint_2_rad
+    - right_arm_joint_3_rad
+    - right_arm_joint_4_rad
+    - right_arm_joint_5_rad
+    - right_arm_joint_6_rad
+    - right_gripper_open
+    - right_eef_pos_x_m
+    - right_eef_pos_y_m
+    - right_eef_pos_z_m
+    - right_eef_rot_euler_x_rad
+    - right_eef_rot_euler_y_rad
+    - right_eef_rot_euler_z_rad
+  timestamp:
+    dtype: float32
+    shape:
+    - 1
+    names: null
+  frame_index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  episode_index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  task_index:
+    dtype: int64
+    shape:
+    - 1
+    names: null
+  subtask_annotation:
+    names: null
+    dtype: int32
+    shape:
+    - 5
+  scene_annotation:
+    names: null
+    dtype: int32
+    shape:
+    - 1
+  eef_sim_pose_state:
+    names:
+    - left_eef_pos_x
+    - left_eef_pos_y
+    - left_eef_pos_z
+    - left_eef_ori_x
+    - left_eef_ori_y
+    - left_eef_ori_z
+    - right_eef_pos_x
+    - right_eef_pos_y
+    - right_eef_pos_z
+    - right_eef_ori_x
+    - right_eef_ori_y
+    - right_eef_ori_z
+    dtype: float32
+    shape:
+    - 12
+  eef_sim_pose_action:
+    names:
+    - left_eef_pos_x
+    - left_eef_pos_y
+    - left_eef_pos_z
+    - left_eef_ori_x
+    - left_eef_ori_y
+    - left_eef_ori_z
+    - right_eef_pos_x
+    - right_eef_pos_y
+    - right_eef_pos_z
+    - right_eef_ori_x
+    - right_eef_ori_y
+    - right_eef_ori_z
+    dtype: float32
+    shape:
+    - 12
+  eef_direction_state:
+    names:
+    - left_eef_direction
+    - right_eef_direction
+    dtype: int32
+    shape:
+    - 2
+  eef_direction_action:
+    names:
+    - left_eef_direction
+    - right_eef_direction
+    dtype: int32
+    shape:
+    - 2
+  eef_velocity_state:
+    names:
+    - left_eef_velocity
+    - right_eef_velocity
+    dtype: int32
+    shape:
+    - 2
+  eef_velocity_action:
+    names:
+    - left_eef_velocity
+    - right_eef_velocity
+    dtype: int32
+    shape:
+    - 2
+  eef_acc_mag_state:
+    names:
+    - left_eef_acc_mag
+    - right_eef_acc_mag
+    dtype: int32
+    shape:
+    - 2
+  eef_acc_mag_action:
+    names:
+    - left_eef_acc_mag
+    - right_eef_acc_mag
+    dtype: int32
+    shape:
+    - 2
+  gripper_open_scale_state:
+    names:
+    - left_gripper_open_scale
+    - right_gripper_open_scale
+    dtype: float32
+    shape:
+    - 2
+  gripper_open_scale_action:
+    names:
+    - left_gripper_open_scale
+    - right_gripper_open_scale
+    dtype: float32
+    shape:
+    - 2
+  gripper_mode_state:
+    names:
+    - left_gripper_mode
+    - right_gripper_mode
+    dtype: int32
+    shape:
+    - 2
+  gripper_mode_action:
+    names:
+    - left_gripper_mode
+    - right_gripper_mode
+    dtype: int32
+    shape:
+    - 2
+  gripper_activity_state:
+    names:
+    - left_gripper_activity
+    - right_gripper_activity
+    dtype: int32
+    shape:
+    - 2
+tasks: 'Pick up a paper cup and a bottle of Nongfu Spring mineral water, pour the
+  water into the paper cup, and then place them back on the table after completing.
+
+  Pick up the paper cup and the Yibao mineral water, pour the water into the paper
+  cup, and then place them back on the table.
+
+  Pick up the paper cup and the Yibao mineral water, pour the water into the paper
+  cup, and then place them back on the table.
+
+  Pick up a paper cup and a Nongfu Spring mineral water bottle, pour the water into
+  the paper cup, and then place them back on the table.
+
+  Pick up the paper cup and the Nongfu Spring water bottle, and after grabbing both
+  items by their ends, pour the water into one of them, then put down the paper cup
+  and the water bottle.
+
+  Pick up the paper cup and the Yibao mineral water, and after holding both items
+  by their ends, pour water into one of them, then put down the paper cup and the
+  mineral water.
+
+  Pick up the blue paper cup and the Wahaha mineral water bottle, pour an appropriate
+  amount of water into the paper cup, put down the blue paper cup, and put down the
+  Wahaha mineral water bottle.
+
+  Pick up the blue paper cup and the Bai Suishan mineral water bottle, pour an appropriate
+  amount of water into the paper cup, first put down the blue paper cup, and then
+  put down the mineral water bottle.'
+sub_tasks:
+- abnormal
+- Collect water with the left hand.
+- Collect water with the right hand.
+- Discard.
+- end
+- Fill water with the left hand.
+- Fill water with the right hand.
+- Grab the bottle with right gripper
+- Grab the paper cup with the left hand.
+- Grab the paper cup with the right hand.
+- Grab the water bottle with the left hand.
+- Grab the water bottle with the right hand.
+- Grasp the bottle with the left gripper
+- Grasp the bottle with the right gripper
+- Grasp the cup with left gripper
+- Grasp the paper cup with the left gripper
+- Grasp the paper cup with the right gripper
+- Lift the cup with left gripper
+- Lift the paper cup with the left hand.
+- Lift the paper cup with the right hand.
+- 'null'
+- Pick up the bottle
+- Pick up the cup
+- Place the bottle
+- Place the bottle with the left gripper
+- Place the bottle with the right gripper
+- Place the cup
+- Place the paper cup with the left gripper
+- Place the paper cup with the left hand.
+- Place the paper cup with the right gripper
+- Place the paper cup with the right hand.
+- Place the water bottle with the left hand.
+- Place the water bottle with the right hand.
+- Pour the water with right gripper
+- Pour water from bottle to cup
+- Pour water from bottle to cup with the left gripper
+- Pour water from bottle to cup with the right gripper
+- Pour water with the left hand.
+- Pour water with the right hand.
+- Put the bottle down with right gripper
+- Put the cup down with left gripper
+- Take the water with left gripper
+annotations:
+  subtask_annotation: auto_generated
+  scene_annotation: auto_generated
+  eef_direction: auto_generated
+  eef_velocity: auto_generated
+  eef_acc_mag: auto_generated
+  gripper_mode: auto_generated
+  gripper_activity: auto_generated
+cameras:
+- key: observation.images.cam_high_rgb
+  name: cam_high_rgb
+  dtype: video
+  shape:
+  - 480
+  - 640
+  - 3
+  resolution:
+  - 480
+  - 640
+  fps: 30
+  is_depth: false
+- key: observation.images.cam_left_wrist_rgb
+  name: cam_left_wrist_rgb
+  dtype: video
+  shape:
+  - 480
+  - 640
+  - 3
+  resolution:
+  - 480
+  - 640
+  fps: 30
+  is_depth: false
+- key: observation.images.cam_right_wrist_rgb
+  name: cam_right_wrist_rgb
+  dtype: video
+  shape:
+  - 480
+  - 640
+  - 3
+  resolution:
+  - 480
+  - 640
+  fps: 30
+  is_depth: false
+observation_space:
+  images:
+  - key: observation.images.cam_high_rgb
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+  - key: observation.images.cam_left_wrist_rgb
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+  - key: observation.images.cam_right_wrist_rgb
+    dtype: video
+    shape:
+    - 480
+    - 640
+    - 3
+    names:
+    - height
+    - width
+    - channels
+  state:
+    dtype: float32
+    shape:
+    - 26
+    names:
+    - left_arm_joint_1_rad
+    - left_arm_joint_2_rad
+    - left_arm_joint_3_rad
+    - left_arm_joint_4_rad
+    - left_arm_joint_5_rad
+    - left_arm_joint_6_rad
+    - left_gripper_open
+    - left_eef_pos_x_m
+    - left_eef_pos_y_m
+    - left_eef_pos_z_m
+    - left_eef_rot_euler_x_rad
+    - left_eef_rot_euler_y_rad
+    - left_eef_rot_euler_z_rad
+    - right_arm_joint_1_rad
+    - right_arm_joint_2_rad
+    - right_arm_joint_3_rad
+    - right_arm_joint_4_rad
+    - right_arm_joint_5_rad
+    - right_arm_joint_6_rad
+    - right_gripper_open
+    - right_eef_pos_x_m
+    - right_eef_pos_y_m
+    - right_eef_pos_z_m
+    - right_eef_rot_euler_x_rad
+    - right_eef_rot_euler_y_rad
+    - right_eef_rot_euler_z_rad
+action_space:
+  dtype: float32
+  shape:
+  - 26
+  names:
+  - left_arm_joint_1_rad
+  - left_arm_joint_2_rad
+  - left_arm_joint_3_rad
+  - left_arm_joint_4_rad
+  - left_arm_joint_5_rad
+  - left_arm_joint_6_rad
+  - left_gripper_open
+  - left_eef_pos_x_m
+  - left_eef_pos_y_m
+  - left_eef_pos_z_m
+  - left_eef_rot_euler_x_rad
+  - left_eef_rot_euler_y_rad
+  - left_eef_rot_euler_z_rad
+  - right_arm_joint_1_rad
+  - right_arm_joint_2_rad
+  - right_arm_joint_3_rad
+  - right_arm_joint_4_rad
+  - right_arm_joint_5_rad
+  - right_arm_joint_6_rad
+  - right_gripper_open
+  - right_eef_pos_x_m
+  - right_eef_pos_y_m
+  - right_eef_pos_z_m
+  - right_eef_rot_euler_x_rad
+  - right_eef_rot_euler_y_rad
+  - right_eef_rot_euler_z_rad
+eef_sim_pose: auto_generated
+gripper_open_scale: auto_generated
+depth_enabled: false
+data_schema: auto_generated
+structure: "Cobot_Magic_pour_water_a_qced_hardlink/\n├── annotations/\n│   ├── eef_acc_mag_annotation.jsonl\n\
+  │   ├── eef_direction_annotation.jsonl\n│   ├── eef_velocity_annotation.jsonl\n\
+  │   ├── gripper_activity_annotation.jsonl\n│   ├── gripper_mode_annotation.jsonl\n\
+  │   └── (...)\n├── data/\n│   └── chunk-000/\n│       ├── episode_000000.parquet\n\
+  │       ├── episode_000001.parquet\n│       ├── episode_000002.parquet\n│      \
+  \ ├── episode_000003.parquet\n│       ├── episode_000004.parquet\n│       └── (...)\n\
+  ├── meta/\n│   ├── episodes.jsonl\n│   ├── episodes_stats.jsonl\n│   ├── info.json\n\
+  │   └── tasks.jsonl\n└── videos/\n    └── chunk-000/\n        ├── observation.images.cam_high_rgb/\n\
+  \        │   ├── episode_000000.mp4\n        │   ├── episode_000001.mp4\n      \
+  \  │   ├── episode_000002.mp4\n        │   ├── episode_000003.mp4\n        │   ├──\
+  \ episode_000004.mp4\n        │   └── (...)\n        ├── observation.images.cam_left_wrist_rgb/\n\
+  \        │   ├── episode_000000.mp4\n        │   ├── episode_000001.mp4\n      \
+  \  │   ├── episode_000002.mp4\n        │   ├── episode_000003.mp4\n        │   ├──\
+  \ episode_000004.mp4\n        │   └── (...)\n        └── observation.images.cam_right_wrist_rgb/\n\
+  \            ├── episode_000000.mp4\n            ├── episode_000001.mp4\n      \
+  \      ├── episode_000002.mp4\n            ├── episode_000003.mp4\n            ├──\
+  \ episode_000004.mp4\n            └── (...)"
+contact_email: null
+contact_info: For questions, issues, or feedback regarding this dataset, please contact
+  us.
+support_info: For technical support, please open an issue on our GitHub repository.
+license_details: Please refer to the LICENSE file for full license terms and conditions.
+citation_bibtex: "@article{robocoin,\n    title={RoboCOIN: An Open-Sourced Bimanual\
+  \ Robotic Data Collection for Integrated Manipulation},\n    author={Shihan Wu,\
+  \ Xuecheng Liu, Shaoxuan Xie, Pengwei Wang, Xinghang Li, Bowen Yang, Zhe Li, Kai\
+  \ Zhu, Hongyu Wu, Yiheng Liu, Zhaoye Long, Yue Wang, Chong Liu, Dihan Wang, Ziqiang\
+  \ Ni, Xiang Yang, You Liu, Ruoxuan Feng, Runtian Xu, Lei Zhang, Denghang Huang,\
+  \ Chenghao Jin, Anlan Yin, Xinlong Wang, Zhenguo Sun, Junkai Zhao, Mengfei Du, Mingyu\
+  \ Cao, Xiansheng Chen, Hongyang Cheng, Xiaojie Zhang, Yankai Fu, Ning Chen, Cheng\
+  \ Chi, Sixiang Chen, Huaihai Lyu, Xiaoshuai Hao, Yequan Wang, Bo Lei, Dong Liu,\
+  \ Xi Yang, Yance Jiao, Tengfei Pan, Yunyan Zhang, Songjing Wang, Ziqian Zhang, Xu\
+  \ Liu, Ji Zhang, Caowei Meng, Zhizheng Zhang, Jiyang Gao, Song Wang, Xiaokun Leng,\
+  \ Zhiqiang Xie, Zhenzhen Zhou, Peng Huang, Wu Yang, Yandong Guo, Yichao Zhu, Suibing\
+  \ Zheng, Hao Cheng, Xinmin Ding, Yang Yue, Huanqian Wang, Chi Chen, Jingrui Pang,\
+  \ YuXi Qian, Haoran Geng, Lianli Gao, Haiyuan Li, Bin Fang, Gao Huang, Yaodong Yang,\
+  \ Hao Dong, He Wang, Hang Zhao, Yadong Mu, Di Hu, Hao Zhao, Tiejun Huang, Shanghang\
+  \ Zhang, Yonghua Lin, Zhongyuan Wang and Guocai Yao},\n    journal={arXiv preprint\
+  \ arXiv:2511.17441},\n    url = {https://arxiv.org/abs/2511.17441},\n    year={2025}\n\
+  \    }"
+additional_citations: 'If you use this dataset, please also consider citing:
+
+  - LeRobot Framework: https://github.com/huggingface/lerobot'
+version_info: '## Version History
+
+  - v1.0.0 (2025-11): Initial release'
+raw:
+  dataset_name: pour_water_a
+  dataset_uuid: null
+  task_descriptions:
+  - pick up the paper cup with your left hand and the yibao mineral water with your
+    right hand. after holding both items by their ends, pour water into one of them,
+    then put down the paper cup and the yibao mineral water.
+  - pick up the paper cup with your left hand and the nongfu spring water bottle with
+    your right hand. after grabbing both items by their ends, pour the water into
+    one of them, then put down the paper cup and the nongfu spring water bottle.
+  - with the left hand, pick up the blue paper cup, with the right hand pick up the
+    wahaha mineral water bottle, pour an appropriate amount of water from the right
+    hand into the left hand paper cup, put down the blue paper cup with the left hand,
+    and put down the wahaha mineral water bottle with the right hand.
+  - pick up the blue paper cup with your left hand, then pick up the bai suishan mineral
+    water bottle with your right hand. pour an appropriate amount of water from your
+    right hand into the paper cup in your left hand. first, put down the blue paper
+    cup with your left hand, then put down the bai suishan mineral water bottle with
+    your right hand.
+  - pick up the yellow paper cup with the left hand, pick up the bai suishan mineral
+    water bottle with the right hand, pour an appropriate amount of water from the
+    right hand into the left hand's cup, first put down the yellow paper cup with
+    the left hand, and then put down the bai suishan mineral water bottle with the
+    right hand.
+  - with the left hand, pick up the yellow paper cup, and with the right hand, pick
+    up the wahaha mineral water bottle. pour an appropriate amount of water from the
+    right hand into the paper cup in the left hand, then first put down the yellow
+    paper cup with the left hand, and finally put down the wahaha mineral water bottle
+    with the right hand.
+  - pick up the paper cup with the left hand and the yibao mineral water with the
+    right hand, pour the water into the paper cup, and then place them back on the
+    table.
+  - picking up a paper cup with the left hand and a bottle of nongfu spring mineral
+    water with the right hand, pouring the water into the paper cup, and then placing
+    them back on the table after completing.
+  - pick up the paper cup with your right hand and the yibao mineral water with your
+    left hand, pour the water into the paper cup, and then place them back on the
+    table.
+  - picking up a paper cup with the right hand and a nongfu spring mineral water bottle
+    with the left hand, pour the water into the paper cup, and then place them back
+    on the table.
+  scene_type:
+  - home
+  atomic_actions:
+  - grasp
+  - place
+  - pick
+  objects:
+  - object_name: table
+    level1: furniture
+    level2: table
+    level3: null
+    level4: null
+    level5: null
+  - object_name: nongfu_spring_mineral_water
+    level1: drink
+    level2: nongfu_spring_mineral_water
+    level3: null
+    level4: null
+    level5: null
+  - object_name: yibao_mineral_water
+    level1: drink
+    level2: yibao_mineral_water
+    level3: null
+    level4: null
+    level5: null
+  - object_name: baisui_mountain_mineral_water
+    level1: drink
+    level2: baisui_mountain_mineral_water
+    level3: null
+    level4: null
+    level5: null
+  - object_name: wahaha_mineral_water
+    level1: drink
+    level2: wahaha_mineral_water
+    level3: null
+    level4: null
+    level5: null
+  - object_name: cup
+    level1: container
+    level2: cup
+    level3: null
+    level4: null
+    level5: null
+  operation_platform_height: 77.2
+  device_model:
+  - agilex_cobot_magic_aloha
+  end_effector_type: two_finger_gripper
