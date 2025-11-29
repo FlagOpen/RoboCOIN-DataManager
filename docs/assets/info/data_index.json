@@ -247,6 +247,7 @@
     "Split_aloha_basket_storage_banana",
     "Split_aloha_basket_storage_bread",
     "Split_aloha_basket_storage_egg_yolk_pastry",
+    "Split_aloha_basket_storage_long_bread",
     "Split_aloha_basket_storage_orange",
     "Split_aloha_basket_storage_peach",
     "Split_aloha_fold_the_pants",
@@ -254,9 +255,11 @@
     "Split_aloha_pour_rice",
     "Split_aloha_pour_tea",
     "Split_aloha_scoop_coffee_beans",
+    "Split_aloha_stack_baskets",
     "Split_aloha_stir_coffee",
     "Split_aloha_wipe_table",
     "Split_aloha_wipe_the_table",
+    "Split_aloha_zip_up_the_document_bag",
     "Tianqin_A2_box_storage_part",
     "Tianqin_A2_container_storage_graphics_card",
     "Tianqin_A2_place_the_paper_box",
@@ -264,5 +267,5 @@
     "leju_robot_part_placement",
     "leju_robot_pass_the_cleaner_a"
   ],
-  "count": 263
+  "count": 266
 }
