@@ -19,6 +19,7 @@
     "AgiBot-g1_picks_up_battery_a",
     "AgiBot-g1_picks_up_cardboard_box",
     "AgiBot-g1_picks_up_parts_a",
+    "AgiBot-g1_picks_up_parts_b",
     "AgiBot-g1_remove_the_accessory",
     "AgiBot-g1_storage_item_b",
     "AgiBot-g1_storage_item_d",
@@ -27,7 +28,20 @@
     "Cobot_Magic_pour_water_a",
     "Galbot_g1_fold_clothe_b",
     "Galbot_g1_fold_clothe_c",
-    "Split_aloha_fold_the_pants"
+    "Galbot_g1_fold_clothe_e",
+    "Galbot_g1_steamer_storage_baozi_b",
+    "Galbot_g1_steamer_storage_baozi_c",
+    "Galbot_g1_steamer_storage_baozi_d",
+    "Galbot_g1_steamer_storage_baozi_e",
+    "Galbot_g1_steamer_storage_baozi_f",
+    "Galbot_g1_steamer_storage_baozi_g",
+    "Galbot_g1_steamer_storage_baozi_h",
+    "Galbot_g1_steamer_storage_baozi_i",
+    "Galbot_g1_steamer_storage_baozi_j",
+    "Split_aloha_fold_the_pants",
+    "leju_robot_pass_the_cleaner_c",
+    "leju_robot_pass_the_cleaner_d",
+    "leju_robot_pass_the_cleaner_e"
   ],
-  "count": 28
+  "count": 42
 }
